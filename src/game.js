@@ -49,18 +49,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initializeGame() {
-    let score = 7;
+    let score = 0;
     const scoreboard = document.getElementById('points');
     const timerDisplay = document.getElementById('timer');
 
     if (scoreboard) {
-        scoreboard.textContent = ' Points: ' + score;
+        scoreboard.textContent = 'Points: ' + score;
     } else {
         console.error('Element with ID "points" not found');
     }
 
     if (timerDisplay) {
-        timerDisplay.textContent = '00:10'; // Initialize timer display or adjust as needed
+        timerDisplay.textContent = '00:10';
     } else {
         console.error('Element with ID "timer" not found');
     }
@@ -104,10 +104,19 @@ function initializeGame() {
                 <div class="question">${currentQuestion.question}</div>
                 <div class="options">
                     ${currentQuestion.choices.map((choice, index) => `
-                        <button onclick="selectAnswer(${choice.isCorrect})" class="option-item">${choice.answer}</button>
+                        <button class="option-item" data-is-correct="${choice.isCorrect}">
+                            ${choice.answer}
+                        </button>
                     `).join('')}
                 </div>
             `;
+
+            // Add event listeners
+            quizContainer.querySelectorAll('.option-item').forEach(button => {
+                button.addEventListener('click', function () {
+                    selectAnswer(this.dataset.isCorrect === 'true');
+                });
+            });
         } else {
             console.error('Element with ID "quiz" not found');
         }
@@ -117,7 +126,7 @@ function initializeGame() {
         if (isCorrect) {
             score++;
             if (scoreboard) {
-                scoreboard.textContent = score;
+                scoreboard.textContent = 'Points: ' + score;
             }
         }
 
