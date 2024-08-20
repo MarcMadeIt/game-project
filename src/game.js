@@ -23,7 +23,7 @@ function includeHTML() {
 
 // Kald funktionen for at inkludere navbaren
 includeHTML();
-
+document.addEventListener('DOMContentLoaded', function() {
 const scoreboard = document.getElementById('points');
 const timerDisplay = document.getElementById('timer');
 scoreboard.textContent = score;
@@ -103,3 +103,4 @@ function updateTimerDisplay() {
 
 // Load questions when the page loads
 window.onload = loadQuestions;
+});
