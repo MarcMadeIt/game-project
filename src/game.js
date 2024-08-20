@@ -98,7 +98,7 @@ function initializeGame() {
     function loadQuestion() {
         const quizContainer = document.getElementById('quiz');
         const currentQuestion = questions[currentQuestionIndex];
-
+        startTimer();
         if (quizContainer) {
             quizContainer.innerHTML = `
                 <div class="question">${currentQuestion.question}</div>
