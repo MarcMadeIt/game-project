@@ -24,12 +24,12 @@ function includeHTML() {
 // Kald funktionen for at inkludere navbaren
 includeHTML();
 document.addEventListener('DOMContentLoaded', function() {
+let score = 0;
 const scoreboard = document.getElementById('points');
 const timerDisplay = document.getElementById('timer');
 scoreboard.textContent = score;
 let questions = [];
 let currentQuestionIndex = 0;
-let score = 0;
 let timeLeft = 10;
 let timerInterval;
 let timerRunning;
