@@ -119,6 +119,7 @@ main {
 
 .main-content {
     height: 100%;
+
 }
 
 .hero {
@@ -129,8 +130,8 @@ main {
 }
 
 .image {
-    height: 500px;
-    width: 500px;
+    height: 100%;
+    width: auto;
     overflow: hidden;
 
 }
@@ -141,11 +142,19 @@ main {
     border-radius: 50%;
 }
 
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 40%;
+}
+
 .question {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20%;
 }
 
 .question span {
@@ -158,16 +167,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20%;
     gap: 30px;
+
 }
 
-.option-item {
+.options button {
+    font-size: 25px;
+    outline: none;
     border: 2px solid #171717;
     padding: 5px 10px;
+    border-radius: 7px;
 
-}
-
-.options-item span {
-    font-size: 30px
 }
