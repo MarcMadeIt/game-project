@@ -1,10 +1,5 @@
-
-
 function includeHTML() {
-    // Find det element, hvor du vil inkludere navbaren
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
-
-    // Brug Fetch API til at hente indholdet af navbar.html
     fetch('/navbar/navbar.html')
         .then(response => {
             if (!response.ok) {
@@ -13,7 +8,6 @@ function includeHTML() {
             return response.text();
         })
         .then(data => {
-            // Indsæt indholdet af navbar.html i navbarPlaceholder-diven
             navbarPlaceholder.innerHTML = data;
         })
         .catch(error => {
@@ -21,13 +15,13 @@ function includeHTML() {
         });
 }
 
-// Kald funktionen for at inkludere navbaren
 includeHTML();
-document.addEventListener('DOMContentLoaded', function() {
-let score = 0;
+
+let score = 0; // Flyttet denne linje op
 const scoreboard = document.getElementById('points');
 const timerDisplay = document.getElementById('timer');
 scoreboard.textContent = score;
+
 let questions = [];
 let currentQuestionIndex = 0;
 let timeLeft = 10;
@@ -56,7 +50,7 @@ function shuffleQuestions() {
 function loadQuestion() {
     const quizContainer = document.getElementById('quiz');
     const currentQuestion = questions[currentQuestionIndex];
-    
+
     quizContainer.innerHTML = `
         <div class="question">${currentQuestion.question}</div>
         <div class="options">
@@ -103,4 +97,3 @@ function updateTimerDisplay() {
 
 // Load questions when the page loads
 window.onload = loadQuestions;
-});
