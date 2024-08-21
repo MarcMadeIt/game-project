@@ -40,9 +40,21 @@ header {
     width: 100%;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
 .logo span {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
+    line-height: 80%;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
 }
 
 .btn-cta {
