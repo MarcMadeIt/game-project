@@ -125,6 +125,7 @@ function initializeGame() {
     function selectAnswer(isCorrect) {
         if (isCorrect) {
             score++;
+            timeLeft = timeLeft + 5;
             if (scoreboard) {
                 scoreboard.textContent = 'Points: ' + score;
             }

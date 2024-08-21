@@ -10,21 +10,293 @@
     {
         "question": "Which planet is known as the Red Planet?",
         "choices": [
-            {"answer": "Earth", "isCorrect": false},
             {"answer": "Mars", "isCorrect": true},
+            {"answer": "Venus", "isCorrect": false},
             {"answer": "Jupiter", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the largest mammal?",
+        "question": "What is the largest ocean on Earth?",
         "choices": [
-            {"answer": "Elephant", "isCorrect": false},
-            {"answer": "Blue Whale", "isCorrect": true},
-            {"answer": "Giraffe", "isCorrect": false}
+            {"answer": "Pacific Ocean", "isCorrect": true},
+            {"answer": "Atlantic Ocean", "isCorrect": false},
+            {"answer": "Indian Ocean", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the chemical symbol for water?",
+        "question": "In which year did the Titanic sink?",
+        "choices": [
+            {"answer": "1912", "isCorrect": true},
+            {"answer": "1905", "isCorrect": false},
+            {"answer": "1920", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the powerhouse of the cell?",
+        "choices": [
+            {"answer": "Mitochondria", "isCorrect": true},
+            {"answer": "Nucleus", "isCorrect": false},
+            {"answer": "Ribosome", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "choices": [
+            {"answer": "William Shakespeare", "isCorrect": true},
+            {"answer": "Charles Dickens", "isCorrect": false},
+            {"answer": "Jane Austen", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which element has the chemical symbol 'O'?",
+        "choices": [
+            {"answer": "Oxygen", "isCorrect": true},
+            {"answer": "Gold", "isCorrect": false},
+            {"answer": "Osmium", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the hardest natural substance on Earth?",
+        "choices": [
+            {"answer": "Diamond", "isCorrect": true},
+            {"answer": "Gold", "isCorrect": false},
+            {"answer": "Iron", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "How many continents are there on Earth?",
+        "choices": [
+            {"answer": "Seven", "isCorrect": true},
+            {"answer": "Five", "isCorrect": false},
+            {"answer": "Six", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the boiling point of water at sea level?",
+        "choices": [
+            {"answer": "100°C", "isCorrect": true},
+            {"answer": "0°C", "isCorrect": false},
+            {"answer": "50°C", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Who was the first President of the United States?",
+        "choices": [
+            {"answer": "George Washington", "isCorrect": true},
+            {"answer": "Abraham Lincoln", "isCorrect": false},
+            {"answer": "Thomas Jefferson", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the largest planet in our solar system?",
+        "choices": [
+            {"answer": "Jupiter", "isCorrect": true},
+            {"answer": "Saturn", "isCorrect": false},
+            {"answer": "Earth", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country is home to the kangaroo?",
+        "choices": [
+            {"answer": "Australia", "isCorrect": true},
+            {"answer": "India", "isCorrect": false},
+            {"answer": "Brazil", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the smallest prime number?",
+        "choices": [
+            {"answer": "2", "isCorrect": true},
+            {"answer": "1", "isCorrect": false},
+            {"answer": "3", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which famous scientist developed the theory of relativity?",
+        "choices": [
+            {"answer": "Albert Einstein", "isCorrect": true},
+            {"answer": "Isaac Newton", "isCorrect": false},
+            {"answer": "Galileo Galilei", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "choices": [
+            {"answer": "Japan", "isCorrect": true},
+            {"answer": "China", "isCorrect": false},
+            {"answer": "Thailand", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the largest bone in the human body?",
+        "choices": [
+            {"answer": "Femur", "isCorrect": true},
+            {"answer": "Skull", "isCorrect": false},
+            {"answer": "Humerus", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which element is represented by the symbol 'Na'?",
+        "choices": [
+            {"answer": "Sodium", "isCorrect": true},
+            {"answer": "Neon", "isCorrect": false},
+            {"answer": "Nickel", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "choices": [
+            {"answer": "Leonardo da Vinci", "isCorrect": true},
+            {"answer": "Vincent van Gogh", "isCorrect": false},
+            {"answer": "Pablo Picasso", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which planet is closest to the Sun?",
+        "choices": [
+            {"answer": "Mercury", "isCorrect": true},
+            {"answer": "Venus", "isCorrect": false},
+            {"answer": "Earth", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the square root of 64?",
+        "choices": [
+            {"answer": "8", "isCorrect": true},
+            {"answer": "6", "isCorrect": false},
+            {"answer": "10", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the longest river in the world?",
+        "choices": [
+            {"answer": "Nile River", "isCorrect": true},
+            {"answer": "Amazon River", "isCorrect": false},
+            {"answer": "Yangtze River", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Who was the first person to walk on the moon?",
+        "choices": [
+            {"answer": "Neil Armstrong", "isCorrect": true},
+            {"answer": "Buzz Aldrin", "isCorrect": false},
+            {"answer": "Yuri Gagarin", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which gas do plants absorb from the atmosphere?",
+        "choices": [
+            {"answer": "Carbon dioxide", "isCorrect": true},
+            {"answer": "Oxygen", "isCorrect": false},
+            {"answer": "Nitrogen", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the currency of Japan?",
+        "choices": [
+            {"answer": "Yen", "isCorrect": true},
+            {"answer": "Won", "isCorrect": false},
+            {"answer": "Peso", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the main ingredient in guacamole?",
+        "choices": [
+            {"answer": "Avocado", "isCorrect": true},
+            {"answer": "Tomato", "isCorrect": false},
+            {"answer": "Onion", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which ocean lies on the east coast of the United States?",
+        "choices": [
+            {"answer": "Atlantic Ocean", "isCorrect": true},
+            {"answer": "Pacific Ocean", "isCorrect": false},
+            {"answer": "Indian Ocean", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "How many rings are on the Olympic flag?",
+        "choices": [
+            {"answer": "Five", "isCorrect": true},
+            {"answer": "Four", "isCorrect": false},
+            {"answer": "Six", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for gold?",
+        "choices": [
+            {"answer": "Au", "isCorrect": true},
+            {"answer": "Ag", "isCorrect": false},
+            {"answer": "Pb", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which continent is the Sahara Desert located on?",
+        "choices": [
+            {"answer": "Africa", "isCorrect": true},
+            {"answer": "Asia", "isCorrect": false},
+            {"answer": "Australia", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the smallest country in the world?",
+        "choices": [
+            {"answer": "Vatican City", "isCorrect": true},
+            {"answer": "Monaco", "isCorrect": false},
+            {"answer": "San Marino", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which mammal is known for laying eggs?",
+        "choices": [
+            {"answer": "Platypus", "isCorrect": true},
+            {"answer": "Kangaroo", "isCorrect": false},
+            {"answer": "Elephant", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Who invented the telephone?",
+        "choices": [
+            {"answer": "Alexander Graham Bell", "isCorrect": true},
+            {"answer": "Thomas Edison", "isCorrect": false},
+            {"answer": "Nikola Tesla", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which organ is responsible for pumping blood through the body?",
+        "choices": [
+            {"answer": "Heart", "isCorrect": true},
+            {"answer": "Liver", "isCorrect": false},
+            {"answer": "Kidney", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the main gas found in the air we breathe?",
+        "choices": [
+            {"answer": "Nitrogen", "isCorrect": true},
+            {"answer": "Oxygen", "isCorrect": false},
+            {"answer": "Carbon Dioxide", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which planet has the most moons?",
+        "choices": [
+            {"answer": "Saturn", "isCorrect": true},
+            {"answer": "Jupiter", "isCorrect": false},
+            {"answer": "Uranus", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Who is known as the 'Father of Computers'?",
+        "choices": [
+            {"answer": "Charles Babbage", "isCorrect": true},
+            {"answer": "Alan Turing", "isCorrect": false},
+            {"answer": "John von Neumann", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the chemical formula for water?",
         "choices": [
             {"answer": "H2O", "isCorrect": true},
             {"answer": "CO2", "isCorrect": false},
@@ -32,11 +304,323 @@
         ]
     },
     {
-        "question": "Who wrote 'Romeo and Juliet'?",
+        "question": "What is the capital city of Italy?",
         "choices": [
-            {"answer": "Charles Dickens", "isCorrect": false},
-            {"answer": "William Shakespeare", "isCorrect": true},
-            {"answer": "Mark Twain", "isCorrect": false}
+            {"answer": "Rome", "isCorrect": true},
+            {"answer": "Milan", "isCorrect": false},
+            {"answer": "Venice", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which element has the atomic number 1?",
+        "choices": [
+            {"answer": "Hydrogen", "isCorrect": true},
+            {"answer": "Helium", "isCorrect": false},
+            {"answer": "Lithium", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which planet is known for its rings?",
+        "choices": [
+            {"answer": "Saturn", "isCorrect": true},
+            {"answer": "Neptune", "isCorrect": false},
+            {"answer": "Uranus", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the main language spoken in Brazil?",
+        "choices": [
+            {"answer": "Portuguese", "isCorrect": true},
+            {"answer": "Spanish", "isCorrect": false},
+            {"answer": "French", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which planet is known as Earth's twin?",
+        "choices": [
+            {"answer": "Venus", "isCorrect": true},
+            {"answer": "Mars", "isCorrect": false},
+            {"answer": "Mercury", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the most common blood type in humans?",
+        "choices": [
+            {"answer": "O+", "isCorrect": true},
+            {"answer": "A+", "isCorrect": false},
+            {"answer": "B+", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Who wrote 'Pride and Prejudice'?",
+        "choices": [
+            {"answer": "Jane Austen", "isCorrect": true},
+            {"answer": "Charlotte Brontë", "isCorrect": false},
+            {"answer": "Mary Shelley", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which metal is liquid at room temperature?",
+        "choices": [
+            {"answer": "Mercury", "isCorrect": true},
+            {"answer": "Lead", "isCorrect": false},
+            {"answer": "Iron", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the main ingredient in bread?",
+        "choices": [
+            {"answer": "Flour", "isCorrect": true},
+            {"answer": "Sugar", "isCorrect": false},
+            {"answer": "Salt", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country is the largest by land area?",
+        "choices": [
+            {"answer": "Russia", "isCorrect": true},
+            {"answer": "Canada", "isCorrect": false},
+            {"answer": "China", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which bird is known for its colorful feathers and large beak?",
+        "choices": [
+            {"answer": "Toucan", "isCorrect": true},
+            {"answer": "Peacock", "isCorrect": false},
+            {"answer": "Flamingo", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which element is essential for the production of nuclear energy?",
+        "choices": [
+            {"answer": "Uranium", "isCorrect": true},
+            {"answer": "Iron", "isCorrect": false},
+            {"answer": "Copper", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the primary ingredient in chocolate?",
+        "choices": [
+            {"answer": "Cocoa", "isCorrect": true},
+            {"answer": "Sugar", "isCorrect": false},
+            {"answer": "Milk", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which city is known as the Big Apple?",
+        "choices": [
+            {"answer": "New York City", "isCorrect": true},
+            {"answer": "Los Angeles", "isCorrect": false},
+            {"answer": "Chicago", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country is known for inventing the piano?",
+        "choices": [
+            {"answer": "Italy", "isCorrect": true},
+            {"answer": "Germany", "isCorrect": false},
+            {"answer": "Austria", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which part of the brain controls balance?",
+        "choices": [
+            {"answer": "Cerebellum", "isCorrect": true},
+            {"answer": "Cerebrum", "isCorrect": false},
+            {"answer": "Brainstem", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the capital city of Canada?",
+        "choices": [
+            {"answer": "Ottawa", "isCorrect": true},
+            {"answer": "Toronto", "isCorrect": false},
+            {"answer": "Vancouver", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which animal is known as the King of the Jungle?",
+        "choices": [
+            {"answer": "Lion", "isCorrect": true},
+            {"answer": "Tiger", "isCorrect": false},
+            {"answer": "Elephant", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country hosted the first modern Olympic Games?",
+        "choices": [
+            {"answer": "Greece", "isCorrect": true},
+            {"answer": "France", "isCorrect": false},
+            {"answer": "United States", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which mineral is essential for healthy bones?",
+        "choices": [
+            {"answer": "Calcium", "isCorrect": true},
+            {"answer": "Iron", "isCorrect": false},
+            {"answer": "Magnesium", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country is famous for the Eiffel Tower?",
+        "choices": [
+            {"answer": "France", "isCorrect": true},
+            {"answer": "Italy", "isCorrect": false},
+            {"answer": "Spain", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which gas is necessary for human respiration?",
+        "choices": [
+            {"answer": "Oxygen", "isCorrect": true},
+            {"answer": "Carbon Dioxide", "isCorrect": false},
+            {"answer": "Nitrogen", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which continent is known as the birthplace of humanity?",
+        "choices": [
+            {"answer": "Africa", "isCorrect": true},
+            {"answer": "Asia", "isCorrect": false},
+            {"answer": "Europe", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which natural disaster is measured with the Richter scale?",
+        "choices": [
+            {"answer": "Earthquake", "isCorrect": true},
+            {"answer": "Tornado", "isCorrect": false},
+            {"answer": "Hurricane", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the main component of the Sun?",
+        "choices": [
+            {"answer": "Hydrogen", "isCorrect": true},
+            {"answer": "Helium", "isCorrect": false},
+            {"answer": "Carbon", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country is known for its pyramids?",
+        "choices": [
+            {"answer": "Egypt", "isCorrect": true},
+            {"answer": "Mexico", "isCorrect": false},
+            {"answer": "Peru", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which planet is known as the 'Evening Star'?",
+        "choices": [
+            {"answer": "Venus", "isCorrect": true},
+            {"answer": "Mars", "isCorrect": false},
+            {"answer": "Jupiter", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the freezing point of water in Celsius?",
+        "choices": [
+            {"answer": "0°C", "isCorrect": true},
+            {"answer": "32°C", "isCorrect": false},
+            {"answer": "-32°C", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country is known as the Land of the Midnight Sun?",
+        "choices": [
+            {"answer": "Norway", "isCorrect": true},
+            {"answer": "Sweden", "isCorrect": false},
+            {"answer": "Finland", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which artist is famous for painting the Sistine Chapel ceiling?",
+        "choices": [
+            {"answer": "Michelangelo", "isCorrect": true},
+            {"answer": "Leonardo da Vinci", "isCorrect": false},
+            {"answer": "Raphael", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which instrument is associated with Beethoven?",
+        "choices": [
+            {"answer": "Piano", "isCorrect": true},
+            {"answer": "Violin", "isCorrect": false},
+            {"answer": "Flute", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which river flows through Paris?",
+        "choices": [
+            {"answer": "Seine", "isCorrect": true},
+            {"answer": "Thames", "isCorrect": false},
+            {"answer": "Danube", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which country is known for the maple leaf?",
+        "choices": [
+            {"answer": "Canada", "isCorrect": true},
+            {"answer": "United States", "isCorrect": false},
+            {"answer": "Australia", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which planet is the smallest in the solar system?",
+        "choices": [
+            {"answer": "Mercury", "isCorrect": true},
+            {"answer": "Mars", "isCorrect": false},
+            {"answer": "Pluto", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which element is a key component of steel?",
+        "choices": [
+            {"answer": "Iron", "isCorrect": true},
+            {"answer": "Copper", "isCorrect": false},
+            {"answer": "Aluminum", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the capital city of Spain?",
+        "choices": [
+            {"answer": "Madrid", "isCorrect": true},
+            {"answer": "Barcelona", "isCorrect": false},
+            {"answer": "Seville", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which planet is known as the Blue Planet?",
+        "choices": [
+            {"answer": "Earth", "isCorrect": true},
+            {"answer": "Neptune", "isCorrect": false},
+            {"answer": "Uranus", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "What is the capital city of Germany?",
+        "choices": [
+            {"answer": "Berlin", "isCorrect": true},
+            {"answer": "Munich", "isCorrect": false},
+            {"answer": "Frankfurt", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which organ is responsible for filtering blood in the human body?",
+        "choices": [
+            {"answer": "Kidney", "isCorrect": true},
+            {"answer": "Liver", "isCorrect": false},
+            {"answer": "Heart", "isCorrect": false}
+        ]
+    },
+    {
+        "question": "Which ocean is the smallest by surface area?",
+        "choices": [
+            {"answer": "Arctic Ocean", "isCorrect": true},
+            {"answer": "Southern Ocean", "isCorrect": false},
+            {"answer": "Indian Ocean", "isCorrect": false}
         ]
     }
 ]
