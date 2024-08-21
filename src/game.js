@@ -114,11 +114,11 @@ function initializeGame() {
                     `).join('')}
                 </div>
             `;
-
+    
             // Add event listeners
             quizContainer.querySelectorAll('.option-item').forEach(button => {
                 button.addEventListener('click', function () {
-                    selectAnswer(this.dataset.isCorrect === 'true');
+                    selectAnswer(this);
                 });
             });
         } else {
@@ -126,21 +126,41 @@ function initializeGame() {
         }
     }
 
-    function selectAnswer(isCorrect) {
+    function selectAnswer(selectedButton) {
+        const isCorrect = selectedButton.dataset.isCorrect === 'true';
+        const optionButtons = document.querySelectorAll('.option-item');
+    
+        // Disable all buttons after one is clicked
+        optionButtons.forEach(button => button.disabled = true);
+    
+        // Highlight the correct and wrong answers
+        optionButtons.forEach(button => {
+            const correct = button.dataset.isCorrect === 'true';
+            if (correct) {
+                button.style.borderColor = 'green';  // Highlight correct answer
+            } else if (button === selectedButton) {
+                button.style.borderColor = 'red';  // Highlight wrong answer selected
+            } else {
+                button.style.borderColor = 'grey';  // Neutral color for other buttons
+            }
+        });
+    
         if (isCorrect) {
             score++;
             if (scoreboard) {
                 scoreboard.textContent = 'Points: ' + score;
             }
         }
-
+    
         currentQuestionIndex++;
-
-        if (currentQuestionIndex < questions.length) {
-            loadQuestion();
-        } else {
-            // End the game -- No more questions 
-        }
+    
+        setTimeout(() => {
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                // End the game -- No more questions 
+            }
+        }, 1500);  // Wait for 1.5 seconds before loading the next question
     }
 
     function startTimer() {
