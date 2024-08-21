@@ -138,7 +138,7 @@ function initializeGame() {
         if (currentQuestionIndex < questions.length) {
             loadQuestion();
         } else {
-            // End the game
+            // End the game -- No more questions 
         }
     }
 
@@ -149,6 +149,8 @@ function initializeGame() {
             timerInterval = setInterval(() => {
                 timeLeft--;
                 if (timeLeft <= 0) {
+                    timeUpModal();
+                    currentQuestionIndex++;
                     loadQuestion();
                 } else {
                     updateTimerDisplay();
@@ -174,6 +176,14 @@ function initializeGame() {
         } else {
             console.error('Element with ID "timer" not found');
         }
+    }
+
+    function timeUpModal() {
+        const modal = document.getElementById('time-up');
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 2000);
     }
 
     // Load questions when the page loads
