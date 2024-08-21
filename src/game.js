@@ -67,7 +67,7 @@ function initializeGame() {
 
     let questions = [];
     let currentQuestionIndex = 0;
-    let timeLeft = 10;
+    let timeLeft = 15;
     let timerInterval;
     let timerRunning;
 
@@ -128,7 +128,7 @@ function initializeGame() {
     function selectAnswer(isCorrect) {
         if (isCorrect) {
             score++;
-            timeLeft = timeLeft + 5;
+            timeLeft = 15;
             if (scoreboard) {
                 scoreboard.textContent = 'Points: ' + score;
             }
@@ -152,7 +152,7 @@ function initializeGame() {
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
                     loadQuestion();
-                    timeLeft = 10;
+                    timeLeft = 15;
                 } else {
                     updateTimerDisplay();
                 }
