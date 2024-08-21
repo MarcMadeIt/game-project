@@ -52,6 +52,7 @@ function initializeGame() {
     let score = 0;
     const scoreboard = document.getElementById('points');
     const timerDisplay = document.getElementById('timer');
+    const ShopDisplay = document.getElementById('shop');
 
     if (scoreboard) {
         scoreboard.textContent = 'Points: ' + score;
@@ -166,28 +167,27 @@ function initializeGame() {
         }, 1500);  // Wait for 1.5 seconds before loading the next question
     }
 
-    function startTimer() {
+    async function startTimer() {
         timerRunning = true;
         if (timerRunning) {
-            updateTimerDisplay()
-            timerInterval = setInterval(() => {
+            updateTimerDisplay();
+            timerInterval = setInterval(async () => {
                 timeLeft--;
                 if (timeLeft <= 0) {
-                    timeUpModal();
+                    clearInterval(timerInterval);
+                    await timeUpModal();           
                     currentQuestionIndex++;
-                    pauseTimer();
-                    if (!showingModal) {
-                        loadQuestion();
-                    }
+                    loadQuestion();
+                    startTimer();                  
                 } else {
                     updateTimerDisplay();
                 }
             }, 1000);
         } else {
             //Freeze the timer and do something -- Store etc.
-
         }
     }
+    
 
     function pauseTimer() {
         timerRunning = false;
@@ -205,14 +205,19 @@ function initializeGame() {
     }
 
     function timeUpModal() {
-        showingModal = true;
-        const modal = document.getElementById('time-up');
-        modal.style.display = 'flex';
-        setTimeout(() => {
-            modal.style.display = 'none';
-            showingModal = false;
-        }, 3000);
+        return new Promise((resolve) => {
+            pauseTimer();
+            showingModal = true;
+            const modal = document.getElementById('time-up');
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.style.display = 'none';
+                showingModal = false;
+                resolve();
+            }, 3000);
+        });
     }
+    
 
     // Load questions when the page loads
     loadQuestions();
