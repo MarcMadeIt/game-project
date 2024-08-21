@@ -141,17 +141,28 @@ function initializeGame() {
     }
 
     function startTimer() {
-        updateTimerDisplay();
         timerRunning = true;
-        timerInterval = setInterval(() => {
-            timeLeft--;
-            if (timeLeft <= 0) {
-                clearInterval(timerInterval);
-                // End the game
-            } else {
-                updateTimerDisplay();
-            }
-        }, 1000);
+        if(timerRunning){
+            updateTimerDisplay()
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    // End the game
+                } else {
+                    updateTimerDisplay();
+                }
+            }, 1000);
+        } else {
+            //Freeze the timer and do something -- Store etc.
+
+        }
+    }
+
+    function pauseTimer()
+    {
+        timerRunning = false;
+        timerDisplay.textContent ="PAUSED";
     }
 
     function updateTimerDisplay() {
