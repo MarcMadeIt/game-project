@@ -98,7 +98,10 @@ function initializeGame() {
     function loadQuestion() {
         const quizContainer = document.getElementById('quiz');
         const currentQuestion = questions[currentQuestionIndex];
-        startTimer();
+        if (!timerRunning) {
+            startTimer();
+        }
+
         if (quizContainer) {
             quizContainer.innerHTML = `
                 <div class="question">${currentQuestion.question}</div>
@@ -148,7 +151,8 @@ function initializeGame() {
                 timeLeft--;
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    // End the game
+                    loadQuestion();
+                    timeLeft = 10;
                 } else {
                     updateTimerDisplay();
                 }
