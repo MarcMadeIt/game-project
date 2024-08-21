@@ -55,7 +55,7 @@ function initializeGame() {
         score = 0;
         console.log("No previous score found. Starting at 0.");
     } else {
-        // If a score is found, parse it as an integer (it's stored as a string)
+        // If a score is found, parse it
         score = parseInt(score);
         console.log("Previous score found: " + score);
     }
