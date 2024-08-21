@@ -153,7 +153,7 @@ function initializeGame() {
                     timeUpModal();
                     currentQuestionIndex++;
                     pauseTimer();
-                    if (!pauseTimer){
+                    if (!showingModal){
                         loadQuestion();
                     }
                 } else {
@@ -188,7 +188,7 @@ function initializeGame() {
         modal.style.display = 'flex';
         setTimeout(() => {
             modal.style.display = 'none';
-        }, 2000);
+        }, 3000);
         showingModal = false;
     }
 
