@@ -114,7 +114,7 @@ function initializeGame() {
                     `).join('')}
                 </div>
             `;
-    
+
             // Add event listeners
             quizContainer.querySelectorAll('.option-item').forEach(button => {
                 button.addEventListener('click', function () {
@@ -129,31 +129,34 @@ function initializeGame() {
     function selectAnswer(selectedButton) {
         const isCorrect = selectedButton.dataset.isCorrect === 'true';
         const optionButtons = document.querySelectorAll('.option-item');
-    
+
         // Disable all buttons after one is clicked
         optionButtons.forEach(button => button.disabled = true);
-    
+
         // Highlight the correct and wrong answers
         optionButtons.forEach(button => {
             const correct = button.dataset.isCorrect === 'true';
             if (correct) {
-                button.style.borderColor = 'green';  // Highlight correct answer
+                button.style.border = '3px solid #71d44d';
+                button.style.color = '#171717'  // Highlight correct answer
             } else if (button === selectedButton) {
-                button.style.borderColor = 'red';  // Highlight wrong answer selected
+                button.style.border = '3px solid #DF2935';
+                button.style.color = '#171717'  // Highlight wrong answer selected
             } else {
-                button.style.borderColor = 'grey';  // Neutral color for other buttons
+                button.style.border = '3px solid #abb1bd';
+                button.style.color = '#171717'  // Neutral color for other buttons
             }
         });
-    
+
         if (isCorrect) {
             score++;
             if (scoreboard) {
                 scoreboard.textContent = 'Points: ' + score;
             }
         }
-    
+
         currentQuestionIndex++;
-    
+
         setTimeout(() => {
             if (currentQuestionIndex < questions.length) {
                 loadQuestion();
