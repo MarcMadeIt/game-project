@@ -76,18 +76,18 @@ function initializeGame() {
 
 
     shopBtn.addEventListener('click', function () {
-        // Tjek om modal er åben ved at se på dens display stil
         if (shopDisplay.style.display === 'block') {
             shopDisplay.style.display = 'none';  // Luk modal
+            startTimer();
         } else {
-            shopDisplay.style.display = 'block'; // Åbn modal
+            shopDisplay.style.display = 'block' // Åbn modal
+            pauseTimer();
         }
     });
 
-    // Tilføj event listener til klik uden for modal for at lukke den
     window.addEventListener('click', function (event) {
         if (event.target === shopDisplay) {
-            shopDisplay.style.display = 'none';  // Luk modal
+            shopDisplay.style.display = 'none';
         }
     });
 
