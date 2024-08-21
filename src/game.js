@@ -49,7 +49,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initializeGame() {
-    let score = 0;
+    let score = localStorage.getItem('score');
+    if (score === null) {
+        // If no score is found, initialize it
+        score = 0;
+        console.log("No previous score found. Starting at 0.");
+    } else {
+        // If a score is found, parse it as an integer (it's stored as a string)
+        score = parseInt(score);
+        console.log("Previous score found: " + score);
+    }
+
     const scoreboard = document.getElementById('points');
     const timerDisplay = document.getElementById('timer');
     var shopDisplay = document.getElementById('shop');
@@ -80,6 +90,7 @@ function initializeGame() {
             shopDisplay.style.display = 'none';  // Luk modal
             startTimer();
         } else {
+            updateShopButtons();
             shopDisplay.style.display = 'block' // Åbn modal
             pauseTimer();
         }
@@ -91,6 +102,46 @@ function initializeGame() {
         }
     });
 
+    function updateScore() {
+        document.getElementById("points").textContent = score;
+    }
+
+    function buyItem(itemNumber, cost) {
+        if (score >= cost) {
+            score -= cost;
+            updateScore();
+            //alert(`You purchased Item ${itemNumber} for ${cost} points!`); -- Maybe change to modal
+            updateScore(score);
+        } else {
+            //alert("You don't have enough points to buy this item."); -- Maybe change to modal 
+        }
+    }
+
+    function updateShopButtons() {
+        for (let i = 1; i <= 5; i++) {
+            let button = document.getElementById(`item${i}`);
+            let cost = parseInt(button.textContent.match(/\d+/)[0]); // Get the price from the button
+            if (score < cost) {
+                button.disabled = true; // Not enough money -- Disable button
+            } else {
+                button.disabled = false;
+            }
+        }
+    }
+
+    function buyItem(itemNumber, cost) {
+        if (score >= cost) {
+            score -= cost;
+            updateScore();
+            alert(`You purchased Item ${itemNumber} for ${cost} points!`);
+        } else {
+            alert("You don't have enough points to buy this item.");
+        }
+        updateShopButtons();
+    }
+
+    // button setup -- <button id="item1" onclick="buyItem(1, 20)">Buy Item 1 (Cost: 20)</button>
+    
     async function loadQuestions() {
         try {
             const response = await fetch('questions.json');
@@ -149,10 +200,7 @@ function initializeGame() {
         const isCorrect = selectedButton.dataset.isCorrect === 'true';
         const optionButtons = document.querySelectorAll('.option-item');
 
-        // Disable all buttons after one is clicked
         optionButtons.forEach(button => button.disabled = true);
-
-        // Highlight the correct and wrong answers
         optionButtons.forEach(button => {
             const correct = button.dataset.isCorrect === 'true';
             if (correct) {
@@ -168,7 +216,7 @@ function initializeGame() {
         });
 
         if (isCorrect) {
-            score++;
+            updateScore(20);
             if (scoreboard) {
                 scoreboard.textContent = 'Points: ' + score;
             }
@@ -199,11 +247,8 @@ function initializeGame() {
                     updateTimerDisplay();
                 }
             }, 1000);
-        } else {
-            //Freeze the timer and do something -- Store etc.
         }
     }
-
 
     function pauseTimer() {
         timerRunning = false;
@@ -236,6 +281,11 @@ function initializeGame() {
         });
     }
 
+    function updateScore(points) {
+        score += points;
+        localStorage.setItem('score', score);
+        console.log("Score updated to: " + score);
+    }
 
     // Load questions when the page loads
     loadQuestions();
