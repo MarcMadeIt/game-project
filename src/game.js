@@ -145,7 +145,7 @@ function initializeGame() {
 
     function startTimer() {
         timerRunning = true;
-        if(timerRunning){
+        if (timerRunning) {
             updateTimerDisplay()
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -153,7 +153,7 @@ function initializeGame() {
                     timeUpModal();
                     currentQuestionIndex++;
                     pauseTimer();
-                    if (!showingModal){
+                    if (!showingModal) {
                         loadQuestion();
                     }
                 } else {
@@ -166,10 +166,9 @@ function initializeGame() {
         }
     }
 
-    function pauseTimer()
-    {
+    function pauseTimer() {
         timerRunning = false;
-        timerDisplay.textContent ="PAUSED";
+        timerDisplay.textContent = "PAUSED";
     }
 
     function updateTimerDisplay() {
@@ -185,7 +184,7 @@ function initializeGame() {
     function timeUpModal() {
         showingModal = true;
         const modal = document.getElementById('time-up');
-        modal.style.display = 'flex';      
+        modal.style.display = 'flex';
         setTimeout(() => {
             modal.style.display = 'none';
             showingModal = false;

@@ -178,6 +178,10 @@ main {
     font-weight: 500;
 }
 
+.correct {
+    border: 2px solid var(--action);
+}
+
 
 .options {
     display: flex;
