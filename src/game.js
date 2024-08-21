@@ -213,6 +213,7 @@ function initializeGame() {
             setTimeout(() => {
                 modal.style.display = 'none';
                 showingModal = false;
+                timerRunning = true;
                 resolve();
             }, 3000);
         });
