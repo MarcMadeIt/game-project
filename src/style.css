@@ -146,6 +146,18 @@ header {
     gap: 2px;
 }
 
+.shop {
+    background-color: var(--secondary);
+    width: 500px;
+    height: 500px;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+}
+
 
 
 /* Main */

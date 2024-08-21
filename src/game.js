@@ -74,16 +74,22 @@ function initializeGame() {
     let timerRunning;
     let showingModal;
 
-    shopBtn.onclick = function() {
-        pauseTimer();
-        shopDisplay.style.display = "block";
-    }
 
-    window.onclick = function(event) {
-        if (event.target == ShopDisplay) {
-            ShopDisplay.style.display = "none";
+    shopBtn.addEventListener('click', function () {
+        // Tjek om modal er åben ved at se på dens display stil
+        if (shopDisplay.style.display === 'block') {
+            shopDisplay.style.display = 'none';  // Luk modal
+        } else {
+            shopDisplay.style.display = 'block'; // Åbn modal
         }
-    }
+    });
+
+    // Tilføj event listener til klik uden for modal for at lukke den
+    window.addEventListener('click', function (event) {
+        if (event.target === shopDisplay) {
+            shopDisplay.style.display = 'none';  // Luk modal
+        }
+    });
 
     async function loadQuestions() {
         try {
@@ -185,10 +191,10 @@ function initializeGame() {
                 timeLeft--;
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    await timeUpModal();           
+                    await timeUpModal();
                     currentQuestionIndex++;
                     loadQuestion();
-                    startTimer();                  
+                    startTimer();
                 } else {
                     updateTimerDisplay();
                 }
@@ -197,7 +203,7 @@ function initializeGame() {
             //Freeze the timer and do something -- Store etc.
         }
     }
-    
+
 
     function pauseTimer() {
         timerRunning = false;
@@ -229,7 +235,7 @@ function initializeGame() {
             }, 3000);
         });
     }
-    
+
 
     // Load questions when the page loads
     loadQuestions();
