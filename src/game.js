@@ -52,7 +52,8 @@ function initializeGame() {
     let score = 0;
     const scoreboard = document.getElementById('points');
     const timerDisplay = document.getElementById('timer');
-    const ShopDisplay = document.getElementById('shop');
+    var shopDisplay = document.getElementById('shop');
+    var shopBtn = document.getElementById("shop-btn");
 
     if (scoreboard) {
         scoreboard.textContent = 'Points: ' + score;
@@ -72,6 +73,17 @@ function initializeGame() {
     let timerInterval;
     let timerRunning;
     let showingModal;
+
+    shopBtn.onclick = function() {
+        pauseTimer();
+        shopDisplay.style.display = "block";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == ShopDisplay) {
+            ShopDisplay.style.display = "none";
+        }
+    }
 
     async function loadQuestions() {
         try {
@@ -189,6 +201,7 @@ function initializeGame() {
 
     function pauseTimer() {
         timerRunning = false;
+        clearInterval(timerInterval);
         timerDisplay.textContent = "PAUSED";
     }
 
