@@ -185,11 +185,11 @@ function initializeGame() {
     function timeUpModal() {
         showingModal = true;
         const modal = document.getElementById('time-up');
-        modal.style.display = 'flex';
+        modal.style.display = 'flex';      
         setTimeout(() => {
             modal.style.display = 'none';
+            showingModal = false;
         }, 3000);
-        showingModal = false;
     }
 
     // Load questions when the page loads
