@@ -98,10 +98,10 @@ function initializeGame() {
     function loadQuestion() {
         const quizContainer = document.getElementById('quiz');
         const currentQuestion = questions[currentQuestionIndex];
+        timeLeft = 15;
         if (!timerRunning) {
             startTimer();
         }
-
         if (quizContainer) {
             quizContainer.innerHTML = `
                 <div class="question">${currentQuestion.question}</div>
@@ -128,7 +128,6 @@ function initializeGame() {
     function selectAnswer(isCorrect) {
         if (isCorrect) {
             score++;
-            timeLeft = 15;
             if (scoreboard) {
                 scoreboard.textContent = 'Points: ' + score;
             }
@@ -150,9 +149,7 @@ function initializeGame() {
             timerInterval = setInterval(() => {
                 timeLeft--;
                 if (timeLeft <= 0) {
-                    clearInterval(timerInterval);
                     loadQuestion();
-                    timeLeft = 15;
                 } else {
                     updateTimerDisplay();
                 }
