@@ -70,6 +70,7 @@ function initializeGame() {
     let timeLeft = 15;
     let timerInterval;
     let timerRunning;
+    let showingModal;
 
     async function loadQuestions() {
         try {
@@ -151,7 +152,10 @@ function initializeGame() {
                 if (timeLeft <= 0) {
                     timeUpModal();
                     currentQuestionIndex++;
-                    loadQuestion();
+                    pauseTimer();
+                    if (!pauseTimer){
+                        loadQuestion();
+                    }
                 } else {
                     updateTimerDisplay();
                 }
@@ -179,11 +183,13 @@ function initializeGame() {
     }
 
     function timeUpModal() {
+        showingModal = true;
         const modal = document.getElementById('time-up');
         modal.style.display = 'flex';
         setTimeout(() => {
             modal.style.display = 'none';
         }, 2000);
+        showingModal = false;
     }
 
     // Load questions when the page loads
