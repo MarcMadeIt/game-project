@@ -100,6 +100,7 @@ function initializeGame() {
     function loadQuestion() {
         const quizContainer = document.getElementById('quiz');
         const currentQuestion = questions[currentQuestionIndex];
+        timeLeft = 15;
         if (!timerRunning) {
             startTimer();
         }
@@ -154,12 +155,9 @@ function initializeGame() {
                 scoreboard.textContent = 'Points: ' + score;
             }
         }
-
         currentQuestionIndex++;
-
         setTimeout(() => {
             if (currentQuestionIndex < questions.length) {
-                timeLeft = 15;
                 loadQuestion();
             } else {
                 // End the game -- No more questions 
