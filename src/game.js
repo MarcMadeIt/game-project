@@ -84,17 +84,18 @@ function initializeGame() {
     let timerRunning;
     let showingModal;
 
-    function buyItem(itemNumber, cost) {
-        if (score >= cost) {
-            score -= cost;
-            updateScore();
-            //alert(`You purchased Item ${itemNumber} for ${cost} points!`); -- Maybe change to modal
-            updateScore(score);
-        } else {
-            //alert("You don't have enough points to buy this item."); -- Maybe change to modal 
-        }
-        updateShopButtons();
+function buyItem(itemNumber, cost) {
+    if (score >= cost) {
+        score -= cost;
+        updateScore();
+        alert(`You purchased Item ${itemNumber} for ${cost} points!`); 
+        updateScore(score);
+    } else {
+        alert("You don't have enough points to buy this item.");
     }
+    updateShopButtons();
+}
+
     function updateShopButtons() {
         for (let i = 1; i <= 5; i++) {
             let button = document.getElementById(`item${i}`);
@@ -106,7 +107,6 @@ function initializeGame() {
             }
         }
     }
-    // button setup -- <button id="item1" onclick="buyItem(1, 20)">Buy Item 1 (Cost: 20)</button>
 
     function updateScore() {
         document.getElementById("points").textContent = score;
@@ -269,4 +269,6 @@ function initializeGame() {
 
     // Load questions when the page loads
     loadQuestions();
+
+    
 }
