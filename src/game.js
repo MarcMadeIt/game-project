@@ -151,8 +151,8 @@ function initializeGame() {
         const quizContainer = document.getElementById('quiz');
         const currentQuestion = questions[currentQuestionIndex];
         timeLeft = 15;
-        timerRunning = true;
         if (!timerRunning) {
+            timerRunning = true;
             startTimer();
         }
         if (quizContainer) {
