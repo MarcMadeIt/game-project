@@ -66,7 +66,7 @@ function initializeGame() {
     var shopBtn = document.getElementById("shop-btn");
 
     if (scoreboard) {
-        scoreboard.textContent = 'Points: ' + score;
+        scoreboard.textContent = score;
     } else {
         console.error('Element with ID "points" not found');
     }
