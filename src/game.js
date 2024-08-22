@@ -91,8 +91,8 @@ function initializeGame() {
             timerRunning = true;
         } else {
             shopDisplay.style.display = 'block' // Åbn modal
-            updateShopButtons();
             pauseTimer();
+            updateShopButtons();
         }
     });
 
