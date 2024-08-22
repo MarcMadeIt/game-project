@@ -69,7 +69,19 @@ header {
 .btn-cta {
     padding: 10px 15px;
     background-color: var(--action);
+    border: none;
+    outline: none;
+    border-radius: 7px;
 }
+
+.btn-light {
+    padding: 10px 15px;
+    background-color: var(--primary);
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+
 
 
 
@@ -154,13 +166,14 @@ header {
     display: flex;
     align-items: center;
     gap: 2px;
+    cursor: pointer;
 }
 
 .shop {
     background-color: var(--bg);
-    border: 3px solid var(--text);
+    box-shadow: var(--secondary) 0px 0px 5px 1px;
     border-radius: 7px;
-    height: 50vh;
+    height: 70vh;
     width: 80%;
     z-index: 10;
     top: 50%;
@@ -172,15 +185,32 @@ header {
 
 .shop-content {
     display: flex;
-
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 
 }
 
 .shop-item {
-    width: 100px;
-    height: 100px;
-    background-color: #318ce7;
+    width: 200px;
+    height: 200px;
+    box-shadow: var(--secondary) 0px 0px 5px 1px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
 }
+
+.shop-item img {
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 
 
