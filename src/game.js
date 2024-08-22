@@ -90,8 +90,8 @@ function initializeGame() {
             shopDisplay.style.display = 'none';  // Luk modal
             startTimer();
         } else {
-            updateShopButtons();
             shopDisplay.style.display = 'block' // Åbn modal
+            updateShopButtons();
             pauseTimer();
         }
     });
@@ -115,6 +115,7 @@ function initializeGame() {
         } else {
             //alert("You don't have enough points to buy this item."); -- Maybe change to modal 
         }
+        updateShopButtons();
     }
 
     function updateShopButtons() {
@@ -127,17 +128,6 @@ function initializeGame() {
                 button.disabled = false;
             }
         }
-    }
-
-    function buyItem(itemNumber, cost) {
-        if (score >= cost) {
-            score -= cost;
-            updateScore();
-            alert(`You purchased Item ${itemNumber} for ${cost} points!`);
-        } else {
-            alert("You don't have enough points to buy this item.");
-        }
-        updateShopButtons();
     }
 
     // button setup -- <button id="item1" onclick="buyItem(1, 20)">Buy Item 1 (Cost: 20)</button>
