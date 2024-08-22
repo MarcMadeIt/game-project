@@ -69,9 +69,15 @@ header {
 .btn-cta {
     padding: 10px 15px;
     background-color: var(--action);
+
     border: none;
     outline: none;
     border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    box-shadow: var(--action) 0px 0px 5px;
 }
 
 .btn-light {
@@ -80,6 +86,11 @@ header {
     border: none;
     outline: none;
     border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn-light:hover {
+    box-shadow: var(--secondary) 0px 0px 4px;
 }
 
 
