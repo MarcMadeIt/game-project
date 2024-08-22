@@ -84,22 +84,6 @@ function initializeGame() {
     let timerRunning;
     let showingModal;
 
-
-    shopBtn.addEventListener('click', function () {
-        if (shopDisplay.style.display === 'block') {
-            shopDisplay.style.display = 'none';  // Luk modal
-            timerRunning = true;
-        } else {
-            shopDisplay.style.display = 'block' // Åbn modal
-            pauseTimer();
-            updateShopButtons();
-        }
-    });
-
-    function updateScore() {
-        document.getElementById("points").textContent = score;
-    }
-
     function buyItem(itemNumber, cost) {
         if (score >= cost) {
             score -= cost;
@@ -111,7 +95,6 @@ function initializeGame() {
         }
         updateShopButtons();
     }
-
     function updateShopButtons() {
         for (let i = 1; i <= 5; i++) {
             let button = document.getElementById(`item${i}`);
@@ -123,8 +106,22 @@ function initializeGame() {
             }
         }
     }
+        // button setup -- <button id="item1" onclick="buyItem(1, 20)">Buy Item 1 (Cost: 20)</button>
 
-    // button setup -- <button id="item1" onclick="buyItem(1, 20)">Buy Item 1 (Cost: 20)</button>
+        function updateScore() {
+            document.getElementById("points").textContent = score;
+        }
+
+    shopBtn.addEventListener('click', function () {
+        if (shopDisplay.style.display === 'block') {
+            shopDisplay.style.display = 'none';  // Luk modal
+            timerRunning = true;
+        } else {
+            shopDisplay.style.display = 'block' // Åbn modal
+            pauseTimer();
+            updateShopButtons();
+        }
+    });
     
     async function loadQuestions() {
         try {
@@ -216,7 +213,6 @@ function initializeGame() {
     }
 
     async function startTimer() {
-        timerRunning = true;
         if (timerRunning) {
             updateTimerDisplay();
             timerInterval = setInterval(async () => {
