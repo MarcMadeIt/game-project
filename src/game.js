@@ -72,7 +72,7 @@ function initializeGame() {
     }
 
     if (timerDisplay) {
-        timerDisplay.textContent = '00:10';
+        timerDisplay.textContent = '00:15';
     } else {
         console.error('Element with ID "timer" not found');
     }
@@ -106,11 +106,11 @@ function initializeGame() {
             }
         }
     }
-        // button setup -- <button id="item1" onclick="buyItem(1, 20)">Buy Item 1 (Cost: 20)</button>
+    // button setup -- <button id="item1" onclick="buyItem(1, 20)">Buy Item 1 (Cost: 20)</button>
 
-        function updateScore() {
-            document.getElementById("points").textContent = score;
-        }
+    function updateScore() {
+        document.getElementById("points").textContent = score;
+    }
 
     shopBtn.addEventListener('click', function () {
         if (shopDisplay.style.display === 'block') {
@@ -122,7 +122,7 @@ function initializeGame() {
             updateShopButtons();
         }
     });
-    
+
     async function loadQuestions() {
         try {
             const response = await fetch('questions.json');

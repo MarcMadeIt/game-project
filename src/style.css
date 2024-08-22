@@ -151,6 +151,8 @@ header {
 
 .points {
     font-weight: 500;
+    display: flex;
+    align-items: center;
 }
 
 .timer {
@@ -222,6 +224,10 @@ header {
     object-fit: cover;
 }
 
+.shop-item p {
+    font-size: 12px;
+    font-weight: 800;
+}
 
 
 
