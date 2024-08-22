@@ -88,17 +88,11 @@ function initializeGame() {
     shopBtn.addEventListener('click', function () {
         if (shopDisplay.style.display === 'block') {
             shopDisplay.style.display = 'none';  // Luk modal
-            startTimer();
+            timerRunning = true;
         } else {
             shopDisplay.style.display = 'block' // Åbn modal
             updateShopButtons();
             pauseTimer();
-        }
-    });
-
-    window.addEventListener('click', function (event) {
-        if (event.target === shopDisplay) {
-            shopDisplay.style.display = 'none';
         }
     });
 
@@ -242,7 +236,6 @@ function initializeGame() {
 
     function pauseTimer() {
         timerRunning = false;
-        clearInterval(timerInterval);
         timerDisplay.textContent = "PAUSED";
     }
 
