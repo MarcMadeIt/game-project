@@ -32,6 +32,12 @@ button {
     color: #171717;
 }
 
+input {
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
 
 body {
     overflow-y: hidden;
@@ -42,6 +48,8 @@ body {
     --text: #171717;
     --action: #71d44d;
     --alert: #DF2935;
+
+    --shadow: var(--secondary) 0px 0px 5px 1px;
 
 
     background-color: var(--bg);
@@ -119,7 +127,8 @@ header {
 
 
 
-/* Homepage */
+
+/* Homepage ----------------------------- */
 
 .intro {
     display: flex;
@@ -137,6 +146,43 @@ header {
     flex-direction: column;
     gap: 15px;
 }
+
+
+/* CREATE NAME */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.create-name {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.create-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
 
 
 /* GAME SECTION ------------------------ */
@@ -212,7 +258,7 @@ header {
 
 .shop {
     background-color: var(--bg);
-    box-shadow: var(--secondary) 0px 0px 5px 1px;
+    box-shadow: var(--shadow);
     border-radius: 7px;
     height: 70vh;
     width: 80%;
@@ -237,7 +283,7 @@ header {
 .shop-item {
     width: 200px;
     height: 200px;
-    box-shadow: var(--secondary) 0px 0px 5px 1px;
+    box-shadow: var(--shadow);
     border-radius: 7px;
     display: flex;
     flex-direction: column;
