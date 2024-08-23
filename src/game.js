@@ -103,24 +103,16 @@ function initializeGame() {
         }
     }
 
-    document.getElementById('item1').addEventListener('click', function() {
-        buyItem(1, 20);
-    });
-    document.getElementById('item2').addEventListener('click', function() {
-        buyItem(2, 20);
-    });
-    document.getElementById('item3').addEventListener('click', function() {
-        buyItem(3, 20);
-    });
-    document.getElementById('item4').addEventListener('click', function() {
-        buyItem(4, 20);
-    });
-    document.getElementById('item5').addEventListener('click', function() {
-        buyItem(5, 20);
-    });
-    document.getElementById('item6').addEventListener('click', function() {
-        buyItem(6, 20);
-    });
+    function setupEventListeners() {
+        for (let i = 1; i <= 6; i++) {
+            let button = document.getElementById(`item${i}`);
+            if (button) {
+                button.addEventListener('click', () => buyItem(i, parseInt(button.getAttribute('data-cost'), 10)));
+            } else {
+                console.error(`Button with id item${i} not found`);
+            }
+        }
+    }
 
     function buyItem(itemNumber, cost) {
         console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
@@ -138,6 +130,7 @@ function initializeGame() {
     window.onload = function() {
         updateScore(0);
         updateShopButtons();
+        setupEventListeners();
     }
 
     shopBtn.addEventListener('click', function () {
