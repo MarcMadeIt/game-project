@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+    font-family: 'Skyscapers';
+    src: url('//2ttf.com/webfont/6IF8GLA3aiM/webfont.ttf') format('truetype');
+}
+
 
 * {
     padding: 0;
@@ -19,6 +24,12 @@ html {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+button {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: #171717;
 }
 
 
@@ -53,12 +64,14 @@ header {
     display: flex;
     align-items: center;
     gap: 3px;
+    padding-top: 25px;
 }
 
 .logo span {
     font-size: 25px;
     font-weight: 600;
     line-height: 80%;
+    font-family: 'Skyscapers';
 }
 
 .logo img {
@@ -67,9 +80,9 @@ header {
 }
 
 .btn-cta {
-    padding: 10px 15px;
+    padding: 7px 21px;
     background-color: var(--action);
-
+    font-size: 25px;
     border: none;
     outline: none;
     border-radius: 7px;
@@ -81,7 +94,7 @@ header {
 }
 
 .btn-light {
-    padding: 10px 15px;
+    padding: 5px 15px;
     background-color: var(--primary);
     border: none;
     outline: none;
@@ -92,9 +105,6 @@ header {
 .btn-light:hover {
     box-shadow: var(--secondary) 0px 0px 4px;
 }
-
-
-
 
 
 
@@ -127,14 +137,13 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 25px;
+    gap: 50px;
 }
 
 .close-game {
     position: absolute;
-    left: 30px;
-    top: 30px;
+    left: 25px;
+    top: 25px;
 }
 
 .close-game a {
@@ -146,26 +155,34 @@ header {
 .table {
     display: flex;
     gap: 50px;
-    width: 200px;
+    width: 100%;
+    background-color: var(--text);
+    color: var(--bg);
+    padding: 7px 14px;
+    border-radius: 7px;
 }
 
 .points {
     font-weight: 500;
     display: flex;
     align-items: center;
+    font-size: 20px;
 }
 
 .timer {
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 2px;
     font-weight: 500;
+    width: 80px;
+    font-size: 20px;
 }
 
 .shop-area {
     position: absolute;
-    right: 30px;
-    top: 30px;
+    right: 25px;
+    top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,12 +251,13 @@ header {
 /* Main */
 
 main {
-    height: 70vh;
+    height: 60%;
 }
 
 .main-content {
     height: 100%;
     position: relative;
+    margin-top: 50px;
 
 }
 
@@ -275,6 +293,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .5px;
 }
 
 .question span {
@@ -295,11 +317,11 @@ main {
 
 }
 
-.options button {
-    font-size: 25px;
+.option-item {
+    font-size: 20px;
     outline: none;
     border: 3px solid #171717;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 7px;
 }
 
@@ -329,16 +351,14 @@ main {
 }
 
 @media screen and (max-width: 600px) {
-
-    .exit-btn {
-        display: none;
+    .option-item {
+        font-size: 16px;
+        padding: 3px 9px;
     }
 
-    .table {
-        flex-direction: column;
-        align-items: center;
-        right: 5px;
-        gap: 5px;
+    .options {
+        gap: 15px;
+        padding: 10px;
     }
 
 }
