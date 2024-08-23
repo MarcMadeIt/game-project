@@ -122,10 +122,6 @@ function initializeGame() {
         buyItem(6, 20);
     });
 
-    initializeGame().then(() => {
-        buyItem();
-    });
-
     function buyItem(itemNumber, cost) {
         console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
         
