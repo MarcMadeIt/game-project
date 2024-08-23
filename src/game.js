@@ -254,8 +254,7 @@ function buyItem(itemNumber, cost) {
     }
 
     function updateScore(points) {
-        score += points;
-        retrivedPlayerData.score += score;
+        retrivedPlayerData.score += points;
         localStorage.setItem('playerData', JSON.stringify(retrivedPlayerData));
         console.log("Score updated to: " + score);
     }
