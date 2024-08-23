@@ -192,7 +192,7 @@ function buyItem(itemNumber, cost) {
         if (isCorrect) {
             updateScore(20);
             if (scoreboard) {
-                scoreboard.textContent = 'Points: ' + score;
+                scoreboard.textContent = 'Points: ' + retrivedPlayerData.score;
             }
         }
         currentQuestionIndex++;
