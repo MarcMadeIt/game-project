@@ -122,7 +122,6 @@ function buyItem(itemNumber, cost) {
     function closeShopModal() {
         shopDisplay.style.display = 'none';  // Close modal
         timerRunning = true;
-        startTimer();
     }
 
     async function loadQuestions() {
@@ -218,19 +217,20 @@ function buyItem(itemNumber, cost) {
         }, 1500);  // Wait for 1.5 seconds before loading the next question
     }
 
-    async function startTimer() {
+    function startTimer() {
         if (timerRunning) {
             updateTimerDisplay();
-            timerInterval = setInterval(async () => {
-                timeLeft--;
+            const endTime = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes from now
+            timerInterval = setInterval(() => {
+                const timeLeft = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    await timeUpModal();
+                    timeUpModal();
                     currentQuestionIndex++;
                     loadQuestion();
                     startTimer();
                 } else {
-                    updateTimerDisplay();
+                    updateTimerDisplay(timeLeft);
                 }
             }, 1000);
         }
@@ -241,7 +241,7 @@ function buyItem(itemNumber, cost) {
         timerDisplay.textContent = "PAUSED";
     }
 
-    function updateTimerDisplay() {
+    function updateTimerDisplay(timeLeft) {
         const minutes = Math.floor(timeLeft / 60);
         const seconds = timeLeft % 60;
         if (timerDisplay) {
@@ -249,7 +249,7 @@ function buyItem(itemNumber, cost) {
         } else {
             console.error('Element with ID "timer" not found');
         }
-    }
+}
 
     function timeUpModal() {
         return new Promise((resolve) => {
