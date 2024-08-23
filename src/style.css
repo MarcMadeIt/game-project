@@ -308,7 +308,6 @@ main {
     background-color: var(--bg);
     box-shadow: var(--shadow);
     position: fixed;
-    width: 90%;
     top: 200px;
     padding: 30px;
     z-index: 20;
@@ -321,12 +320,16 @@ main {
 
 .shop-content {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 30px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100%;
+}
 
+.shop-cont-group {
+    display: flex;
+    gap: 30px;
 }
 
 .shop-item {
