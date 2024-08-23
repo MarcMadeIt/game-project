@@ -31,3 +31,14 @@ submitBtn.addEventListener('click', () => {
         alert('Please enter a string');
     }
 });
+
+window.onload = function() {
+    const previousGame = document.getElementById('prev-game');
+    const playerData = JSON.parse(localStorage.getItem('playerData'));
+
+    if (playerData) {
+        previousGame.textContent = `${playerData.name} / ${playerData.score}`;
+    } else {
+        previousGame.textContent = 'No game found. Create a new one!';
+    }
+};
