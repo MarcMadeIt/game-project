@@ -76,6 +76,7 @@ function initializeGame() {
     let timerInterval;
     let timerRunning;
     let showingModal;
+    
 
 function buyItem(itemNumber, cost) {
     if (score >= cost) {
@@ -112,16 +113,16 @@ function buyItem(itemNumber, cost) {
             openShopModal();
         }
     });
-
+    
     function openShopModal() {
         shopDisplay.style.display = 'block';  // Open modal
         pauseTimer();
         updateShopButtons();
     }
-
+    
     function closeShopModal() {
         shopDisplay.style.display = 'none';  // Close modal
-        timerRunning = true;
+        startTimer(); 
     }
 
     async function loadQuestions() {
@@ -218,12 +219,14 @@ function buyItem(itemNumber, cost) {
     }
 
     async function startTimer() {
-        if (timerRunning) {
+        if (!timerRunning) {
+            timerRunning = true;
             updateTimerDisplay();
             timerInterval = setInterval(async () => {
                 timeLeft--;
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
+                    timerRunning = false;
                     await timeUpModal();
                     currentQuestionIndex++;
                     loadQuestion();
@@ -236,8 +239,10 @@ function buyItem(itemNumber, cost) {
     }
 
     function pauseTimer() {
-        timerRunning = false;
+        clearInterval(timerInterval);
+        timerRunning = false; 
         timerDisplay.textContent = "PAUSED";
+
     }
 
     function updateTimerDisplay() {
