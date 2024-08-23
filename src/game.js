@@ -41,6 +41,25 @@ document.addEventListener('DOMContentLoaded', function () {
         ]);
     }
 
+    document.getElementById('item1').addEventListener('click', function() {
+        buyItem(1, 20);
+    });
+    document.getElementById('item2').addEventListener('click', function() {
+        buyItem(2, 20);
+    });
+    document.getElementById('item3').addEventListener('click', function() {
+        buyItem(3, 20);
+    });
+    document.getElementById('item4').addEventListener('click', function() {
+        buyItem(4, 20);
+    });
+    document.getElementById('item5').addEventListener('click', function() {
+        buyItem(5, 20);
+    });
+    document.getElementById('item6').addEventListener('click', function() {
+        buyItem(6, 20);
+    });
+    
     // Call the function and then initialize game logic
     includeHTML().then(() => {
         // Initialize game logic only after HTML is inserted
@@ -102,25 +121,6 @@ function initializeGame() {
             }
         }
     }
-
-    document.getElementById('item1').addEventListener('click', function() {
-        buyItem(1, 20);
-    });
-    document.getElementById('item2').addEventListener('click', function() {
-        buyItem(2, 20);
-    });
-    document.getElementById('item3').addEventListener('click', function() {
-        buyItem(3, 20);
-    });
-    document.getElementById('item4').addEventListener('click', function() {
-        buyItem(4, 20);
-    });
-    document.getElementById('item5').addEventListener('click', function() {
-        buyItem(5, 20);
-    });
-    document.getElementById('item6').addEventListener('click', function() {
-        buyItem(6, 20);
-    });
 
     function buyItem(itemNumber, cost) {
         console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
