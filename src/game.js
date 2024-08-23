@@ -307,6 +307,9 @@ function initializeGame() {
 
     function updateScore(points) {
         retrivedPlayerData.score += points;
+        if (retrivedPlayerData.score < 0) {
+            retrivedPlayerData.score = 0;
+        }
         localStorage.setItem('playerData', JSON.stringify(retrivedPlayerData));
         console.log("Score updated to: " + retrivedPlayerData.score);
     }
