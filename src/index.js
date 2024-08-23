@@ -38,10 +38,14 @@ window.onload = function() {
     const previousGameScore = document.getElementById('prev-score');
     const playerData = JSON.parse(localStorage.getItem('playerData'));
 
-    if (playerData) {
-        previousGameName.textContent = `${playerData.name}`;
-        previousGameScore.textContent = `${playerData.score}`;
+    if (previousGameName && previousGameScore) {
+        if (playerData) {
+            previousGameName.textContent = `${playerData.name}`;
+            previousGameScore.textContent = `${playerData.score}`;
+        } else {
+            contiuneBtn.style.display = 'none';
+        }
     } else {
-        contiuneBtn.style.display = 'none';
+        console.error("The elements 'prev-game' or 'prev-score' were not found in the DOM.");
     }
 };
