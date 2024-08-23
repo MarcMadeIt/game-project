@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div class="overlay" id="overlay"></div>
     <header>
         <div class="logo">
             <img src="../assets/img/racoon icon.png" alt="">
@@ -24,11 +25,16 @@
                     dolore
                     debitis sunt est consequuntur dicta.</p>
             </div>
-            <a href="/game/" id="reset-btn" class="btn-cta">Start new</a>
+            <a id="create-game" class="btn-cta">New Game</a>
             <a href="/game/" class="btn-black">Continue</a>
         </div>
-    </main>
+        <div class="create-name" id="create-name">
+            <span class="create-title">Enter your name</span>
+            <input type="text" id="input-name" placeholder="Name">
+            <a href="/game/" class="btn-black" id="reset-btn">Start Game</a>
+        </div>
 
+    </main>
 </body>
 <script src="./src/index.js"></script>
 
