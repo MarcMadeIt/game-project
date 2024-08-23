@@ -136,7 +136,7 @@ function initializeGame() {
     }
 
     window.onload = function() {
-        updateScore();
+        updateScore(0);
         updateShopButtons();
     }
 
