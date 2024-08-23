@@ -125,9 +125,9 @@ function initializeGame() {
     function buyItem(itemNumber, cost) {
         console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
         
-        if (score >= cost) {
-            score -= cost;
-            updateScore();
+        if (retrivedPlayerData.score >= cost) {
+            retrivedPlayerData.score -= cost;
+            updateScore(0);
             alert(`You purchased Item ${itemNumber} for ${cost} points!`);
         } else {
             alert("You don't have enough points to buy this item.");
@@ -308,7 +308,7 @@ function initializeGame() {
     function updateScore(points) {
         retrivedPlayerData.score += points;
         localStorage.setItem('playerData', JSON.stringify(retrivedPlayerData));
-        console.log("Score updated to: " + score);
+        console.log("Score updated to: " + retrivedPlayerData.score);
     }
 
     // Load questions when the page loads
