@@ -90,17 +90,30 @@ function buyItem(itemNumber, cost) {
     updateShopButtons();
 }
 
-    function updateShopButtons() {
-        for (let i = 1; i <= 5; i++) {
-            let button = document.getElementById(`item${i}`);
-            let cost = parseInt(button.textContent.match(/\d+/)[0]); // Get the price from the button
-            if (score < cost) {
-                button.disabled = true; // Not enough money -- Disable button
+function updateShopButtons() {
+    for (let i = 1; i <= 5; i++) {
+        let button = document.getElementById(`item${i}`);
+        
+        if (button) { // Ensure the button exists
+            let match = button.textContent.match(/\d+/);
+            
+            if (match) { // Ensure a number was found
+                let cost = parseInt(match[0]);
+                
+                if (score < cost) {
+                    button.disabled = true; // Not enough money -- Disable button
+                } else {
+                    button.disabled = false; // Enable button
+                }
             } else {
-                button.disabled = false;
+                console.error(`No number found in button text for item${i}`);
             }
+        } else {
+            console.error(`Button with id item${i} not found`);
         }
     }
+}
+
 
     function updateScore() {
         document.getElementById("points").textContent = score;
