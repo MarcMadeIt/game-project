@@ -104,6 +104,8 @@ function initializeGame() {
     }
 
     function buyItem(itemNumber, cost) {
+        console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
+        
         if (score >= cost) {
             score -= cost;
             updateScore();
