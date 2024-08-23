@@ -96,6 +96,7 @@ header {
 .btn-light {
     padding: 5px 15px;
     background-color: var(--primary);
+    color: var(--bg);
     border: none;
     outline: none;
     border-radius: 7px;
@@ -104,6 +105,16 @@ header {
 
 .btn-light:hover {
     box-shadow: var(--secondary) 0px 0px 4px;
+}
+
+.btn-black {
+    padding: 5px 15px;
+    background-color: var(--text);
+    color: var(--bg);
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
 }
 
 
