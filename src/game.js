@@ -77,17 +77,8 @@ function initializeGame() {
     let timerRunning;
     let showingModal;
 
-
-    function buyItem(itemNumber, cost) {
-        if (score >= cost) {
-            score -= cost;
-            updateScore();
-            alert(`You purchased Item ${itemNumber} for ${cost} points!`);
-            updateScore(score);
-        } else {
-            alert("You don't have enough points to buy this item.");
-        }
-        updateShopButtons();
+    function updateScore() {
+        document.getElementById("points").textContent = score;
     }
 
     function updateShopButtons() {
@@ -112,10 +103,20 @@ function initializeGame() {
         }
     }
 
+    function buyItem(itemNumber, cost) {
+        if (score >= cost) {
+            score -= cost;
+            updateScore();
+            alert(`You purchased Item ${itemNumber} for ${cost} points!`);
+        } else {
+            alert("You don't have enough points to buy this item.");
+        }
+        updateShopButtons();
+    }
 
-
-    function updateScore() {
-        document.getElementById("points").textContent = score;
+    window.onload = function() {
+        updateScore();
+        updateShopButtons();
     }
 
     shopBtn.addEventListener('click', function () {
