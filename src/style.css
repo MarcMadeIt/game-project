@@ -51,6 +51,8 @@ body {
 
     --shadow: var(--secondary) 0px 0px 5px 1px;
 
+    --primary-active: #2873bf;
+
 
     background-color: var(--bg);
     color: var(--text);
@@ -126,6 +128,10 @@ main {
     box-shadow: var(--secondary) 0px 0px 4px;
 }
 
+.btn-light:active {
+    background-color: var(--primary-active);
+}
+
 .btn-black {
     padding: 5px 15px;
     background-color: var(--text);
@@ -135,6 +141,8 @@ main {
     border-radius: 7px;
     cursor: pointer;
 }
+
+
 
 
 
