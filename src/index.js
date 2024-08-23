@@ -34,13 +34,14 @@ submitBtn.addEventListener('click', () => {
 });
 
 window.onload = function() {
-    const previousGame = document.getElementById('prev-game');
+    const previousGameName = document.getElementById('prev-game');
+    const previousGameScore = document.getElementById('prev-score');
     const playerData = JSON.parse(localStorage.getItem('playerData'));
 
     if (playerData) {
-    previousGame.innerHTML = `${playerData.name} <iconify-icon icon="material-symbols:family-star" width="20" height="20" style="color: gold"></iconify-icon> ${playerData.score}`;
-    } 
-    else {
+        previousGameName.textContent = `${playerData.name}`;
+        previousGameScore.textContent = `${playerData.score}`;
+    } else {
         contiuneBtn.style.display = 'none';
     }
 };
