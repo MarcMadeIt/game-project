@@ -56,6 +56,8 @@ function initializeGame() {
     const timerDisplay = document.getElementById('timer');
     var shopDisplay = document.getElementById('shop');
     var shopBtn = document.getElementById("shop-btn");
+    const optionButtons = document.querySelectorAll('.option-item');
+
 
     if (scoreboard) {
         scoreboard.textContent = score;
@@ -172,7 +174,7 @@ function buyItem(itemNumber, cost) {
 
     function selectAnswer(selectedButton) {
         const isCorrect = selectedButton.dataset.isCorrect === 'true';
-        const optionButtons = document.querySelectorAll('.option-item');
+        optionButtons = document.querySelectorAll('.option-item');
 
         optionButtons.forEach(button => button.disabled = true);
         optionButtons.forEach(button => {
@@ -241,6 +243,7 @@ function buyItem(itemNumber, cost) {
     function timeUpModal() {
         return new Promise((resolve) => {
             pauseTimer();
+            optionButtons.forEach(button => button.disabled = true);
             showingModal = true;
             const modal = document.getElementById('time-up');
             modal.style.display = 'flex';
