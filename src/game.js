@@ -174,7 +174,7 @@ function buyItem(itemNumber, cost) {
 
     function selectAnswer(selectedButton) {
         const isCorrect = selectedButton.dataset.isCorrect === 'true';
-        optionButtons = document.querySelectorAll('.option-item');
+        const optionButtons = document.querySelectorAll('.option-item');
 
         optionButtons.forEach(button => button.disabled = true);
         optionButtons.forEach(button => {
