@@ -59,17 +59,23 @@ body {
 }
 
 .home {
-    background-image: url(/assets/img/jungle2.jpg);
+    /* background-image: url(/assets/img/jungle2.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+
 
 header {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    z-index: 3;
+}
+
+main {
+    z-index: 3;
 }
 
 
@@ -186,6 +192,20 @@ header {
 .create-title {
     font-size: 20px;
     font-weight: 700;
+}
+
+.prev-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.prev-game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 13px;
 }
 
 .close-btn {
