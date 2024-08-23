@@ -184,6 +184,8 @@ function buyItem(itemNumber, cost) {
             } else if (button === selectedButton) {
                 button.style.border = '3px solid #DF2935';
                 button.style.color = '#171717'  // Highlight wrong answer selected
+                updateScore(-20);
+                scoreboard.textContent = retrivedPlayerData.score;
             } else {
                 button.style.border = '3px solid #abb1bd';
                 button.style.color = '#171717'  // Neutral color for other buttons
@@ -247,6 +249,8 @@ function buyItem(itemNumber, cost) {
             showingModal = true;
             const modal = document.getElementById('time-up');
             modal.style.display = 'flex';
+            updateScore(-20);
+            scoreboard.textContent = retrivedPlayerData.score;
             setTimeout(() => {
                 modal.style.display = 'none';
                 showingModal = false;
