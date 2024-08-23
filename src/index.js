@@ -23,7 +23,7 @@ submitBtn.addEventListener('click', () => {
             name: inputValue,
             score: 0
         };
-        localStorage.setItem('playerData', json.stringify(playerData));
+        localStorage.setItem('playerData', JSON.stringify(playerData));
         console.log('Stored string:', inputValue);
         modal.style.display = 'none';
         overlay.style.display = 'none';

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initializeGame() {
-    let retrivedPlayerData = json.parse(localStorage.getItem('playerData'));
+    let retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
     let score = retrivedPlayerData.score;
 
     const scoreboard = document.getElementById('points');
