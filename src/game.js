@@ -56,7 +56,6 @@ function initializeGame() {
     const timerDisplay = document.getElementById('timer');
     var shopDisplay = document.getElementById('shop');
     var shopBtn = document.getElementById("shop-btn");
-    const optionButtons = document.querySelectorAll('.option-item');
 
 
     if (scoreboard) {
@@ -243,6 +242,7 @@ function buyItem(itemNumber, cost) {
     function timeUpModal() {
         return new Promise((resolve) => {
             pauseTimer();
+            const optionButtons = document.querySelectorAll('.option-item');
             optionButtons.forEach(button => button.disabled = true);
             showingModal = true;
             const modal = document.getElementById('time-up');
