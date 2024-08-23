@@ -84,10 +84,10 @@ function initializeGame() {
     function updateShopButtons() {
         for (let i = 1; i <= 6; i++) {
             let button = document.getElementById(`item${i}`);
-            
+
             if (button) { // Ensure the button exists
                 let cost = parseInt(button.getAttribute('data-cost'));
-                
+
                 if (!isNaN(cost)) { // Ensure cost is a valid number
                     if (score < cost) {
                         button.disabled = true; // Not enough money -- Disable button
@@ -116,7 +116,7 @@ function initializeGame() {
 
     function buyItem(itemNumber, cost) {
         console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
-        
+
         if (retrivedPlayerData.score >= cost) {
             retrivedPlayerData.score -= cost;
             updateScore(0);
@@ -127,7 +127,7 @@ function initializeGame() {
         updateShopButtons();
     }
 
-    window.onload = function() {
+    window.onload = function () {
         updateScore(0);
         updateShopButtons();
         setupEventListeners();
