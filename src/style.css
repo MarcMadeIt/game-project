@@ -308,9 +308,8 @@ main {
     background-color: var(--bg);
     box-shadow: var(--shadow);
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 90%;
+    top: 200px;
     padding: 30px;
     z-index: 20;
     text-align: center;
@@ -359,6 +358,7 @@ main {
 
 main {
     height: 60%;
+    padding: 0 10px;
 }
 
 .main-content {
@@ -459,13 +459,26 @@ main {
 
 @media screen and (max-width: 600px) {
     .option-item {
-        font-size: 16px;
-        padding: 3px 9px;
+        font-size: 13px;
+        width: 100px;
+        height: 100px;
+        border-width: 5px;
+
     }
 
     .options {
-        gap: 15px;
+        gap: 10px;
         padding: 10px;
+    }
+
+    .shop {
+        padding: 15px;
+    }
+
+    .shop-item {
+        width: 120px;
+        height: 120px;
+
     }
 
 }
