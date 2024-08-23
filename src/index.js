@@ -38,7 +38,7 @@ window.onload = function() {
     const playerData = JSON.parse(localStorage.getItem('playerData'));
 
     if (playerData) {
-        previousGame.textContent = `${playerData.name} / ${playerData.score}`;
+        previousGame.textContent = `${playerData.name} <iconify-icon icon="material-symbols:family-star" width="20" height="20" style="color: gold"></iconify-icon> ${playerData.score}`;
     } else {
         contiuneBtn.style.display = 'none';
     }
