@@ -33,9 +33,9 @@ submitBtn.addEventListener('click', () => {
     }
 });
 
-window.onload = function() {
-    const previousGameName = document.getElementById('prev-game');
-    const previousGameScore = document.getElementById('prev-score');
+window.onload = function () {
+    const previousGameName = document.getElementById('prev-game-name');
+    const previousGameScore = document.getElementById('prev-game-score');
     const playerData = JSON.parse(localStorage.getItem('playerData'));
 
     if (previousGameName && previousGameScore) {

@@ -27,16 +27,23 @@
             </div>
             <a id="create-game" class="btn-cta">New Game</a>
             <div class="prev-content" id="prev-cont">
-                <a href="/game/" class="btn-black">Continue</a>
+                <a href="/game/" class="btn-black">Continue Game</a>
                 <div class="prev-game">
-                    Previous Game:
-                    <span id="prev-game"></span>
+                    <div class="prev-info">
+                        <span id="prev-game-name">
+                        </span>
+                        <iconify-icon icon="material-symbols:family-star" width="17" height="17"
+                            style="color: gold"></iconify-icon>
+
+                        <span id="prev-game-score">
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="create-name" id="create-name">
             <span class="close-btn" id="close-btn"><iconify-icon class="close-btn" icon="material-symbols:close-rounded"
-                    width="50" height="50" style="color: #171717"></iconify-icon></span>
+                    width="22" height="22" style="color: #171717"></iconify-icon></span>
             <span class="create-title">Enter your name</span>
             <input type="text" id="input-name" placeholder="Name">
             <a href="/game/" class="btn-black" id="reset-btn">Start Game</a>
@@ -45,5 +52,6 @@
     </main>
 </body>
 <script src="./src/index.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 
 </html>

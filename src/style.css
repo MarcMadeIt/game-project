@@ -178,7 +178,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     z-index: 20;
@@ -208,11 +208,18 @@ main {
     font-size: 13px;
 }
 
+.prev-info {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
 .close-btn {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 5px;
+    top: 5px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 
