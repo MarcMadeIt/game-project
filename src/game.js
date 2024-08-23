@@ -49,16 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initializeGame() {
-    let score = localStorage.getItem('score');
-    if (score === null) {
-        // If no score is found, initialize it
-        score = 0;
-        console.log("No previous score found. Starting at 0.");
-    } else {
-        // If a score is found, parse it
-        score = parseInt(score);
-        console.log("Previous score found: " + score);
-    }
+    let retrivedPlayerData = json.parse(localStorage.getItem('playerData'));
+    let score = retrivedPlayerData.score;
 
     const scoreboard = document.getElementById('points');
     const timerDisplay = document.getElementById('timer');
@@ -263,7 +255,8 @@ function buyItem(itemNumber, cost) {
 
     function updateScore(points) {
         score += points;
-        localStorage.setItem('score', score);
+        retrivedPlayerData.score += score;
+        localStorage.setItem('playerData', JSON.stringify(retrivedPlayerData));
         console.log("Score updated to: " + score);
     }
 
