@@ -76,43 +76,42 @@ function initializeGame() {
     let timerInterval;
     let timerRunning;
     let showingModal;
-    
 
-function buyItem(itemNumber, cost) {
-    if (score >= cost) {
-        score -= cost;
-        updateScore();
-        alert(`You purchased Item ${itemNumber} for ${cost} points!`); 
-        updateScore(score);
-    } else {
-        alert("You don't have enough points to buy this item.");
+
+    function buyItem(itemNumber, cost) {
+        if (score >= cost) {
+            score -= cost;
+            updateScore();
+            alert(`You purchased Item ${itemNumber} for ${cost} points!`);
+            updateScore(score);
+        } else {
+            alert("You don't have enough points to buy this item.");
+        }
+        updateShopButtons();
     }
-    updateShopButtons();
-}
 
-function updateShopButtons() {
-    for (let i = 1; i <= 5; i++) {
-        let button = document.getElementById(`item${i}`);
-        
-        if (button) { // Ensure the button exists
-            let match = button.textContent.match(/\d+/);
-            
-            if (match) { // Ensure a number was found
-                let cost = parseInt(match[0]);
-                
-                if (score < cost) {
-                    button.disabled = true; // Not enough money -- Disable button
+    function updateShopButtons() {
+        for (let i = 1; i <= 5; i++) {
+            let button = document.getElementById(`item${i}`);
+
+            if (button) { // Ensure the button exists
+                let cost = parseInt(button.getAttribute('data-cost'), 10);
+
+                if (!isNaN(cost)) { // Ensure the cost is a valid number
+                    if (score < cost) {
+                        button.disabled = true; // Not enough money -- Disable button
+                    } else {
+                        button.disabled = false; // Enable button
+                    }
                 } else {
-                    button.disabled = false; // Enable button
+                    console.error(`Invalid or missing data-cost attribute for item${i}`);
                 }
             } else {
-                console.error(`No number found in button text for item${i}`);
+                console.error(`Button with id item${i} not found`);
             }
-        } else {
-            console.error(`Button with id item${i} not found`);
         }
     }
-}
+
 
 
     function updateScore() {
@@ -126,16 +125,16 @@ function updateShopButtons() {
             openShopModal();
         }
     });
-    
+
     function openShopModal() {
         shopDisplay.style.display = 'block';  // Open modal
         pauseTimer();
         updateShopButtons();
     }
-    
+
     function closeShopModal() {
         shopDisplay.style.display = 'none';  // Close modal
-        startTimer(); 
+        startTimer();
     }
 
     async function loadQuestions() {
@@ -250,7 +249,7 @@ function updateShopButtons() {
 
     function pauseTimer() {
         clearInterval(timerInterval);
-        timerRunning = false; 
+        timerRunning = false;
         timerDisplay.textContent = "PAUSED";
 
     }
@@ -293,5 +292,5 @@ function updateShopButtons() {
     // Load questions when the page loads
     loadQuestions();
 
-    
+
 }
