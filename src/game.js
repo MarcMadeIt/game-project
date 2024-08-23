@@ -107,14 +107,23 @@ function buyItem(itemNumber, cost) {
 
     shopBtn.addEventListener('click', function () {
         if (shopDisplay.style.display === 'block') {
-            shopDisplay.style.display = 'none';  // Luk modal
-            timerRunning = true;
+            closeShopModal();
         } else {
-            shopDisplay.style.display = 'block' // Åbn modal
-            pauseTimer();
-            updateShopButtons();
+            openShopModal();
         }
     });
+
+    function openShopModal() {
+        shopDisplay.style.display = 'block';  // Open modal
+        pauseTimer();
+        updateShopButtons();
+    }
+
+    function closeShopModal() {
+        shopDisplay.style.display = 'none';  // Close modal
+        timerRunning = true;
+        startTimer();
+    }
 
     async function loadQuestions() {
         try {
@@ -185,7 +194,7 @@ function buyItem(itemNumber, cost) {
             } else if (button === selectedButton) {
                 button.style.border = '3px solid #DF2935';
                 button.style.color = '#171717'  // Highlight wrong answer selected
-                updateScore(-20);
+                updateScore(-10);
                 scoreboard.textContent = retrivedPlayerData.score;
             } else {
                 button.style.border = '3px solid #abb1bd';
@@ -250,7 +259,7 @@ function buyItem(itemNumber, cost) {
             showingModal = true;
             const modal = document.getElementById('time-up');
             modal.style.display = 'flex';
-            updateScore(-20);
+            updateScore(-10);
             scoreboard.textContent = retrivedPlayerData.score;
             setTimeout(() => {
                 modal.style.display = 'none';
