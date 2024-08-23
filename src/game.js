@@ -91,20 +91,20 @@ function initializeGame() {
     }
 
     function updateShopButtons() {
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= 6; i++) {
             let button = document.getElementById(`item${i}`);
-
+            
             if (button) { // Ensure the button exists
-                let cost = parseInt(button.getAttribute('data-cost'), 10);
-
-                if (!isNaN(cost)) { // Ensure the cost is a valid number
+                let cost = parseInt(button.getAttribute('data-cost'));
+                
+                if (!isNaN(cost)) { // Ensure cost is a valid number
                     if (score < cost) {
                         button.disabled = true; // Not enough money -- Disable button
                     } else {
                         button.disabled = false; // Enable button
                     }
                 } else {
-                    console.error(`Invalid or missing data-cost attribute for item${i}`);
+                    console.error(`Invalid cost value for item${i}`);
                 }
             } else {
                 console.error(`Button with id item${i} not found`);
