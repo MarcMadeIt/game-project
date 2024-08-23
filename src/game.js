@@ -149,6 +149,7 @@ function buyItem(itemNumber, cost) {
             startTimer();
         }
         if (quizContainer) {
+            currentQuestion.choices.sort(() => Math.random() - 0.5);
             quizContainer.innerHTML = `
                 <div class="question">${currentQuestion.question}</div>
                 <div class="options">
