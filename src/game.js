@@ -81,27 +81,27 @@ function initializeGame() {
         document.getElementById("points").textContent = score;
     }
 
-    function updateShopButtons() {
-        for (let i = 1; i <= 6; i++) {
-            let button = document.getElementById(`item${i}`);
+function updateShopButtons() {
+    for (let i = 1; i <= 6; i++) {
+        let button = document.getElementById(`item${i}`);
 
-            if (button) { // Ensure the button exists
-                let cost = parseInt(button.getAttribute('data-cost'));
+        if (button) {
+            let cost = parseInt(button.getAttribute('data-cost'));
 
-                if (!isNaN(cost)) { // Ensure cost is a valid number
-                    if (score < cost) {
-                        button.disabled = true; // Not enough money -- Disable button
-                    } else {
-                        button.disabled = false; // Enable button
-                    }
+            if (!isNaN(cost)) {
+                if (score >= cost) {
+                    button.disabled = false;
                 } else {
-                    console.error(`Invalid cost value for item${i}`);
+                    button.disabled = true;
                 }
             } else {
-                console.error(`Button with id item${i} not found`);
+                console.error(`Invalid cost value for item${i}`);
             }
+        } else {
+            console.error(`Button with id item${i} not found`);
         }
     }
+}
 
     function setupEventListeners() {
         for (let i = 1; i <= 6; i++) {
@@ -114,18 +114,21 @@ function initializeGame() {
         }
     }
 
-    function buyItem(itemNumber, cost) {
-        console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
+function buyItem(itemNumber) {
+    const button = document.getElementById(`item${itemNumber}`);
+    const cost = parseInt(button.getAttribute('data-cost'), 10);
 
-        if (retrivedPlayerData.score >= cost) {
-            retrivedPlayerData.score -= cost;
-            updateScore(0);
-            alert(`You purchased Item ${itemNumber} for ${cost} points!`);
-        } else {
-            alert("You don't have enough points to buy this item.");
-        }
-        updateShopButtons();
+    console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
+
+    if (retrivedPlayerData.score >= cost) {
+        retrivedPlayerData.score -= cost;
+        updateScore(0);
+        alert(`You purchased Item ${itemNumber} for ${cost} points!`);
+    } else {
+        alert("You don't have enough points to buy this item.");
     }
+    updateShopButtons();
+}
 
     window.onload = function () {
         updateScore(0);
