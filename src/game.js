@@ -1,34 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-
-    // Call the function and then initialize game logic
-
-    // Initialize game logic only after HTML is inserted
     initializeGame();
 });
 
 function initializeGame() {
     let retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
     let score = retrivedPlayerData.score;
-
     const scoreboard = document.getElementById('points');
     const timerDisplay = document.getElementById('timer');
     var shopDisplay = document.getElementById('shop');
     var shopBtn = document.getElementById("shop-btn");
-
-
-    if (scoreboard) {
-        scoreboard.textContent = score;
-    } else {
-        console.error('Element with ID "points" not found');
-    }
-
-    if (timerDisplay) {
-        timerDisplay.textContent = '00:15';
-    } else {
-        console.error('Element with ID "timer" not found');
-    }
-
     let questions = [];
     let currentQuestionIndex = 0;
     let timeLeft = 15;
@@ -42,28 +22,13 @@ function initializeGame() {
 
     function updateShopButtons(retrivedPlayerData) {
         retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
-        console.log('Starting updateShopButtons function');
-        console.log('retrivedPlayerData:', retrivedPlayerData);
-
-        // Check if retrivedPlayerData is defined and has a score property
-        if (!retrivedPlayerData || typeof retrivedPlayerData.score === 'undefined') {
-            console.error('Invalid retrivedPlayerData object:', retrivedPlayerData);
-            return; // Exit the function early to prevent further errors
-        }
-
         for (let i = 1; i <= 6; i++) {
-            console.log(`Processing button #item${i}`);
-
             const button = document.querySelector(`#item${i}`);
             const itemFrame = document.querySelector(`#shop-item${i}`);
-
             if (button) {
-                const costAttribute = button.getAttribute('data-cost');
-                console.log(`Button #item${i}: data-cost attribute value = ${costAttribute}`);
-
+                const costAttribute = button.getAttribute('data-cost');        
                 if (costAttribute !== null) {
                     const cost = parseInt(costAttribute);
-
                     if (!isNaN(cost)) {
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
                         if (retrivedPlayerData.score >= cost) {
@@ -72,8 +37,8 @@ function initializeGame() {
                                 itemFrame.style.opacity = '1';
                             }
                         } else {
-                            button.classList.add('button-disabled');
                             console.log(`Button #item${i} is disabled`);
+                            button.classList.add('button-disabled');
                             if (itemFrame) {
                                 itemFrame.style.opacity = '0.5';
                             }
@@ -88,10 +53,8 @@ function initializeGame() {
                 console.error(`Button with id item${i} not found`);
             }
         }
-
         console.log('Finished updateShopButtons function');
     }
-
 
     function setupEventListeners() {
         for (let i = 1; i <= 6; i++) {
@@ -110,7 +73,7 @@ function initializeGame() {
         const soldBox = document.createElement('button');
         soldBox.id = `sold${itemNumber}`;
         soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
-        soldBox.classList.add('sold-box');  // Add CSS class for styling
+        soldBox.classList.add('sold-box');
 
         console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
 
@@ -118,7 +81,7 @@ function initializeGame() {
             retrivedPlayerData.score -= cost;
             updateScore(0);
             scoreboard.textContent = retrivedPlayerData.score;
-            button.parentNode.replaceChild(soldBox, button);  // Replace the button with the sold box
+            button.parentNode.replaceChild(soldBox, button);
         } else {
             alert("You don't have enough points to buy this item.");
         }
@@ -140,13 +103,13 @@ function initializeGame() {
     });
 
     function openShopModal() {
-        shopDisplay.style.display = 'block';  // Open modal
+        shopDisplay.style.display = 'block';
         pauseTimer();
         updateShopButtons();
     }
 
     function closeShopModal() {
-        shopDisplay.style.display = 'none';  // Close modal
+        shopDisplay.style.display = 'none';
         startTimer();
 
     }
