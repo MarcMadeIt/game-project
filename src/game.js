@@ -83,7 +83,7 @@ function initializeGame() {
 
     function updateShopButtons(retrivedPlayerData) {
         for (let i = 1; i <= 6; i++) {
-            const button = document.querySelector(`#item${i}`);
+            const button = document.querySelectorAll(`#item${i}`);
     
             if (button) {
                 const costAttribute = button.getAttribute('data-cost');
