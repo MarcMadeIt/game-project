@@ -81,7 +81,7 @@ function initializeGame() {
                             
                             if (isOwned) {
 //                                soldBox = document.createElement('button');
-                                soldBox.id = `sold${itemNumber}`;
+                                soldBox.id = `sold${i}`;
                                 soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
                                 soldBox.classList.add('sold-box');
                                 button.parentNode.replaceChild(soldBox, button);
