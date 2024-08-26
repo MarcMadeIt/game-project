@@ -115,7 +115,6 @@ function initializeGame() {
     }
 
     window.onload = function () {
-        buyItem();
         updateScore(0);
         updateShopButtons(retrivedPlayerData);
         setupEventListeners();
