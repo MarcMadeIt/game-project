@@ -278,8 +278,8 @@ function initializeGame() {
         }
     }
 
-    function timeUpModal() {
-        return new Promise((resolve) => {
+    async function timeUpModal() {
+        await new Promise((resolve) => {
             pauseTimer();
             const optionButtons = document.querySelectorAll('.option-item');
             optionButtons.forEach(button => button.disabled = true);
@@ -291,19 +291,16 @@ function initializeGame() {
             setTimeout(() => {
                 modal.style.display = 'none';
                 showingModal = false;
-                timerRunning = true;
                 currentQuestionIndex++;
                 resolve();
             }, 3000);
-        }).then(() => {
-            currentQuestionIndex++;
-            if (currentQuestionIndex < questions.length) { 
-                loadQuestion();
-                startTimer();
-            } else { 
-                //end
-            }
         });
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+            startTimer();
+        } else {
+        }
     }
 
     function updateScore(points) {
