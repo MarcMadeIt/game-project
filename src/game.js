@@ -110,7 +110,7 @@ function initializeGame() {
     }
 
     shopBtn.addEventListener('click', function () {
-        if (shopDisplay.style.display === 'block') {
+        if (shopDisplay.style.display === 'flex') {
             closeShopModal();
         } else {
             openShopModal();
@@ -118,7 +118,7 @@ function initializeGame() {
     });
 
     function openShopModal() {
-        shopDisplay.style.display = 'block';
+        shopDisplay.style.display = 'flex';
         pauseTimer();
         updateShopButtons();
     }
