@@ -33,10 +33,10 @@ function initializeGame() {
         document.getElementById("points").textContent = score;
     }
 
-    function updateShopButtons() {
-        const retrivedPlayerData = loadPlayerData();
+    function updateShopButtons(retrivedPlayerData) {
+        retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
         const upgradeOwnership = loadUpgradeOwnership();
-    
+
         for (let i = 1; i <= 6; i++) {
             const button = document.querySelector(`#item${i}`);
             const itemFrame = document.querySelector(`#shop-item${i}`);
@@ -46,9 +46,7 @@ function initializeGame() {
                 if (costAttribute !== null) {
                     const cost = parseInt(costAttribute, 10);
                     if (!isNaN(cost)) {
-                        console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
-                        
-                        // Determine if the button should be enabled or disabled
+                        console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);                        
                         if (retrivedPlayerData.score >= cost && !upgradeOwnership[i - 1]) {
                             console.log(`Button #item${i} is enabled`);
                             button.classList.remove('button-disabled');
@@ -71,8 +69,7 @@ function initializeGame() {
             } else {
                 console.error(`Button with id item${i} not found`);
             }
-        }
-    
+        }   
         console.log('Finished updateShopButtons function');
     }
 
@@ -96,7 +93,7 @@ function initializeGame() {
             return [false, false, false, false, false, false];
         }
     }
-
+    
         function saveUpgradeOwnership(ownership) {
         const ownershipJSON = JSON.stringify(ownership);
         localStorage.setItem('upgradeOwnership', ownershipJSON);
