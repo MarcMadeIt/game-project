@@ -262,7 +262,7 @@ function initializeGame() {
             }, 1000);
         }
     }
-
+ 
     function pauseTimer() {
         clearInterval(timerInterval);
         timerRunning = false;
