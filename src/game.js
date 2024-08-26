@@ -80,7 +80,7 @@ function initializeGame() {
                             }
                             
                             if (isOwned) {
-                                soldBox = document.createElement('button');
+//                                soldBox = document.createElement('button');
                                 soldBox.id = `sold${itemNumber}`;
                                 soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
                                 soldBox.classList.add('sold-box');
@@ -116,7 +116,7 @@ function initializeGame() {
     function buyItem(itemNumber) {
         const button = document.getElementById(`item${itemNumber}`);
         const cost = parseInt(button.getAttribute('data-cost'), 10);
-        soldBox = document.createElement('button');
+//        soldBox = document.createElement('button');
         soldBox.id = `sold${itemNumber}`;
         soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
         soldBox.classList.add('sold-box');
