@@ -9,6 +9,19 @@ function initializeGame() {
     const timerDisplay = document.getElementById('timer');
     var shopDisplay = document.getElementById('shop');
     var shopBtn = document.getElementById("shop-btn");
+
+    if (scoreboard) {
+        scoreboard.textContent = score;
+    } else {
+        console.error('Element with ID "points" not found');
+    }
+
+    if (timerDisplay) {
+        timerDisplay.textContent = '00:15';
+    } else {
+        console.error('Element with ID "timer" not found');
+    }
+
     let questions = [];
     let currentQuestionIndex = 0;
     let timeLeft = 15;
@@ -33,7 +46,7 @@ function initializeGame() {
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
                         if (retrivedPlayerData.score >= cost) {
                             console.log(`Button #item${i} is enabled`);
-                            
+                            button.classList.remove('button-disabled');
                             if (itemFrame) {
                                 itemFrame.style.opacity = '1';
                             }
@@ -56,6 +69,7 @@ function initializeGame() {
         }
         console.log('Finished updateShopButtons function');
     }
+
 
     function setupEventListeners() {
         for (let i = 1; i <= 6; i++) {
