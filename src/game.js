@@ -103,19 +103,25 @@ function initializeGame() {
         soldBox.id = `sold${itemNumber}`;
         soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
         soldBox.classList.add('sold-box');
+        console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${retrivedPlayerData.score}`);
+        let upgradeOwnership = loadUpgradeOwnership();
 
-        console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
-
+        if (upgradeOwnership[itemNumber - 1]) {
+            alert("You already own this item.");
+            return;
+        }
+    
         if (retrivedPlayerData.score >= cost) {
             retrivedPlayerData.score -= cost;
             updateScore(0);
-            scoreboard.textContent = retrivedPlayerData.score;
+            upgradeOwnership[itemNumber - 1] = true;
+            saveUpgradeOwnership(upgradeOwnership);
             button.parentNode.replaceChild(soldBox, button);
         } else {
             alert("You don't have enough points to buy this item.");
         }
-        updateShopButtons();
-    }
+            updateShopButtons();
+        }
 
     window.onload = function () {
         updateScore(0);
