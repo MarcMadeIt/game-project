@@ -362,6 +362,15 @@ main {
     font-weight: 800;
 }
 
+.sold-box {
+    display: none;
+    border-radius: none;
+    font-weight: 700;
+    color: var(--action);
+    align-items: center;
+    gap: 2px;
+}
+
 
 
 /* Main */

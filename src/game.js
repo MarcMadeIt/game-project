@@ -98,26 +98,26 @@ function initializeGame() {
         }
     }
 
-function buyItem(itemNumber) {
-    const button = document.getElementById(`item${itemNumber}`);
-    const cost = parseInt(button.getAttribute('data-cost'), 10);
-    const soldBox = document.createElement('div');
-    soldBox.id = `sold${itemNumber}`;
-    soldBox.textContent = 'Sold';
-    soldBox.classList.add('sold-box');  // Add CSS class for styling
+    function buyItem(itemNumber) {
+        const button = document.getElementById(`item${itemNumber}`);
+        const cost = parseInt(button.getAttribute('data-cost'), 10);
+        const soldBox = document.createElement('div');
+        soldBox.id = `sold${itemNumber}`;
+        soldBox.textContent = 'Sold';
+        soldBox.classList.add('sold-box');  // Add CSS class for styling
 
-    console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
+        console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
 
-    if (retrivedPlayerData.score >= cost) {
-        retrivedPlayerData.score -= cost;
-        updateScore(0);
-        scoreboard.textContent = retrivedPlayerData.score;
-        button.parentNode.replaceChild(soldBox, button);  // Replace the button with the sold box
-    } else {
-        alert("You don't have enough points to buy this item.");
+        if (retrivedPlayerData.score >= cost) {
+            retrivedPlayerData.score -= cost;
+            updateScore(0);
+            scoreboard.textContent = retrivedPlayerData.score;
+            button.parentNode.replaceChild(soldBox, button);  // Replace the button with the sold box
+        } else {
+            alert("You don't have enough points to buy this item.");
+        }
+        updateShopButtons();
     }
-    updateShopButtons();
-}
 
     window.onload = function () {
         updateScore(0);
@@ -210,15 +210,15 @@ function buyItem(itemNumber) {
         optionButtons.forEach(button => {
             const correct = button.dataset.isCorrect === 'true';
             if (correct) {
-                button.style.border = '3px solid #71d44d';
+                button.style.border = '5px solid #71d44d';
                 button.style.color = '#171717'  // Highlight correct answer
             } else if (button === selectedButton) {
-                button.style.border = '3px solid #DF2935';
+                button.style.border = '5px solid #DF2935';
                 button.style.color = '#171717'  // Highlight wrong answer selected
                 updateScore(-10);
                 scoreboard.textContent = retrivedPlayerData.score;
             } else {
-                button.style.border = '3px solid #abb1bd';
+                button.style.border = '5px solid #abb1bd';
                 button.style.color = '#171717'  // Neutral color for other buttons
             }
         });
