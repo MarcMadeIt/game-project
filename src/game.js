@@ -101,9 +101,9 @@ function initializeGame() {
     function buyItem(itemNumber) {
         const button = document.getElementById(`item${itemNumber}`);
         const cost = parseInt(button.getAttribute('data-cost'), 10);
-        const soldBox = document.createElement('div');
+        const soldBox = document.createElement('button');
         soldBox.id = `sold${itemNumber}`;
-        soldBox.textContent = 'Sold';
+        soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
         soldBox.classList.add('sold-box');  // Add CSS class for styling
 
         console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);

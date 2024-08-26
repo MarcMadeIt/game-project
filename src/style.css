@@ -349,6 +349,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    opacity: 50%;
 }
 
 .shop-item img {
@@ -363,12 +364,14 @@ main {
 }
 
 .sold-box {
-    display: none;
-    border-radius: none;
+    border: none;
     font-weight: 700;
     color: var(--action);
+    display: flex;
     align-items: center;
     gap: 2px;
+
+
 }
 
 
