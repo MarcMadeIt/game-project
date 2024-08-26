@@ -166,6 +166,13 @@ main {
     gap: 15px;
 }
 
+.intro-txt h1 {
+    font-size: 2px;
+}
+
+.intro-txt p {
+    font-size: 16px;
+}
 
 /* CREATE NAME */
 
@@ -482,6 +489,14 @@ main {
         width: 120px;
         height: 120px;
 
+    }
+
+    .intro-txt h1 {
+        font-size: 20px;
+    }
+
+    .intro-txt p {
+        font-size: 14px;
     }
 
 }

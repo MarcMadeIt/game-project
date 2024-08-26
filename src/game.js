@@ -1,51 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    function includeHTML() {
-        return Promise.all([
-            fetch('/navbar/index.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    const navbarPlaceholder = document.getElementById('navbar-placeholder');
-                    if (navbarPlaceholder) {
-                        navbarPlaceholder.innerHTML = data;
-                    } else {
-                        console.error('Element with ID "navbar-placeholder" not found');
-                    }
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation for navbar:', error);
-                }),
 
-            fetch('/main/index.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    const mainPlaceholder = document.getElementById('main-placeholder');
-                    if (mainPlaceholder) {
-                        mainPlaceholder.innerHTML = data;
-                    } else {
-                        console.error('Element with ID "main-placeholder" not found');
-                    }
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation for main content:', error);
-                })
-        ]);
-    }
 
     // Call the function and then initialize game logic
-    includeHTML().then(() => {
-        // Initialize game logic only after HTML is inserted
-        initializeGame();
-    });
+
+    // Initialize game logic only after HTML is inserted
+    initializeGame();
 });
 
 function initializeGame() {
@@ -85,25 +44,25 @@ function initializeGame() {
         retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
         console.log('Starting updateShopButtons function');
         console.log('retrivedPlayerData:', retrivedPlayerData);
-    
+
         // Check if retrivedPlayerData is defined and has a score property
         if (!retrivedPlayerData || typeof retrivedPlayerData.score === 'undefined') {
             console.error('Invalid retrivedPlayerData object:', retrivedPlayerData);
             return; // Exit the function early to prevent further errors
         }
-    
+
         for (let i = 1; i <= 6; i++) {
             console.log(`Processing button #item${i}`);
-    
+
             const button = document.querySelector(`#item${i}`);
-    
+
             if (button) {
                 const costAttribute = button.getAttribute('data-cost');
                 console.log(`Button #item${i}: data-cost attribute value = ${costAttribute}`);
-    
+
                 if (costAttribute !== null) {
                     const cost = parseInt(costAttribute);
-    
+
                     if (!isNaN(cost)) {
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
                         if (retrivedPlayerData.score >= cost) {
@@ -123,10 +82,10 @@ function initializeGame() {
                 console.error(`Button with id item${i} not found`);
             }
         }
-    
+
         console.log('Finished updateShopButtons function');
     }
-    
+
 
     function setupEventListeners() {
         for (let i = 1; i <= 6; i++) {
@@ -184,8 +143,8 @@ function initializeGame() {
 
     document.getElementById('close-shop-btn').addEventListener('click', function () {
         closeShopModal();
-        });
-    
+    });
+
     async function loadQuestions() {
         try {
             const response = await fetch('questions.json');
