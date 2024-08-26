@@ -84,18 +84,26 @@ function initializeGame() {
     function updateShopButtons(retrivedPlayerData) {
         for (let i = 1; i <= 6; i++) {
             const button = document.querySelector(`#item${i}`);
-
+    
             if (button) {
-                const cost = parseInt(button.getAttribute('data-cost'));
-
-                if (!isNaN(cost)) {
-                    if (retrivedPlayerData.score >= cost) {
-                        button.disabled = false;
+                const costAttribute = button.getAttribute('data-cost');
+                console.log(`Button #item${i}: data-cost attribute value = ${costAttribute}`);
+    
+                if (costAttribute !== null) {
+                    const cost = parseInt(costAttribute);
+    
+                    if (!isNaN(cost)) {
+                        console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
+                        if (retrivedPlayerData.score >= cost) {
+                            button.disabled = false;
+                        } else {
+                            button.disabled = true;
+                        }
                     } else {
-                        button.disabled = true;
+                        console.error(`Invalid cost value for item${i}`);
                     }
                 } else {
-                    console.error(`Invalid cost value for item${i}`);
+                    console.error(`data-cost attribute missing for item${i}`);
                 }
             } else {
                 console.error(`Button with id item${i} not found`);
@@ -158,7 +166,7 @@ function initializeGame() {
 
     document.getElementById('close-shop-btn').addEventListener('click', function () {
         closeShopModal();
-    });
+        });
     
     async function loadQuestions() {
         try {
