@@ -182,8 +182,8 @@ function initializeGame() {
     function loadQuestion() {
         const quizContainer = document.getElementById('quiz');
         const currentQuestion = questions[currentQuestionIndex];
-        startTimer();
         timeLeft = 15;
+        startTimer();
         if (quizContainer) {
             currentQuestion.choices.sort(() => Math.random() - 0.5);
             quizContainer.innerHTML = `
