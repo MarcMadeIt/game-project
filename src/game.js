@@ -153,11 +153,13 @@ function initializeGame() {
     function closeShopModal() {
         shopDisplay.style.display = 'none';  // Close modal
         startTimer();
-        document.getElementById('close-shop-btn').addEventListener('click', function () {
-            closeShopModal();
-            });
+
     }
 
+    document.getElementById('close-shop-btn').addEventListener('click', function () {
+        closeShopModal();
+    });
+    
     async function loadQuestions() {
         try {
             const response = await fetch('questions.json');
