@@ -101,6 +101,7 @@ function initializeGame() {
     function buyItem(itemNumber) {
         const button = document.getElementById(`item${itemNumber}`);
         const cost = parseInt(button.getAttribute('data-cost'), 10);
+        const bought = document.getElementById(`sold`);
 
         console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
 
@@ -108,7 +109,7 @@ function initializeGame() {
             retrivedPlayerData.score -= cost;
             updateScore(0);
             scoreboard.textContent = retrivedPlayerData.score;
-            alert(`You purchased Item ${itemNumber} for ${cost} points!`);
+            button.id = bought.id;
         } else {
             alert("You don't have enough points to buy this item.");
         }
