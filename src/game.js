@@ -164,10 +164,6 @@ function initializeGame() {
 
     }
 
-    document.getElementById('close-shop-btn').addEventListener('click', function () {
-        closeShopModal();
-        });
-    
     async function loadQuestions() {
         try {
             const response = await fetch('questions.json');
