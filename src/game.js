@@ -81,27 +81,27 @@ function initializeGame() {
         document.getElementById("points").textContent = score;
     }
 
-function updateShopButtons() {
-    for (let i = 1; i <= 6; i++) {
-        let button = document.getElementById(`item${i}`);
+    function updateShopButtons() {
+        for (let i = 1; i <= 6; i++) {
+            let button = document.getElementById(`item${i}`);
 
-        if (button) {
-            let cost = parseInt(button.getAttribute('data-cost'));
+            if (button) {
+                let cost = parseInt(button.getAttribute('data-cost'));
 
-            if (!isNaN(cost)) {
-                if (score >= cost) {
-                    button.disabled = false;
+                if (!isNaN(cost)) {
+                    if (score >= cost) {
+                        button.disabled = false;
+                    } else {
+                        button.disabled = true;
+                    }
                 } else {
-                    button.disabled = true;
+                    console.error(`Invalid cost value for item${i}`);
                 }
             } else {
-                console.error(`Invalid cost value for item${i}`);
+                console.error(`Button with id item${i} not found`);
             }
-        } else {
-            console.error(`Button with id item${i} not found`);
         }
     }
-}
 
     function setupEventListeners() {
         for (let i = 1; i <= 6; i++) {
@@ -114,21 +114,21 @@ function updateShopButtons() {
         }
     }
 
-function buyItem(itemNumber) {
-    const button = document.getElementById(`item${itemNumber}`);
-    const cost = parseInt(button.getAttribute('data-cost'), 10);
+    function buyItem(itemNumber) {
+        const button = document.getElementById(`item${itemNumber}`);
+        const cost = parseInt(button.getAttribute('data-cost'), 10);
 
-    console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
+        console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
 
-    if (retrivedPlayerData.score >= cost) {
-        retrivedPlayerData.score -= cost;
-        updateScore(0);
-        alert(`You purchased Item ${itemNumber} for ${cost} points!`);
-    } else {
-        alert("You don't have enough points to buy this item.");
+        if (retrivedPlayerData.score >= cost) {
+            retrivedPlayerData.score -= cost;
+            updateScore(0);
+            alert(`You purchased Item ${itemNumber} for ${cost} points!`);
+        } else {
+            alert("You don't have enough points to buy this item.");
+        }
+        updateShopButtons();
     }
-    updateShopButtons();
-}
 
     window.onload = function () {
         updateScore(0);
