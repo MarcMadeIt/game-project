@@ -18,6 +18,7 @@ closeBtn.addEventListener('click', () => {
 
 submitBtn.addEventListener('click', () => {
     localStorage.removeItem('score');
+    localStorage.removeItem('upgradeOwnership');
     let inputValue = inputBox.value;
     if (inputValue) {
         let playerData = {

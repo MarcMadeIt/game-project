@@ -33,58 +33,6 @@ function initializeGame() {
         document.getElementById("points").textContent = score;
     }
 
-    function updateShopButtons(retrivedPlayerData) {
-        retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
-        const upgradeOwnership = loadUpgradeOwnership();
-
-        for (let i = 1; i <= 6; i++) {
-            const button = document.querySelector(`#item${i}`);
-            const itemFrame = document.querySelector(`#shop-item${i}`);
-            const costAttribute = button?.getAttribute('data-cost');        
-            
-            if (button) {
-                if (costAttribute !== null) {
-                    const cost = parseInt(costAttribute, 10);
-                    if (!isNaN(cost)) {
-                        console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);                        
-                        if (retrivedPlayerData.score >= cost && !upgradeOwnership[i - 1]) {
-                            console.log(`Button #item${i} is enabled`);
-                            button.classList.remove('button-disabled');
-                            if (itemFrame) {
-                                itemFrame.style.opacity = '1';
-                            }
-                        } else {
-                            console.log(`Button #item${i} is disabled`);
-                            button.classList.add('button-disabled');
-                            if (itemFrame) {
-                                itemFrame.style.opacity = '0.5';
-                            }
-                        }
-                    } else {
-                        console.error(`Invalid cost value for item${i}`);
-                    }
-                } else {
-                    console.error(`data-cost attribute missing for item${i}`);
-                }
-            } else {
-                console.error(`Button with id item${i} not found`);
-            }
-        }   
-        console.log('Finished updateShopButtons function');
-    }
-
-
-    function setupEventListeners() {
-        for (let i = 1; i <= 6; i++) {
-            let button = document.getElementById(`item${i}`);
-            if (button) {
-                button.addEventListener('click', () => buyItem(i, parseInt(button.getAttribute('data-cost'), 10)));
-            } else {
-                console.error(`Button with id item${i} not found`);
-            }
-        }
-    }
-
     function loadUpgradeOwnership() {
         const ownershipJSON = localStorage.getItem('upgradeOwnership');
         if (ownershipJSON) {
@@ -97,6 +45,67 @@ function initializeGame() {
         function saveUpgradeOwnership(ownership) {
         const ownershipJSON = JSON.stringify(ownership);
         localStorage.setItem('upgradeOwnership', ownershipJSON);
+    }
+
+    function updateShopButtons(retrivedPlayerData) {
+        retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
+        const upgradeOwnership = loadUpgradeOwnership();
+
+        for (let i = 1; i <= 6; i++) {
+            const button = document.querySelector(`#item${i}`);
+            const itemFrame = document.querySelector(`#shop-item${i}`);
+            const costAttribute = button?.getAttribute('data-cost');
+    
+            if (button) {
+                if (costAttribute !== null) {
+                    const cost = parseInt(costAttribute, 10);
+                    if (!isNaN(cost)) {
+                        const isOwned = upgradeOwnership[i - 1];
+                        const canAfford = retrivedPlayerData.score >= cost;
+                        
+                        console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}, owned = ${isOwned}`);
+    
+                        if (canAfford && !isOwned) {
+                            console.log(`Button #item${i} is enabled`);
+                            button.classList.remove('button-disabled');
+                            if (itemFrame) {
+                                itemFrame.style.opacity = '1';
+                            }
+                        } else {
+                            console.log(`Button #item${i} is disabled`);
+                            button.classList.add('button-disabled');
+                            if (itemFrame) {
+                                itemFrame.style.opacity = '0.5';
+                            }
+                            
+                            if (isOwned) {
+                                button.parentNode.replaceChild(soldBox, button);
+                            }
+                        }
+                    } else {
+                        console.error(`Invalid cost value for item${i}`);
+                    }
+                } else {
+                    console.error(`data-cost attribute missing for item${i}`);
+                }
+            } else {
+                console.error(`Button with id item${i} not found`);
+            }
+        }
+        console.log('Finished updateShopButtons function');
+    }
+    
+
+
+    function setupEventListeners() {
+        for (let i = 1; i <= 6; i++) {
+            let button = document.getElementById(`item${i}`);
+            if (button) {
+                button.addEventListener('click', () => buyItem(i, parseInt(button.getAttribute('data-cost'), 10)));
+            } else {
+                console.error(`Button with id item${i} not found`);
+            }
+        }
     }
 
     function buyItem(itemNumber) {
