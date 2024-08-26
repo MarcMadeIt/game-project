@@ -83,11 +83,11 @@ function initializeGame() {
 
     function updateShopButtons(retrivedPlayerData) {
         console.log('Starting updateShopButtons function');
-        console.log('retrivedPlayerData:', retrivedPlayerData);
+        console.log('retrivedPlayerData:', retrivedPlayerData.score);
     
         // Check if retrivedPlayerData is defined and has a score property
-        if (!retrivedPlayerData || typeof retrivedPlayerData.score === 'undefined') {
-            console.error('Invalid retrivedPlayerData object:', retrivedPlayerData);
+        if (!retrivedPlayerData.score || typeof retrivedPlayerData.score === 'undefined') {
+            console.error('Invalid retrivedPlayerData object:', retrivedPlayerData.score);
             return; // Exit the function early to prevent further errors
         }
     
