@@ -33,18 +33,23 @@ function initializeGame() {
         document.getElementById("points").textContent = score;
     }
 
-    function updateShopButtons(retrivedPlayerData) {
-        retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
+    function updateShopButtons() {
+        const retrivedPlayerData = loadPlayerData();
+        const upgradeOwnership = loadUpgradeOwnership();
+    
         for (let i = 1; i <= 6; i++) {
             const button = document.querySelector(`#item${i}`);
             const itemFrame = document.querySelector(`#shop-item${i}`);
+            const costAttribute = button?.getAttribute('data-cost');        
+            
             if (button) {
-                const costAttribute = button.getAttribute('data-cost');        
                 if (costAttribute !== null) {
-                    const cost = parseInt(costAttribute);
+                    const cost = parseInt(costAttribute, 10);
                     if (!isNaN(cost)) {
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
-                        if (retrivedPlayerData.score >= cost) {
+                        
+                        // Determine if the button should be enabled or disabled
+                        if (retrivedPlayerData.score >= cost && !upgradeOwnership[i - 1]) {
                             console.log(`Button #item${i} is enabled`);
                             button.classList.remove('button-disabled');
                             if (itemFrame) {
@@ -67,6 +72,7 @@ function initializeGame() {
                 console.error(`Button with id item${i} not found`);
             }
         }
+    
         console.log('Finished updateShopButtons function');
     }
 
@@ -90,7 +96,7 @@ function initializeGame() {
             return [false, false, false, false, false, false];
         }
     }
-    
+
         function saveUpgradeOwnership(ownership) {
         const ownershipJSON = JSON.stringify(ownership);
         localStorage.setItem('upgradeOwnership', ownershipJSON);
