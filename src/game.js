@@ -293,6 +293,7 @@ function initializeGame() {
                 modal.style.display = 'none';
                 showingModal = false;
                 timerRunning = true;
+                loadQuestion();
                 resolve();
             }, 3000);
         });
