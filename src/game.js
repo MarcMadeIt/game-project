@@ -82,7 +82,7 @@ function initializeGame() {
     }
 
     function updateShopButtons(retrivedPlayerData) {
-        let retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
+        retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
         console.log('Starting updateShopButtons function');
         console.log('retrivedPlayerData:', retrivedPlayerData);
     
