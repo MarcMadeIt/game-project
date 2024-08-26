@@ -349,7 +349,6 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    opacity: 50%;
 }
 
 .shop-item img {
@@ -362,6 +361,8 @@ main {
     font-size: 12px;
     font-weight: 800;
 }
+
+
 
 .sold-box {
     border: none;
