@@ -255,7 +255,6 @@ function initializeGame() {
                     clearInterval(timerInterval);
                     timerRunning = false;
                     await timeUpModal();
-                    currentQuestionIndex++;
                 } else {
                     updateTimerDisplay();
                 }
@@ -293,9 +292,17 @@ function initializeGame() {
                 modal.style.display = 'none';
                 showingModal = false;
                 timerRunning = true;
-                loadQuestion();
+                currentQuestionIndex++;
                 resolve();
             }, 3000);
+        }).then(() => {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) { 
+                loadQuestion();
+                startTimer();
+            } else { 
+                //end
+            }
         });
     }
 
