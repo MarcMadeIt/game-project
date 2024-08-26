@@ -81,15 +81,15 @@ function initializeGame() {
         document.getElementById("points").textContent = score;
     }
 
-    function updateShopButtons() {
+    function updateShopButtons(retrivedPlayerData) {
         for (let i = 1; i <= 6; i++) {
-            let button = document.getElementById(`item${i}`);
+            const button = document.querySelector(`#item${i}`);
 
             if (button) {
-                let cost = parseInt(button.getAttribute('data-cost'));
+                const cost = parseInt(button.getAttribute('data-cost'));
 
                 if (!isNaN(cost)) {
-                    if (score >= cost) {
+                    if (retrivedPlayerData.score >= cost) {
                         button.disabled = false;
                     } else {
                         button.disabled = true;
@@ -132,7 +132,7 @@ function initializeGame() {
 
     window.onload = function () {
         updateScore(0);
-        updateShopButtons();
+        updateShopButtons(retrivedPlayerData);
         setupEventListeners();
     }
 
@@ -153,6 +153,9 @@ function initializeGame() {
     function closeShopModal() {
         shopDisplay.style.display = 'none';  // Close modal
         startTimer();
+        document.getElementById('close-shop-btn').addEventListener('click', function () {
+            closeShopModal();
+            });
     }
 
     async function loadQuestions() {
