@@ -67,13 +67,12 @@ function initializeGame() {
                     if (!isNaN(cost)) {
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
                         if (retrivedPlayerData.score >= cost) {
-                            button.disabled = false;
                             console.log(`Button #item${i} is enabled`);
                             if (itemFrame) {
                                 itemFrame.style.opacity = '1';
                             }
                         } else {
-                            button.disabled = true;
+                            button.classList.add('button-disabled');
                             console.log(`Button #item${i} is disabled`);
                             if (itemFrame) {
                                 itemFrame.style.opacity = '0.5';
