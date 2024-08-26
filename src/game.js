@@ -83,7 +83,14 @@ function initializeGame() {
 
     function updateShopButtons(retrivedPlayerData) {
         console.log('Starting updateShopButtons function');
-        
+        console.log('retrivedPlayerData:', retrivedPlayerData);
+    
+        // Check if retrivedPlayerData is defined and has a score property
+        if (!retrivedPlayerData || typeof retrivedPlayerData.score === 'undefined') {
+            console.error('Invalid retrivedPlayerData object:', retrivedPlayerData);
+            return; // Exit the function early to prevent further errors
+        }
+    
         for (let i = 1; i <= 6; i++) {
             console.log(`Processing button #item${i}`);
     
@@ -118,6 +125,7 @@ function initializeGame() {
     
         console.log('Finished updateShopButtons function');
     }
+    
 
     function setupEventListeners() {
         for (let i = 1; i <= 6; i++) {
