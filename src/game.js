@@ -107,6 +107,7 @@ function initializeGame() {
         if (retrivedPlayerData.score >= cost) {
             retrivedPlayerData.score -= cost;
             updateScore(0);
+            scoreboard.textContent = retrivedPlayerData.score;
             alert(`You purchased Item ${itemNumber} for ${cost} points!`);
         } else {
             alert("You don't have enough points to buy this item.");
