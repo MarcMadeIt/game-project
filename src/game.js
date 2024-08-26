@@ -211,7 +211,7 @@ function initializeGame() {
     function selectAnswer(selectedButton) {
         const isCorrect = selectedButton.dataset.isCorrect === 'true';
         const optionButtons = document.querySelectorAll('.option-item');
-
+        pauseTimer();
         optionButtons.forEach(button => button.disabled = true);
         optionButtons.forEach(button => {
             const correct = button.dataset.isCorrect === 'true';
@@ -256,8 +256,6 @@ function initializeGame() {
                     timerRunning = false;
                     await timeUpModal();
                     currentQuestionIndex++;
-                    loadQuestion();
-                    startTimer();
                 } else {
                     updateTimerDisplay();
                 }
