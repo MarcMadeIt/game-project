@@ -55,6 +55,7 @@ function initializeGame() {
             console.log(`Processing button #item${i}`);
 
             const button = document.querySelector(`#item${i}`);
+            const itemFrame = document.querySelector(`#shop-item${i}`);
 
             if (button) {
                 const costAttribute = button.getAttribute('data-cost');
@@ -68,9 +69,15 @@ function initializeGame() {
                         if (retrivedPlayerData.score >= cost) {
                             button.disabled = false;
                             console.log(`Button #item${i} is enabled`);
+                            if (itemFrame) {
+                                itemFrame.style.opacity = '1';
+                            }
                         } else {
                             button.disabled = true;
                             console.log(`Button #item${i} is disabled`);
+                            if (itemFrame) {
+                                itemFrame.style.opacity = '0.5';
+                            }
                         }
                     } else {
                         console.error(`Invalid cost value for item${i}`);
