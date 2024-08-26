@@ -98,23 +98,26 @@ function initializeGame() {
         }
     }
 
-    function buyItem(itemNumber) {
-        const button = document.getElementById(`item${itemNumber}`);
-        const cost = parseInt(button.getAttribute('data-cost'), 10);
-        const bought = document.getElementById(`sold`);
+function buyItem(itemNumber) {
+    const button = document.getElementById(`item${itemNumber}`);
+    const cost = parseInt(button.getAttribute('data-cost'), 10);
+    const soldBox = document.createElement('div');
+    soldBox.id = `sold${itemNumber}`;
+    soldBox.textContent = 'Sold';
+    soldBox.classList.add('sold-box');  // Add CSS class for styling
 
-        console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
+    console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${score}`);
 
-        if (retrivedPlayerData.score >= cost) {
-            retrivedPlayerData.score -= cost;
-            updateScore(0);
-            scoreboard.textContent = retrivedPlayerData.score;
-            button.id = bought.id;
-        } else {
-            alert("You don't have enough points to buy this item.");
-        }
-        updateShopButtons();
+    if (retrivedPlayerData.score >= cost) {
+        retrivedPlayerData.score -= cost;
+        updateScore(0);
+        scoreboard.textContent = retrivedPlayerData.score;
+        button.parentNode.replaceChild(soldBox, button);  // Replace the button with the sold box
+    } else {
+        alert("You don't have enough points to buy this item.");
     }
+    updateShopButtons();
+}
 
     window.onload = function () {
         updateScore(0);
