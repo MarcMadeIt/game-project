@@ -33,7 +33,7 @@ function initializeGame() {
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
                         if (retrivedPlayerData.score >= cost) {
                             console.log(`Button #item${i} is enabled`);
-                            button.classList.remove('button-disabled');
+                            
                             if (itemFrame) {
                                 itemFrame.style.opacity = '1';
                             }
