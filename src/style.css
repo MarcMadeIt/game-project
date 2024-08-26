@@ -316,22 +316,23 @@ main {
     box-shadow: var(--shadow);
     position: fixed;
     top: 200px;
-    padding: 30px;
+    padding: 20px;
     z-index: 20;
-    text-align: center;
     display: none;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .shop-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 kolonner af samme størrelse */
-    gap: 30px;
-    /* Juster afstanden mellem elementer som ønsket */
+    gap: 20px;
     height: 100%;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -345,7 +346,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .shop-item img {
@@ -480,14 +481,7 @@ main {
     flex-direction: column;
 }
 
-@media screen and (max-width: 600px) {
-
-    .shop-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
+@media screen and (max-width: 700px) {
     .option-item {
         font-size: 13px;
         width: 100px;
@@ -505,9 +499,15 @@ main {
         padding: 15px;
     }
 
+    .shop-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
     .shop-item {
-        width: 120px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
 
     }
 
