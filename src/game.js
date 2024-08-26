@@ -82,6 +82,20 @@ function initializeGame() {
         }
     }
 
+    function loadUpgradeOwnership() {
+        const ownershipJSON = localStorage.getItem('upgradeOwnership');
+        if (ownershipJSON) {
+            return JSON.parse(ownershipJSON);
+        } else {
+            return [false, false, false, false, false, false];
+        }
+    }
+    
+        function saveUpgradeOwnership(ownership) {
+        const ownershipJSON = JSON.stringify(ownership);
+        localStorage.setItem('upgradeOwnership', ownershipJSON);
+    }
+
     function buyItem(itemNumber) {
         const button = document.getElementById(`item${itemNumber}`);
         const cost = parseInt(button.getAttribute('data-cost'), 10);
