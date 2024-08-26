@@ -82,8 +82,12 @@ function initializeGame() {
     }
 
     function updateShopButtons(retrivedPlayerData) {
+        console.log('Starting updateShopButtons function');
+        
         for (let i = 1; i <= 6; i++) {
-            const button = document.querySelectorAll(`#item${i}`);
+            console.log(`Processing button #item${i}`);
+    
+            const button = document.querySelector(`#item${i}`);
     
             if (button) {
                 const costAttribute = button.getAttribute('data-cost');
@@ -96,8 +100,10 @@ function initializeGame() {
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}`);
                         if (retrivedPlayerData.score >= cost) {
                             button.disabled = false;
+                            console.log(`Button #item${i} is enabled`);
                         } else {
                             button.disabled = true;
+                            console.log(`Button #item${i} is disabled`);
                         }
                     } else {
                         console.error(`Invalid cost value for item${i}`);
@@ -109,6 +115,8 @@ function initializeGame() {
                 console.error(`Button with id item${i} not found`);
             }
         }
+    
+        console.log('Finished updateShopButtons function');
     }
 
     function setupEventListeners() {
@@ -164,6 +172,10 @@ function initializeGame() {
 
     }
 
+    document.getElementById('close-shop-btn').addEventListener('click', function () {
+        closeShopModal();
+        });
+    
     async function loadQuestions() {
         try {
             const response = await fetch('questions.json');
