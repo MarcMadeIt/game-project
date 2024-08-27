@@ -39,9 +39,10 @@ closeBtn.addEventListener('click', () => {
 
 submitBtn.addEventListener('click', (event) => {
     let inputValue = inputBox.value;
+    let errorElement = document.getElementById('error-message');
     if (!inputValue) {
         event.preventDefault();
-        alert('Please enter a string');
+        errorElement.textContent = 'Please enter a name.';
         return;
     }
     localStorage.removeItem('score');
