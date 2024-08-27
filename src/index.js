@@ -7,6 +7,8 @@ const overlay = document.getElementById('overlay');
 const CreateName = document.getElementById('create-name');
 
 const closeBtn = document.getElementById('close-btn');
+const closeRulesBtn = document.getElementById('close-rules');
+
 
 const contiuneBtn = document.getElementById('prev-cont');
 
@@ -34,7 +36,11 @@ openModalBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     CreateName.style.display = 'none';
     overlay.style.display = 'none';
+});
+
+closeRulesBtn.addEventListener('click', () => {
     rulesModal.style.display = 'none';
+    overlay.style.display = 'none';
 });
 
 submitBtn.addEventListener('click', (event) => {
