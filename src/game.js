@@ -102,7 +102,11 @@ function initializeGame() {
         soldBox.classList.add('sold-box');
         button = document.querySelector(`#item${item}`);
         button.parentNode.replaceChild(soldBox, button);
-        document.getElementById(`sold${item}`).disabled = true; 
+        document.getElementById(`sold${item}`).disabled = true;
+        itemFrame = document.querySelector(`#shop-item${item}`);
+        if (itemFrame) {
+            itemFrame.style.opacity = '1';
+        }
     }
     
     function setupEventListeners() {
