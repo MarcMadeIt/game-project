@@ -24,7 +24,7 @@ function initializeGame() {
 
     let questions = [];
     let currentQuestionIndex = 0;
-    let timeLeft = 15;
+    let timeLeft = 20;
     let timerInterval;
     let timerRunning;
     let showingModal;
@@ -195,7 +195,7 @@ function initializeGame() {
     function loadQuestion() {
         const quizContainer = document.getElementById('quiz');
         const currentQuestion = questions[currentQuestionIndex];
-        timeLeft = 15;
+        timeLeft = 20;
         startTimer();
         if (quizContainer) {
             currentQuestion.choices.sort(() => Math.random() - 0.5);
