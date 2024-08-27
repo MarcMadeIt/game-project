@@ -7,7 +7,6 @@ function initializeGame() {
     let score = retrivedPlayerData.score;
     const scoreboard = document.getElementById('points');
     const timerDisplay = document.getElementById('timer');
-    const soldBox = document.createElement('button');
     var shopDisplay = document.getElementById('shop');
     var shopBtn = document.getElementById("shop-btn");
 
@@ -80,11 +79,7 @@ function initializeGame() {
                             }
                             
                             if (isOwned) {
-//                                soldBox = document.createElement('button');
-                                soldBox.id = `sold${i}`;
-                                soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
-                                soldBox.classList.add('sold-box');
-                                button.parentNode.replaceChild(soldBox, button);
+                                sold(i);
                             }
                         }
                     } else {
@@ -99,9 +94,15 @@ function initializeGame() {
         }
         console.log('Finished updateShopButtons function');
     }
+
+    async function sold(item){
+        const soldBox = document.createElement('button');
+        soldBox.id = `sold${item}`;
+        soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
+        soldBox.classList.add('sold-box');
+        button.parentNode.replaceChild(soldBox, button);
+    }
     
-
-
     function setupEventListeners() {
         for (let i = 1; i <= 6; i++) {
             let button = document.getElementById(`item${i}`);
@@ -116,29 +117,24 @@ function initializeGame() {
     function buyItem(itemNumber) {
         const button = document.getElementById(`item${itemNumber}`);
         const cost = parseInt(button.getAttribute('data-cost'), 10);
-//        soldBox = document.createElement('button');
-        soldBox.id = `sold${itemNumber}`;
-        soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
-        soldBox.classList.add('sold-box');
-        console.log(`Attempting to buy Item ${itemNumber} for ${cost} points. Current score: ${retrivedPlayerData.score}`);
         let upgradeOwnership = loadUpgradeOwnership();
-
+    
         if (upgradeOwnership[itemNumber - 1]) {
             alert("You already own this item.");
             return;
         }
-    
+        
         if (retrivedPlayerData.score >= cost) {
             retrivedPlayerData.score -= cost;
             updateScore(0);
             upgradeOwnership[itemNumber - 1] = true;
             saveUpgradeOwnership(upgradeOwnership);
-            button.parentNode.replaceChild(soldBox, button);
+            sold(itemNumber);
+            updateShopButtons();
         } else {
             alert("You don't have enough points to buy this item.");
         }
-            updateShopButtons();
-        }
+    }
 
     window.onload = function () {
         updateScore(0);
@@ -276,6 +272,7 @@ function initializeGame() {
             }, 1000);
         }
     }
+
     function pauseTimer() {
         clearInterval(timerInterval);
         timerRunning = false;
