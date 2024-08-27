@@ -201,7 +201,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--bg);
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     z-index: 20;
@@ -215,7 +215,6 @@ main {
 .rules-txt {
     font-size: 14px;
     text-align: start;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -225,11 +224,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-left: 10px;
+    padding-left: 8px;
 }
 
 .rules-txt ul {
-    padding-left: 20px;
+    padding-left: 14px;
     display: flex;
     flex-direction: column;
     gap: 5px;
