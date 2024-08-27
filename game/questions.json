@@ -18,41 +18,41 @@
     {
         "question": "What is a Minimum Viable Product (MVP)?",
         "choices": [
-            {"answer": "A basic version of a product with essential features", "isCorrect": true},
-            {"answer": "A final, fully developed product", "isCorrect": false},
-            {"answer": "A product with all possible features", "isCorrect": false}
+            {"answer": "Basic product", "isCorrect": true},
+            {"answer": "Final product", "isCorrect": false},
+            {"answer": "Full product", "isCorrect": false}
         ]
     },
     {
         "question": "Which of the following is NOT typically a source of startup funding?",
         "choices": [
-            {"answer": "Lottery winnings", "isCorrect": true},
+            {"answer": "Lottery", "isCorrect": true},
             {"answer": "Venture capital", "isCorrect": false},
             {"answer": "Angel investors", "isCorrect": false}
         ]
     },
     {
-        "question": "What does 'bootstrapping' mean in the context of entrepreneurship?",
+        "question": "What does 'bootstrapping' mean?",
         "choices": [
-            {"answer": "Starting a business with minimal external funding", "isCorrect": true},
-            {"answer": "Hiring only experienced staff", "isCorrect": false},
-            {"answer": "Expanding rapidly through mergers", "isCorrect": false}
+            {"answer": "Self-funding", "isCorrect": true},
+            {"answer": "Hiring", "isCorrect": false},
+            {"answer": "Merging", "isCorrect": false}
         ]
     },
     {
-        "question": "Which document outlines a business's goals, strategies, and financial forecasts?",
+        "question": "Which document outlines a business's goals and strategies?",
         "choices": [
             {"answer": "Business plan", "isCorrect": true},
             {"answer": "Marketing plan", "isCorrect": false},
-            {"answer": "Employee handbook", "isCorrect": false}
+            {"answer": "Handbook", "isCorrect": false}
         ]
     },
     {
-        "question": "What does 'scalability' refer to in a business context?",
+        "question": "What does 'scalability' refer to?",
         "choices": [
-            {"answer": "The ability to grow without significant increases in cost", "isCorrect": true},
-            {"answer": "The ability to hire more employees quickly", "isCorrect": false},
-            {"answer": "The ability to change the business model", "isCorrect": false}
+            {"answer": "Cost-efficient growth", "isCorrect": true},
+            {"answer": "Rapid hiring", "isCorrect": false},
+            {"answer": "Model change", "isCorrect": false}
         ]
     },
     {
@@ -66,13 +66,13 @@
     {
         "question": "What is 'market research'?",
         "choices": [
-            {"answer": "The process of gathering information about consumers' needs and preferences", "isCorrect": true},
-            {"answer": "The process of hiring new employees", "isCorrect": false},
-            {"answer": "The process of designing a logo", "isCorrect": false}
+            {"answer": "Consumer study", "isCorrect": true},
+            {"answer": "Hiring process", "isCorrect": false},
+            {"answer": "Logo design", "isCorrect": false}
         ]
     },
     {
-        "question": "Which term refers to the financial resources a company uses to fund its operations?",
+        "question": "Which term refers to the financial resources a company uses?",
         "choices": [
             {"answer": "Capital", "isCorrect": true},
             {"answer": "Revenue", "isCorrect": false},
@@ -84,23 +84,23 @@
         "choices": [
             {"answer": "Poor market fit", "isCorrect": true},
             {"answer": "Too many customers", "isCorrect": false},
-            {"answer": "Excessive profits", "isCorrect": false}
+            {"answer": "High profits", "isCorrect": false}
         ]
     },
     {
         "question": "What is the purpose of a SWOT analysis?",
         "choices": [
-            {"answer": "To identify strengths, weaknesses, opportunities, and threats", "isCorrect": true},
-            {"answer": "To calculate profit margins", "isCorrect": false},
-            {"answer": "To design a marketing campaign", "isCorrect": false}
+            {"answer": "Identify strengths", "isCorrect": true},
+            {"answer": "Calculate profit", "isCorrect": false},
+            {"answer": "Design marketing", "isCorrect": false}
         ]
     },
     {
         "question": "Which of the following is an example of a disruptive innovation?",
         "choices": [
-            {"answer": "A new technology that significantly changes an industry", "isCorrect": true},
-            {"answer": "A small improvement to an existing product", "isCorrect": false},
-            {"answer": "A new hire in a company", "isCorrect": false}
+            {"answer": "New technology", "isCorrect": true},
+            {"answer": "Small improvement", "isCorrect": false},
+            {"answer": "New hire", "isCorrect": false}
         ]
     },
     {
@@ -114,9 +114,9 @@
     {
         "question": "What is an 'elevator pitch'?",
         "choices": [
-            {"answer": "A brief, persuasive speech to spark interest in a project", "isCorrect": true},
-            {"answer": "A long, detailed business plan", "isCorrect": false},
-            {"answer": "A summary of a company's financials", "isCorrect": false}
+            {"answer": "Brief speech", "isCorrect": true},
+            {"answer": "Detailed plan", "isCorrect": false},
+            {"answer": "Financial summary", "isCorrect": false}
         ]
     },
     {
@@ -138,17 +138,17 @@
     {
         "question": "What is the primary purpose of a value proposition?",
         "choices": [
-            {"answer": "To explain how a product or service solves a problem", "isCorrect": true},
-            {"answer": "To set the price of a product", "isCorrect": false},
-            {"answer": "To design a marketing strategy", "isCorrect": false}
+            {"answer": "Solve a problem", "isCorrect": true},
+            {"answer": "Set price", "isCorrect": false},
+            {"answer": "Market design", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following is a common characteristic of a successful entrepreneur?",
+        "question": "Which of the following is a key trait of a successful entrepreneur?",
         "choices": [
             {"answer": "Persistence", "isCorrect": true},
             {"answer": "Procrastination", "isCorrect": false},
-            {"answer": "Indecisiveness", "isCorrect": false}
+            {"answer": "Indecision", "isCorrect": false}
         ]
     },
     {
@@ -160,195 +160,179 @@
         ]
     },
     {
-        "question": "Which of the following is considered a major advantage of entrepreneurship?",
+        "question": "Which of the following is a major advantage of entrepreneurship?",
         "choices": [
-            {"answer": "Control over one's own business", "isCorrect": true},
+            {"answer": "Control", "isCorrect": true},
             {"answer": "Guaranteed success", "isCorrect": false},
-            {"answer": "Minimal work hours", "isCorrect": false}
+            {"answer": "Minimal hours", "isCorrect": false}
         ]
     },
     {
-        "question": "What is a 'pivot' in the context of a startup?",
+        "question": "What is a 'pivot' in a startup?",
         "choices": [
-            {"answer": "A fundamental change in the business strategy", "isCorrect": true},
-            {"answer": "A minor adjustment to marketing", "isCorrect": false},
-            {"answer": "Hiring new employees", "isCorrect": false}
+            {"answer": "Change strategy", "isCorrect": true},
+            {"answer": "Adjust marketing", "isCorrect": false},
+            {"answer": "Hire staff", "isCorrect": false}
         ]
     },
     {
         "question": "Which of the following is a primary function of an incubator?",
         "choices": [
-            {"answer": "To provide support and resources to early-stage startups", "isCorrect": true},
-            {"answer": "To facilitate mergers and acquisitions", "isCorrect": false},
-            {"answer": "To offer long-term financial investments", "isCorrect": false}
+            {"answer": "Startup support", "isCorrect": true},
+            {"answer": "Mergers", "isCorrect": false},
+            {"answer": "Long-term investment", "isCorrect": false}
         ]
     },
     {
-        "question": "Which term describes a market where there are many buyers but only one seller?",
+        "question": "Which term describes a market with one seller?",
         "choices": [
             {"answer": "Monopoly", "isCorrect": true},
             {"answer": "Oligopoly", "isCorrect": false},
-            {"answer": "Perfect competition", "isCorrect": false}
+            {"answer": "Competition", "isCorrect": false}
         ]
     },
     {
         "question": "What is the purpose of a business accelerator?",
         "choices": [
-            {"answer": "To help startups grow quickly by providing mentorship and resources", "isCorrect": true},
-            {"answer": "To reduce business taxes", "isCorrect": false},
-            {"answer": "To provide long-term office space", "isCorrect": false}
+            {"answer": "Startup growth", "isCorrect": true},
+            {"answer": "Tax reduction", "isCorrect": false},
+            {"answer": "Office space", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following is a key component of customer acquisition cost (CAC)?",
+        "question": "Which is a key component of customer acquisition cost (CAC)?",
         "choices": [
-            {"answer": "Marketing expenses", "isCorrect": true},
+            {"answer": "Marketing", "isCorrect": true},
             {"answer": "Revenue", "isCorrect": false},
-            {"answer": "Inventory cost", "isCorrect": false}
+            {"answer": "Inventory", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following best defines 'equity' in a business context?",
+        "question": "Which of the following best defines 'equity'?",
         "choices": [
-            {"answer": "Ownership in a company", "isCorrect": true},
-            {"answer": "A company's revenue", "isCorrect": false},
-            {"answer": "The cost of goods sold", "isCorrect": false}
+            {"answer": "Ownership", "isCorrect": true},
+            {"answer": "Revenue", "isCorrect": false},
+            {"answer": "Costs", "isCorrect": false}
         ]
     },
     {
         "question": "What does the term 'angel investor' refer to?",
         "choices": [
-            {"answer": "An individual who provides capital to startups in exchange for ownership equity", "isCorrect": true},
-            {"answer": "A government grant for small businesses", "isCorrect": false},
-            {"answer": "A company that funds non-profit organizations", "isCorrect": false}
+            {"answer": "Individual investor", "isCorrect": true},
+            {"answer": "Government grant", "isCorrect": false},
+            {"answer": "Non-profit funding", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following is a key advantage of a sole proprietorship?",
+        "question": "Which of the following is an advantage of a sole proprietorship?",
         "choices": [
-            {"answer": "Complete control by the owner", "isCorrect": true},
+            {"answer": "Complete control", "isCorrect": true},
             {"answer": "Limited liability", "isCorrect": false},
-            {"answer": "Unlimited growth potential", "isCorrect": false}
+            {"answer": "Unlimited growth", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following is a benefit of conducting a competitive analysis?",
+        "question": "What is the benefit of a competitive analysis?",
         "choices": [
-            {"answer": "Understanding the strengths and weaknesses of competitors", "isCorrect": true},
-            {"answer": "Determining employee salaries", "isCorrect": false},
-            {"answer": "Setting up an office location", "isCorrect": false}
+            {"answer": "Understand competition", "isCorrect": true},
+            {"answer": "Set salaries", "isCorrect": false},
+            {"answer": "Choose location", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the primary goal of a pitch deck?",
+        "question": "What is the goal of a pitch deck?",
         "choices": [
-            {"answer": "To present a business idea to potential investors", "isCorrect": true},
-            {"answer": "To train new employees", "isCorrect": false},
-            {"answer": "To manage company finances", "isCorrect": false}
+            {"answer": "Present to investors", "isCorrect": true},
+            {"answer": "Train staff", "isCorrect": false},
+            {"answer": "Manage finances", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following describes a 'lean startup'?",
+        "question": "What describes a 'lean startup'?",
         "choices": [
-            {"answer": "A startup that maximizes efficiency by minimizing waste", "isCorrect": true},
-            {"answer": "A startup with a large initial investment", "isCorrect": false},
-            {"answer": "A startup that focuses solely on marketing", "isCorrect": false}
+            {"answer": "Minimize waste", "isCorrect": true},
+            {"answer": "Large investment", "isCorrect": false},
+            {"answer": "Focus on marketing", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following best describes a 'pivot'?",
+        "question": "What does 'burn rate' refer to?",
         "choices": [
-            {"answer": "A significant change in business direction", "isCorrect": true},
-            {"answer": "A small adjustment in pricing strategy", "isCorrect": false},
-            {"answer": "An increase in marketing budget", "isCorrect": false}
+            {"answer": "Spending rate", "isCorrect": true},
+            {"answer": "Development speed", "isCorrect": false},
+            {"answer": "Hiring rate", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following is a common way to validate a business idea?",
+        "question": "What is essential for a strong brand?",
         "choices": [
-            {"answer": "Conducting surveys and getting customer feedback", "isCorrect": true},
-            {"answer": "Hiring more employees", "isCorrect": false},
-            {"answer": "Designing a company logo", "isCorrect": false}
+            {"answer": "Consistency", "isCorrect": true},
+            {"answer": "Rebranding", "isCorrect": false},
+            {"answer": "Hiring", "isCorrect": false}
         ]
     },
     {
-        "question": "What does 'burn rate' refer to in a startup context?",
+        "question": "What is a benefit of a partnership?",
         "choices": [
-            {"answer": "The rate at which a startup spends its capital", "isCorrect": true},
-            {"answer": "The speed of product development", "isCorrect": false},
-            {"answer": "The rate of hiring new employees", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which of the following is essential for building a strong brand?",
-        "choices": [
-            {"answer": "Consistency in messaging and visuals", "isCorrect": true},
-            {"answer": "Frequent rebranding", "isCorrect": false},
-            {"answer": "Hiring more employees", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which of the following is a benefit of forming a partnership?",
-        "choices": [
-            {"answer": "Shared resources and skills", "isCorrect": true},
-            {"answer": "Complete control by one person", "isCorrect": false},
-            {"answer": "Unlimited liability for all partners", "isCorrect": false}
+            {"answer": "Shared resources", "isCorrect": true},
+            {"answer": "Full control", "isCorrect": false},
+            {"answer": "Unlimited liability", "isCorrect": false}
         ]
     },
     {
         "question": "What is 'crowdfunding'?",
         "choices": [
-            {"answer": "Raising small amounts of money from a large number of people", "isCorrect": true},
-            {"answer": "Borrowing money from a bank", "isCorrect": false},
-            {"answer": "Receiving a government grant", "isCorrect": false}
+            {"answer": "Raising small amounts", "isCorrect": true},
+            {"answer": "Bank loan", "isCorrect": false},
+            {"answer": "Government grant", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following best describes 'profit margin'?",
+        "question": "What best describes 'profit margin'?",
         "choices": [
-            {"answer": "The percentage of revenue that remains after all expenses are paid", "isCorrect": true},
-            {"answer": "The total revenue of a company", "isCorrect": false},
-            {"answer": "The cost of goods sold", "isCorrect": false}
+            {"answer": "Percentage of revenue after expenses", "isCorrect": true},
+            {"answer": "Total revenue", "isCorrect": false},
+            {"answer": "Cost of goods", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following is a common strategy for customer retention?",
+        "question": "What is a common customer retention strategy?",
         "choices": [
-            {"answer": "Offering loyalty programs", "isCorrect": true},
-            {"answer": "Raising prices", "isCorrect": false},
-            {"answer": "Decreasing customer service efforts", "isCorrect": false}
+            {"answer": "Loyalty programs", "isCorrect": true},
+            {"answer": "Raise prices", "isCorrect": false},
+            {"answer": "Reduce service", "isCorrect": false}
         ]
     },
     {
-        "question": "Which term describes the process of selling a company's shares to the public for the first time?",
+        "question": "What term describes selling a company's shares to the public for the first time?",
         "choices": [
-            {"answer": "Initial Public Offering (IPO)", "isCorrect": true},
+            {"answer": "IPO", "isCorrect": true},
             {"answer": "Merger", "isCorrect": false},
             {"answer": "Acquisition", "isCorrect": false}
         ]
     },
     {
-        "question": "Which of the following best defines 'cash flow'?",
+        "question": "What best defines 'cash flow'?",
         "choices": [
-            {"answer": "The total amount of money being transferred in and out of a business", "isCorrect": true},
-            {"answer": "The company's total profit", "isCorrect": false},
-            {"answer": "The amount of cash a company has at hand", "isCorrect": false}
+            {"answer": "Money in/out", "isCorrect": true},
+            {"answer": "Total profit", "isCorrect": false},
+            {"answer": "Cash on hand", "isCorrect": false}
         ]
     },
     {
-        "question": "What is 'break-even point' in business?",
+        "question": "What is the 'break-even point'?",
         "choices": [
-            {"answer": "The point at which total revenue equals total costs", "isCorrect": true},
-            {"answer": "The point at which a business is profitable", "isCorrect": false},
-            {"answer": "The point at which a business begins", "isCorrect": false}
+            {"answer": "Revenue equals costs", "isCorrect": true},
+            {"answer": "Profitability", "isCorrect": false},
+            {"answer": "Business start", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the main focus of 'design thinking' in entrepreneurship?",
+        "question": "What is the focus of 'design thinking'?",
         "choices": [
-            {"answer": "Solving problems through user-centered design", "isCorrect": true},
-            {"answer": "Maximizing profit margins", "isCorrect": false},
-            {"answer": "Reducing production costs", "isCorrect": false}
+            {"answer": "User-centered solutions", "isCorrect": true},
+            {"answer": "Profit maximization", "isCorrect": false},
+            {"answer": "Cost reduction", "isCorrect": false}
         ]
     }
 ]
