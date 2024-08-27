@@ -102,6 +102,7 @@ function initializeGame() {
         soldBox.classList.add('sold-box');
         button = document.querySelector(`#item${item}`);
         button.parentNode.replaceChild(soldBox, button);
+        document.getElementById(`sold${item}`).disabled = true; 
     }
     
     function setupEventListeners() {
@@ -321,6 +322,7 @@ function initializeGame() {
         if (retrivedPlayerData.score < 0) {
             retrivedPlayerData.score = 0;
         }
+        scoreboard.textContent = retrivedPlayerData.score;
         localStorage.setItem('playerData', JSON.stringify(retrivedPlayerData));
         console.log("Score updated to: " + retrivedPlayerData.score);
     }
