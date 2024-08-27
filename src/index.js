@@ -16,10 +16,12 @@ const rulesBtn = document.getElementById('rules-game');
 const rulesModal = document.getElementById('rules-content');
 
 const scoreBoardBtn = document.getElementById('score-board');
+const closeScoreBoardBtn = document.getElementById('close-score-board');
 const ScoreBoardModal = document.getElementById('score-board-content');
 
 scoreBoardBtn.addEventListener('click', () => {
     ScoreBoardModal.style.display = 'flex';
+    overlay.style.display = 'block';
 });
 
 rulesBtn.addEventListener('click', () => {
@@ -40,6 +42,11 @@ closeBtn.addEventListener('click', () => {
 
 closeRulesBtn.addEventListener('click', () => {
     rulesModal.style.display = 'none';
+    overlay.style.display = 'none';
+});
+
+closeScoreBoardBtn.addEventListener('click', () => {
+    ScoreBoardModal.style.display = 'none';
     overlay.style.display = 'none';
 });
 
