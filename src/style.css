@@ -368,14 +368,18 @@ main {
 }
 
 .shop-item img {
-    height: 40%;
-    width: 100%;
+    height: 50%;
+    width: 90%;
     object-fit: cover;
+}
+
+.shop-item span {
+    font-weight: 500;
 }
 
 .shop-item p {
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 
@@ -541,6 +545,12 @@ main {
         height: 160px;
 
     }
+
+
+    .shop-item span {
+        font-size: 14px;
+    }
+
 
     .intro-txt h1 {
         font-size: 20px;
