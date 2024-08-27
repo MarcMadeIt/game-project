@@ -37,22 +37,23 @@ closeBtn.addEventListener('click', () => {
     rulesModal.style.display = 'none';
 });
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', (event) => {
+    let inputValue = inputBox.value;
+    if (!inputValue) {
+        event.preventDefault();
+        alert('Please enter a string');
+        return;
+    }
     localStorage.removeItem('score');
     localStorage.removeItem('upgradeOwnership');
-    let inputValue = inputBox.value;
-    if (inputValue) {
-        let playerData = {
-            name: inputValue,
-            score: 0
-        };
-        localStorage.setItem('playerData', JSON.stringify(playerData));
-        console.log('Stored string:', inputValue);
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-    } else {
-        alert('Please enter a string');
-    }
+    let playerData = {
+        name: inputValue,
+        score: 0
+    };
+    localStorage.setItem('playerData', JSON.stringify(playerData));
+    console.log('Stored string:', inputValue);
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
 });
 
 window.onload = function () {
