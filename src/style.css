@@ -220,6 +220,14 @@ main {
     gap: 10px;
 }
 
+.rules-txt h3 {
+    font-size: 25px;
+}
+
+.rules-txt h4 {
+    font-size: 15px;
+}
+
 .rules-txt ol {
     display: flex;
     flex-direction: column;
