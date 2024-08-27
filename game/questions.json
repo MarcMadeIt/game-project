@@ -1,626 +1,354 @@
 [
     {
-        "question": "What is the capital of France?",
+        "question": "What is the primary goal of a startup?",
         "choices": [
-            {"answer": "Paris", "isCorrect": true},
-            {"answer": "London", "isCorrect": false},
-            {"answer": "Rome", "isCorrect": false}
+            {"answer": "Growth", "isCorrect": true},
+            {"answer": "Stability", "isCorrect": false},
+            {"answer": "Charity", "isCorrect": false}
         ]
     },
     {
-        "question": "Which planet is known as the Red Planet?",
+        "question": "Which term describes a business model where a company gives another party the rights to operate using its brand?",
         "choices": [
-            {"answer": "Mars", "isCorrect": true},
-            {"answer": "Venus", "isCorrect": false},
-            {"answer": "Jupiter", "isCorrect": false}
+            {"answer": "Franchise", "isCorrect": true},
+            {"answer": "Merger", "isCorrect": false},
+            {"answer": "Partnership", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the largest ocean on Earth?",
+        "question": "What is a Minimum Viable Product (MVP)?",
         "choices": [
-            {"answer": "Pacific Ocean", "isCorrect": true},
-            {"answer": "Atlantic Ocean", "isCorrect": false},
-            {"answer": "Indian Ocean", "isCorrect": false}
+            {"answer": "A basic version of a product with essential features", "isCorrect": true},
+            {"answer": "A final, fully developed product", "isCorrect": false},
+            {"answer": "A product with all possible features", "isCorrect": false}
         ]
     },
     {
-        "question": "In which year did the Titanic sink?",
+        "question": "Which of the following is NOT typically a source of startup funding?",
         "choices": [
-            {"answer": "1912", "isCorrect": true},
-            {"answer": "1905", "isCorrect": false},
-            {"answer": "1920", "isCorrect": false}
+            {"answer": "Lottery winnings", "isCorrect": true},
+            {"answer": "Venture capital", "isCorrect": false},
+            {"answer": "Angel investors", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the powerhouse of the cell?",
+        "question": "What does 'bootstrapping' mean in the context of entrepreneurship?",
         "choices": [
-            {"answer": "Mitochondria", "isCorrect": true},
-            {"answer": "Nucleus", "isCorrect": false},
-            {"answer": "Ribosome", "isCorrect": false}
+            {"answer": "Starting a business with minimal external funding", "isCorrect": true},
+            {"answer": "Hiring only experienced staff", "isCorrect": false},
+            {"answer": "Expanding rapidly through mergers", "isCorrect": false}
         ]
     },
     {
-        "question": "Who wrote 'Romeo and Juliet'?",
+        "question": "Which document outlines a business's goals, strategies, and financial forecasts?",
         "choices": [
-            {"answer": "William Shakespeare", "isCorrect": true},
-            {"answer": "Charles Dickens", "isCorrect": false},
-            {"answer": "Jane Austen", "isCorrect": false}
+            {"answer": "Business plan", "isCorrect": true},
+            {"answer": "Marketing plan", "isCorrect": false},
+            {"answer": "Employee handbook", "isCorrect": false}
         ]
     },
     {
-        "question": "Which element has the chemical symbol 'O'?",
+        "question": "What does 'scalability' refer to in a business context?",
         "choices": [
-            {"answer": "Oxygen", "isCorrect": true},
-            {"answer": "Gold", "isCorrect": false},
-            {"answer": "Osmium", "isCorrect": false}
+            {"answer": "The ability to grow without significant increases in cost", "isCorrect": true},
+            {"answer": "The ability to hire more employees quickly", "isCorrect": false},
+            {"answer": "The ability to change the business model", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the hardest natural substance on Earth?",
+        "question": "Which of the following is a key characteristic of an entrepreneur?",
         "choices": [
-            {"answer": "Diamond", "isCorrect": true},
-            {"answer": "Gold", "isCorrect": false},
-            {"answer": "Iron", "isCorrect": false}
+            {"answer": "Risk-taking", "isCorrect": true},
+            {"answer": "Conservatism", "isCorrect": false},
+            {"answer": "Inflexibility", "isCorrect": false}
         ]
     },
     {
-        "question": "How many continents are there on Earth?",
+        "question": "What is 'market research'?",
         "choices": [
-            {"answer": "Seven", "isCorrect": true},
-            {"answer": "Five", "isCorrect": false},
-            {"answer": "Six", "isCorrect": false}
+            {"answer": "The process of gathering information about consumers' needs and preferences", "isCorrect": true},
+            {"answer": "The process of hiring new employees", "isCorrect": false},
+            {"answer": "The process of designing a logo", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the boiling point of water at sea level?",
+        "question": "Which term refers to the financial resources a company uses to fund its operations?",
         "choices": [
-            {"answer": "100°C", "isCorrect": true},
-            {"answer": "0°C", "isCorrect": false},
-            {"answer": "50°C", "isCorrect": false}
+            {"answer": "Capital", "isCorrect": true},
+            {"answer": "Revenue", "isCorrect": false},
+            {"answer": "Assets", "isCorrect": false}
         ]
     },
     {
-        "question": "Who was the first President of the United States?",
+        "question": "Which of the following is a common reason for startup failure?",
         "choices": [
-            {"answer": "George Washington", "isCorrect": true},
-            {"answer": "Abraham Lincoln", "isCorrect": false},
-            {"answer": "Thomas Jefferson", "isCorrect": false}
+            {"answer": "Poor market fit", "isCorrect": true},
+            {"answer": "Too many customers", "isCorrect": false},
+            {"answer": "Excessive profits", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the largest planet in our solar system?",
+        "question": "What is the purpose of a SWOT analysis?",
         "choices": [
-            {"answer": "Jupiter", "isCorrect": true},
-            {"answer": "Saturn", "isCorrect": false},
-            {"answer": "Earth", "isCorrect": false}
+            {"answer": "To identify strengths, weaknesses, opportunities, and threats", "isCorrect": true},
+            {"answer": "To calculate profit margins", "isCorrect": false},
+            {"answer": "To design a marketing campaign", "isCorrect": false}
         ]
     },
     {
-        "question": "Which country is home to the kangaroo?",
+        "question": "Which of the following is an example of a disruptive innovation?",
         "choices": [
-            {"answer": "Australia", "isCorrect": true},
-            {"answer": "India", "isCorrect": false},
-            {"answer": "Brazil", "isCorrect": false}
+            {"answer": "A new technology that significantly changes an industry", "isCorrect": true},
+            {"answer": "A small improvement to an existing product", "isCorrect": false},
+            {"answer": "A new hire in a company", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the smallest prime number?",
+        "question": "What does 'B2B' stand for?",
         "choices": [
-            {"answer": "2", "isCorrect": true},
-            {"answer": "1", "isCorrect": false},
-            {"answer": "3", "isCorrect": false}
+            {"answer": "Business to Business", "isCorrect": true},
+            {"answer": "Back to Back", "isCorrect": false},
+            {"answer": "Business to Buyer", "isCorrect": false}
         ]
     },
     {
-        "question": "Which famous scientist developed the theory of relativity?",
+        "question": "What is an 'elevator pitch'?",
         "choices": [
-            {"answer": "Albert Einstein", "isCorrect": true},
-            {"answer": "Isaac Newton", "isCorrect": false},
-            {"answer": "Galileo Galilei", "isCorrect": false}
+            {"answer": "A brief, persuasive speech to spark interest in a project", "isCorrect": true},
+            {"answer": "A long, detailed business plan", "isCorrect": false},
+            {"answer": "A summary of a company's financials", "isCorrect": false}
         ]
     },
     {
-        "question": "Which country is known as the Land of the Rising Sun?",
+        "question": "Which of the following is a key component of a business model?",
         "choices": [
-            {"answer": "Japan", "isCorrect": true},
-            {"answer": "China", "isCorrect": false},
-            {"answer": "Thailand", "isCorrect": false}
+            {"answer": "Revenue streams", "isCorrect": true},
+            {"answer": "Office location", "isCorrect": false},
+            {"answer": "Employee benefits", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the largest bone in the human body?",
+        "question": "Which of the following is an example of a fixed cost?",
         "choices": [
-            {"answer": "Femur", "isCorrect": true},
-            {"answer": "Skull", "isCorrect": false},
-            {"answer": "Humerus", "isCorrect": false}
+            {"answer": "Rent", "isCorrect": true},
+            {"answer": "Utilities", "isCorrect": false},
+            {"answer": "Raw materials", "isCorrect": false}
         ]
     },
     {
-        "question": "Which element is represented by the symbol 'Na'?",
+        "question": "What is the primary purpose of a value proposition?",
         "choices": [
-            {"answer": "Sodium", "isCorrect": true},
-            {"answer": "Neon", "isCorrect": false},
-            {"answer": "Nickel", "isCorrect": false}
+            {"answer": "To explain how a product or service solves a problem", "isCorrect": true},
+            {"answer": "To set the price of a product", "isCorrect": false},
+            {"answer": "To design a marketing strategy", "isCorrect": false}
         ]
     },
     {
-        "question": "Who painted the Mona Lisa?",
+        "question": "Which of the following is a common characteristic of a successful entrepreneur?",
         "choices": [
-            {"answer": "Leonardo da Vinci", "isCorrect": true},
-            {"answer": "Vincent van Gogh", "isCorrect": false},
-            {"answer": "Pablo Picasso", "isCorrect": false}
+            {"answer": "Persistence", "isCorrect": true},
+            {"answer": "Procrastination", "isCorrect": false},
+            {"answer": "Indecisiveness", "isCorrect": false}
         ]
     },
     {
-        "question": "Which planet is closest to the Sun?",
+        "question": "What does 'ROI' stand for?",
         "choices": [
-            {"answer": "Mercury", "isCorrect": true},
-            {"answer": "Venus", "isCorrect": false},
-            {"answer": "Earth", "isCorrect": false}
+            {"answer": "Return on Investment", "isCorrect": true},
+            {"answer": "Revenue of Industry", "isCorrect": false},
+            {"answer": "Rate of Interest", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the square root of 64?",
+        "question": "Which of the following is considered a major advantage of entrepreneurship?",
         "choices": [
-            {"answer": "8", "isCorrect": true},
-            {"answer": "6", "isCorrect": false},
-            {"answer": "10", "isCorrect": false}
+            {"answer": "Control over one's own business", "isCorrect": true},
+            {"answer": "Guaranteed success", "isCorrect": false},
+            {"answer": "Minimal work hours", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the longest river in the world?",
+        "question": "What is a 'pivot' in the context of a startup?",
         "choices": [
-            {"answer": "Nile River", "isCorrect": true},
-            {"answer": "Amazon River", "isCorrect": false},
-            {"answer": "Yangtze River", "isCorrect": false}
+            {"answer": "A fundamental change in the business strategy", "isCorrect": true},
+            {"answer": "A minor adjustment to marketing", "isCorrect": false},
+            {"answer": "Hiring new employees", "isCorrect": false}
         ]
     },
     {
-        "question": "Who was the first person to walk on the moon?",
+        "question": "Which of the following is a primary function of an incubator?",
         "choices": [
-            {"answer": "Neil Armstrong", "isCorrect": true},
-            {"answer": "Buzz Aldrin", "isCorrect": false},
-            {"answer": "Yuri Gagarin", "isCorrect": false}
+            {"answer": "To provide support and resources to early-stage startups", "isCorrect": true},
+            {"answer": "To facilitate mergers and acquisitions", "isCorrect": false},
+            {"answer": "To offer long-term financial investments", "isCorrect": false}
         ]
     },
     {
-        "question": "Which gas do plants absorb from the atmosphere?",
+        "question": "Which term describes a market where there are many buyers but only one seller?",
         "choices": [
-            {"answer": "Carbon dioxide", "isCorrect": true},
-            {"answer": "Oxygen", "isCorrect": false},
-            {"answer": "Nitrogen", "isCorrect": false}
+            {"answer": "Monopoly", "isCorrect": true},
+            {"answer": "Oligopoly", "isCorrect": false},
+            {"answer": "Perfect competition", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the currency of Japan?",
+        "question": "What is the purpose of a business accelerator?",
         "choices": [
-            {"answer": "Yen", "isCorrect": true},
-            {"answer": "Won", "isCorrect": false},
-            {"answer": "Peso", "isCorrect": false}
+            {"answer": "To help startups grow quickly by providing mentorship and resources", "isCorrect": true},
+            {"answer": "To reduce business taxes", "isCorrect": false},
+            {"answer": "To provide long-term office space", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the main ingredient in guacamole?",
+        "question": "Which of the following is a key component of customer acquisition cost (CAC)?",
         "choices": [
-            {"answer": "Avocado", "isCorrect": true},
-            {"answer": "Tomato", "isCorrect": false},
-            {"answer": "Onion", "isCorrect": false}
+            {"answer": "Marketing expenses", "isCorrect": true},
+            {"answer": "Revenue", "isCorrect": false},
+            {"answer": "Inventory cost", "isCorrect": false}
         ]
     },
     {
-        "question": "Which ocean lies on the east coast of the United States?",
+        "question": "Which of the following best defines 'equity' in a business context?",
         "choices": [
-            {"answer": "Atlantic Ocean", "isCorrect": true},
-            {"answer": "Pacific Ocean", "isCorrect": false},
-            {"answer": "Indian Ocean", "isCorrect": false}
+            {"answer": "Ownership in a company", "isCorrect": true},
+            {"answer": "A company's revenue", "isCorrect": false},
+            {"answer": "The cost of goods sold", "isCorrect": false}
         ]
     },
     {
-        "question": "How many rings are on the Olympic flag?",
+        "question": "What does the term 'angel investor' refer to?",
         "choices": [
-            {"answer": "Five", "isCorrect": true},
-            {"answer": "Four", "isCorrect": false},
-            {"answer": "Six", "isCorrect": false}
+            {"answer": "An individual who provides capital to startups in exchange for ownership equity", "isCorrect": true},
+            {"answer": "A government grant for small businesses", "isCorrect": false},
+            {"answer": "A company that funds non-profit organizations", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the chemical symbol for gold?",
+        "question": "Which of the following is a key advantage of a sole proprietorship?",
         "choices": [
-            {"answer": "Au", "isCorrect": true},
-            {"answer": "Ag", "isCorrect": false},
-            {"answer": "Pb", "isCorrect": false}
+            {"answer": "Complete control by the owner", "isCorrect": true},
+            {"answer": "Limited liability", "isCorrect": false},
+            {"answer": "Unlimited growth potential", "isCorrect": false}
         ]
     },
     {
-        "question": "Which continent is the Sahara Desert located on?",
+        "question": "Which of the following is a benefit of conducting a competitive analysis?",
         "choices": [
-            {"answer": "Africa", "isCorrect": true},
-            {"answer": "Asia", "isCorrect": false},
-            {"answer": "Australia", "isCorrect": false}
+            {"answer": "Understanding the strengths and weaknesses of competitors", "isCorrect": true},
+            {"answer": "Determining employee salaries", "isCorrect": false},
+            {"answer": "Setting up an office location", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the smallest country in the world?",
+        "question": "What is the primary goal of a pitch deck?",
         "choices": [
-            {"answer": "Vatican City", "isCorrect": true},
-            {"answer": "Monaco", "isCorrect": false},
-            {"answer": "San Marino", "isCorrect": false}
+            {"answer": "To present a business idea to potential investors", "isCorrect": true},
+            {"answer": "To train new employees", "isCorrect": false},
+            {"answer": "To manage company finances", "isCorrect": false}
         ]
     },
     {
-        "question": "Which mammal is known for laying eggs?",
+        "question": "Which of the following describes a 'lean startup'?",
         "choices": [
-            {"answer": "Platypus", "isCorrect": true},
-            {"answer": "Kangaroo", "isCorrect": false},
-            {"answer": "Elephant", "isCorrect": false}
+            {"answer": "A startup that maximizes efficiency by minimizing waste", "isCorrect": true},
+            {"answer": "A startup with a large initial investment", "isCorrect": false},
+            {"answer": "A startup that focuses solely on marketing", "isCorrect": false}
         ]
     },
     {
-        "question": "Who invented the telephone?",
+        "question": "Which of the following best describes a 'pivot'?",
         "choices": [
-            {"answer": "Alexander Graham Bell", "isCorrect": true},
-            {"answer": "Thomas Edison", "isCorrect": false},
-            {"answer": "Nikola Tesla", "isCorrect": false}
+            {"answer": "A significant change in business direction", "isCorrect": true},
+            {"answer": "A small adjustment in pricing strategy", "isCorrect": false},
+            {"answer": "An increase in marketing budget", "isCorrect": false}
         ]
     },
     {
-        "question": "Which organ is responsible for pumping blood through the body?",
+        "question": "Which of the following is a common way to validate a business idea?",
         "choices": [
-            {"answer": "Heart", "isCorrect": true},
-            {"answer": "Liver", "isCorrect": false},
-            {"answer": "Kidney", "isCorrect": false}
+            {"answer": "Conducting surveys and getting customer feedback", "isCorrect": true},
+            {"answer": "Hiring more employees", "isCorrect": false},
+            {"answer": "Designing a company logo", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the main gas found in the air we breathe?",
+        "question": "What does 'burn rate' refer to in a startup context?",
         "choices": [
-            {"answer": "Nitrogen", "isCorrect": true},
-            {"answer": "Oxygen", "isCorrect": false},
-            {"answer": "Carbon Dioxide", "isCorrect": false}
+            {"answer": "The rate at which a startup spends its capital", "isCorrect": true},
+            {"answer": "The speed of product development", "isCorrect": false},
+            {"answer": "The rate of hiring new employees", "isCorrect": false}
         ]
     },
     {
-        "question": "Which planet has the most moons?",
+        "question": "Which of the following is essential for building a strong brand?",
         "choices": [
-            {"answer": "Saturn", "isCorrect": true},
-            {"answer": "Jupiter", "isCorrect": false},
-            {"answer": "Uranus", "isCorrect": false}
+            {"answer": "Consistency in messaging and visuals", "isCorrect": true},
+            {"answer": "Frequent rebranding", "isCorrect": false},
+            {"answer": "Hiring more employees", "isCorrect": false}
         ]
     },
     {
-        "question": "Who is known as the 'Father of Computers'?",
+        "question": "Which of the following is a benefit of forming a partnership?",
         "choices": [
-            {"answer": "Charles Babbage", "isCorrect": true},
-            {"answer": "Alan Turing", "isCorrect": false},
-            {"answer": "John von Neumann", "isCorrect": false}
+            {"answer": "Shared resources and skills", "isCorrect": true},
+            {"answer": "Complete control by one person", "isCorrect": false},
+            {"answer": "Unlimited liability for all partners", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the chemical formula for water?",
+        "question": "What is 'crowdfunding'?",
         "choices": [
-            {"answer": "H2O", "isCorrect": true},
-            {"answer": "CO2", "isCorrect": false},
-            {"answer": "O2", "isCorrect": false}
+            {"answer": "Raising small amounts of money from a large number of people", "isCorrect": true},
+            {"answer": "Borrowing money from a bank", "isCorrect": false},
+            {"answer": "Receiving a government grant", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the capital city of Italy?",
+        "question": "Which of the following best describes 'profit margin'?",
         "choices": [
-            {"answer": "Rome", "isCorrect": true},
-            {"answer": "Milan", "isCorrect": false},
-            {"answer": "Venice", "isCorrect": false}
+            {"answer": "The percentage of revenue that remains after all expenses are paid", "isCorrect": true},
+            {"answer": "The total revenue of a company", "isCorrect": false},
+            {"answer": "The cost of goods sold", "isCorrect": false}
         ]
     },
     {
-        "question": "Which element has the atomic number 1?",
+        "question": "Which of the following is a common strategy for customer retention?",
         "choices": [
-            {"answer": "Hydrogen", "isCorrect": true},
-            {"answer": "Helium", "isCorrect": false},
-            {"answer": "Lithium", "isCorrect": false}
+            {"answer": "Offering loyalty programs", "isCorrect": true},
+            {"answer": "Raising prices", "isCorrect": false},
+            {"answer": "Decreasing customer service efforts", "isCorrect": false}
         ]
     },
     {
-        "question": "Which planet is known for its rings?",
+        "question": "Which term describes the process of selling a company's shares to the public for the first time?",
         "choices": [
-            {"answer": "Saturn", "isCorrect": true},
-            {"answer": "Neptune", "isCorrect": false},
-            {"answer": "Uranus", "isCorrect": false}
+            {"answer": "Initial Public Offering (IPO)", "isCorrect": true},
+            {"answer": "Merger", "isCorrect": false},
+            {"answer": "Acquisition", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the main language spoken in Brazil?",
+        "question": "Which of the following best defines 'cash flow'?",
         "choices": [
-            {"answer": "Portuguese", "isCorrect": true},
-            {"answer": "Spanish", "isCorrect": false},
-            {"answer": "French", "isCorrect": false}
+            {"answer": "The total amount of money being transferred in and out of a business", "isCorrect": true},
+            {"answer": "The company's total profit", "isCorrect": false},
+            {"answer": "The amount of cash a company has at hand", "isCorrect": false}
         ]
     },
     {
-        "question": "Which planet is known as Earth's twin?",
+        "question": "What is 'break-even point' in business?",
         "choices": [
-            {"answer": "Venus", "isCorrect": true},
-            {"answer": "Mars", "isCorrect": false},
-            {"answer": "Mercury", "isCorrect": false}
+            {"answer": "The point at which total revenue equals total costs", "isCorrect": true},
+            {"answer": "The point at which a business is profitable", "isCorrect": false},
+            {"answer": "The point at which a business begins", "isCorrect": false}
         ]
     },
     {
-        "question": "What is the most common blood type in humans?",
+        "question": "What is the main focus of 'design thinking' in entrepreneurship?",
         "choices": [
-            {"answer": "O+", "isCorrect": true},
-            {"answer": "A+", "isCorrect": false},
-            {"answer": "B+", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Who wrote 'Pride and Prejudice'?",
-        "choices": [
-            {"answer": "Jane Austen", "isCorrect": true},
-            {"answer": "Charlotte Brontë", "isCorrect": false},
-            {"answer": "Mary Shelley", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which metal is liquid at room temperature?",
-        "choices": [
-            {"answer": "Mercury", "isCorrect": true},
-            {"answer": "Lead", "isCorrect": false},
-            {"answer": "Iron", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "What is the main ingredient in bread?",
-        "choices": [
-            {"answer": "Flour", "isCorrect": true},
-            {"answer": "Sugar", "isCorrect": false},
-            {"answer": "Salt", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which country is the largest by land area?",
-        "choices": [
-            {"answer": "Russia", "isCorrect": true},
-            {"answer": "Canada", "isCorrect": false},
-            {"answer": "China", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which bird is known for its colorful feathers and large beak?",
-        "choices": [
-            {"answer": "Toucan", "isCorrect": true},
-            {"answer": "Peacock", "isCorrect": false},
-            {"answer": "Flamingo", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which element is essential for the production of nuclear energy?",
-        "choices": [
-            {"answer": "Uranium", "isCorrect": true},
-            {"answer": "Iron", "isCorrect": false},
-            {"answer": "Copper", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "What is the primary ingredient in chocolate?",
-        "choices": [
-            {"answer": "Cocoa", "isCorrect": true},
-            {"answer": "Sugar", "isCorrect": false},
-            {"answer": "Milk", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which city is known as the Big Apple?",
-        "choices": [
-            {"answer": "New York City", "isCorrect": true},
-            {"answer": "Los Angeles", "isCorrect": false},
-            {"answer": "Chicago", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which country is known for inventing the piano?",
-        "choices": [
-            {"answer": "Italy", "isCorrect": true},
-            {"answer": "Germany", "isCorrect": false},
-            {"answer": "Austria", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which part of the brain controls balance?",
-        "choices": [
-            {"answer": "Cerebellum", "isCorrect": true},
-            {"answer": "Cerebrum", "isCorrect": false},
-            {"answer": "Brainstem", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "What is the capital city of Canada?",
-        "choices": [
-            {"answer": "Ottawa", "isCorrect": true},
-            {"answer": "Toronto", "isCorrect": false},
-            {"answer": "Vancouver", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which animal is known as the King of the Jungle?",
-        "choices": [
-            {"answer": "Lion", "isCorrect": true},
-            {"answer": "Tiger", "isCorrect": false},
-            {"answer": "Elephant", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which country hosted the first modern Olympic Games?",
-        "choices": [
-            {"answer": "Greece", "isCorrect": true},
-            {"answer": "France", "isCorrect": false},
-            {"answer": "United States", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which mineral is essential for healthy bones?",
-        "choices": [
-            {"answer": "Calcium", "isCorrect": true},
-            {"answer": "Iron", "isCorrect": false},
-            {"answer": "Magnesium", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which country is famous for the Eiffel Tower?",
-        "choices": [
-            {"answer": "France", "isCorrect": true},
-            {"answer": "Italy", "isCorrect": false},
-            {"answer": "Spain", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which gas is necessary for human respiration?",
-        "choices": [
-            {"answer": "Oxygen", "isCorrect": true},
-            {"answer": "Carbon Dioxide", "isCorrect": false},
-            {"answer": "Nitrogen", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which continent is known as the birthplace of humanity?",
-        "choices": [
-            {"answer": "Africa", "isCorrect": true},
-            {"answer": "Asia", "isCorrect": false},
-            {"answer": "Europe", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which natural disaster is measured with the Richter scale?",
-        "choices": [
-            {"answer": "Earthquake", "isCorrect": true},
-            {"answer": "Tornado", "isCorrect": false},
-            {"answer": "Hurricane", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "What is the main component of the Sun?",
-        "choices": [
-            {"answer": "Hydrogen", "isCorrect": true},
-            {"answer": "Helium", "isCorrect": false},
-            {"answer": "Carbon", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which country is known for its pyramids?",
-        "choices": [
-            {"answer": "Egypt", "isCorrect": true},
-            {"answer": "Mexico", "isCorrect": false},
-            {"answer": "Peru", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which planet is known as the 'Evening Star'?",
-        "choices": [
-            {"answer": "Venus", "isCorrect": true},
-            {"answer": "Mars", "isCorrect": false},
-            {"answer": "Jupiter", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "What is the freezing point of water in Celsius?",
-        "choices": [
-            {"answer": "0°C", "isCorrect": true},
-            {"answer": "32°C", "isCorrect": false},
-            {"answer": "-32°C", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which country is known as the Land of the Midnight Sun?",
-        "choices": [
-            {"answer": "Norway", "isCorrect": true},
-            {"answer": "Sweden", "isCorrect": false},
-            {"answer": "Finland", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which artist is famous for painting the Sistine Chapel ceiling?",
-        "choices": [
-            {"answer": "Michelangelo", "isCorrect": true},
-            {"answer": "Leonardo da Vinci", "isCorrect": false},
-            {"answer": "Raphael", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which instrument is associated with Beethoven?",
-        "choices": [
-            {"answer": "Piano", "isCorrect": true},
-            {"answer": "Violin", "isCorrect": false},
-            {"answer": "Flute", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which river flows through Paris?",
-        "choices": [
-            {"answer": "Seine", "isCorrect": true},
-            {"answer": "Thames", "isCorrect": false},
-            {"answer": "Danube", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which country is known for the maple leaf?",
-        "choices": [
-            {"answer": "Canada", "isCorrect": true},
-            {"answer": "United States", "isCorrect": false},
-            {"answer": "Australia", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which planet is the smallest in the solar system?",
-        "choices": [
-            {"answer": "Mercury", "isCorrect": true},
-            {"answer": "Mars", "isCorrect": false},
-            {"answer": "Pluto", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which element is a key component of steel?",
-        "choices": [
-            {"answer": "Iron", "isCorrect": true},
-            {"answer": "Copper", "isCorrect": false},
-            {"answer": "Aluminum", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "What is the capital city of Spain?",
-        "choices": [
-            {"answer": "Madrid", "isCorrect": true},
-            {"answer": "Barcelona", "isCorrect": false},
-            {"answer": "Seville", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which planet is known as the Blue Planet?",
-        "choices": [
-            {"answer": "Earth", "isCorrect": true},
-            {"answer": "Neptune", "isCorrect": false},
-            {"answer": "Uranus", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "What is the capital city of Germany?",
-        "choices": [
-            {"answer": "Berlin", "isCorrect": true},
-            {"answer": "Munich", "isCorrect": false},
-            {"answer": "Frankfurt", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which organ is responsible for filtering blood in the human body?",
-        "choices": [
-            {"answer": "Kidney", "isCorrect": true},
-            {"answer": "Liver", "isCorrect": false},
-            {"answer": "Heart", "isCorrect": false}
-        ]
-    },
-    {
-        "question": "Which ocean is the smallest by surface area?",
-        "choices": [
-            {"answer": "Arctic Ocean", "isCorrect": true},
-            {"answer": "Southern Ocean", "isCorrect": false},
-            {"answer": "Indian Ocean", "isCorrect": false}
+            {"answer": "Solving problems through user-centered design", "isCorrect": true},
+            {"answer": "Maximizing profit margins", "isCorrect": false},
+            {"answer": "Reducing production costs", "isCorrect": false}
         ]
     }
 ]
