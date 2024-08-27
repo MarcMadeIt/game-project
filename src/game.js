@@ -100,6 +100,7 @@ function initializeGame() {
         soldBox.id = `sold${item}`;
         soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
         soldBox.classList.add('sold-box');
+        button = document.querySelector(`#item${item}`);
         button.parentNode.replaceChild(soldBox, button);
     }
     
@@ -123,7 +124,7 @@ function initializeGame() {
             alert("You already own this item.");
             return;
         }
-        
+
         if (retrivedPlayerData.score >= cost) {
             retrivedPlayerData.score -= cost;
             updateScore(0);
