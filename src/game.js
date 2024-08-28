@@ -58,12 +58,12 @@ function initializeGame() {
             const itemFrame = document.querySelector(`#shop-item${i}`);
             const upgradeContent = document.querySelector(`#upgradeContent${i}`);
             const costAttribute = button?.getAttribute('data-cost');
-    
+            const isOwned = upgradeOwnership[i - 1];
+            
             if (button) {
                 if (costAttribute !== null) {
                     const cost = parseInt(costAttribute, 10);
                     if (!isNaN(cost)) {
-                        const isOwned = upgradeOwnership[i - 1];
                         const canAfford = retrivedPlayerData.score >= cost;
     
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}, owned = ${isOwned}`);
@@ -81,13 +81,7 @@ function initializeGame() {
                                 itemFrame.style.opacity = '0.5';
                             }
     
-                            if (isOwned) {
-                                anyUpgradeOwned = true;
-                                sold(i);
-                                showUpgrade(i);
-                            } else if (upgradeContent) {
-                                upgradeContent.style.display = 'none';
-                            }
+
                         }
                     } else {
                         console.error(`Invalid cost value for item${i}`);
@@ -97,6 +91,14 @@ function initializeGame() {
                 }
             } else {
                 console.error(`Button with id item${i} not found`);
+            }
+            
+            if (isOwned) {
+                anyUpgradeOwned = true;
+                sold(i);
+                showUpgrade(i);
+            } else if (upgradeContent) {
+                upgradeContent.style.display = 'none';
             }
         }
     
