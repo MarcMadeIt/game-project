@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', initializeGame);
 
 function initializeGame() {
-    // Cache player data and upgrade ownership
     let retrievedPlayerData = JSON.parse(localStorage.getItem('playerData')) || { score: 0 };
     let upgradeOwnership = loadUpgradeOwnership();
 
-    // Cache DOM elements
     const scoreboard = document.getElementById('points');
     const timerDisplay = document.getElementById('timer');
     const shopDisplay = document.getElementById('shop');
@@ -14,7 +12,6 @@ function initializeGame() {
     const closeShopBtn = document.getElementById('close-shop-btn');
     const defaultImage = document.querySelector('#racoon');
 
-    // Initialize game state
     let questions = [];
     let currentQuestionIndex = 0;
     let timeLeft = 20;
@@ -22,18 +19,16 @@ function initializeGame() {
     let timerRunning = false;
     let showingModal = false;
 
-    // Update scoreboard and timer display
     if (scoreboard) scoreboard.textContent = retrievedPlayerData.score;
     if (timerDisplay) timerDisplay.textContent = '00:20';
 
-    // Setup initial event listeners
     shopBtn.addEventListener('click', toggleShopModal);
     closeShopBtn?.addEventListener('click', closeShopModal);
 
     setupShopEventListeners();
     loadQuestions();
+    updateShopButtons();
 
-    // Function to update score
     function updateScore(points) {
         retrievedPlayerData.score = Math.max(0, retrievedPlayerData.score + points);
         if (scoreboard) scoreboard.textContent = retrievedPlayerData.score;
@@ -41,26 +36,32 @@ function initializeGame() {
         console.log("Score updated to:", retrievedPlayerData.score);
     }
 
-    // Function to update timer display
     function updateTimerDisplay() {
         const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
         const seconds = (timeLeft % 60).toString().padStart(2, '0');
         if (timerDisplay) timerDisplay.textContent = `${minutes}:${seconds}`;
     }
 
-    // Function to load upgrade ownership from localStorage
     function loadUpgradeOwnership() {
         const ownershipJSON = localStorage.getItem('upgradeOwnership');
         return ownershipJSON ? JSON.parse(ownershipJSON) : [false, false, false, false, false, false];
     }
 
-    // Function to save upgrade ownership to localStorage
     function saveUpgradeOwnership(ownership) {
         const ownershipJSON = JSON.stringify(ownership);
         localStorage.setItem('upgradeOwnership', ownershipJSON);
     }
 
-    // Function to setup event listeners for shop buttons
+    function showUpgrade(item) {
+        const upgradeContent = document.querySelector(`#upgrades${item}`);
+        
+        if (upgradeContent) {
+            upgradeContent.style.display = 'flex';
+        } else {
+            console.error(`Upgrade content with id "upgradeContent${item}" not found.`);
+        }
+    }
+    
     function setupShopEventListeners() {
         for (let i = 1; i <= 6; i++) {
             const button = document.getElementById(`item${i}`);
@@ -68,7 +69,6 @@ function initializeGame() {
         }
     }
 
-    // Function to load questions from JSON file
     function loadQuestions() {
         fetch('questions.json')
             .then(response => response.json())
@@ -85,12 +85,10 @@ function initializeGame() {
             });
     }
 
-    // Function to shuffle questions
     function shuffleQuestions() {
         questions.sort(() => Math.random() - 0.5);
     }
 
-    // Function to load a question
     function loadQuestion() {
         const currentQuestion = questions[currentQuestionIndex];
         if (!currentQuestion) return;
@@ -117,7 +115,6 @@ function initializeGame() {
         startTimer();
     }
 
-    // Function to handle answer selection
     function selectAnswer(selectedButton) {
         const isCorrect = selectedButton.dataset.isCorrect === 'true';
         const optionButtons = quizContainer.querySelectorAll('.option-item');
@@ -145,7 +142,6 @@ function initializeGame() {
         }, 1500);
     }
 
-    // Function to handle item purchase
     function buyItem(itemNumber) {
         if (upgradeOwnership[itemNumber - 1]) {
             alert("You already own this item.");
@@ -166,20 +162,21 @@ function initializeGame() {
         }
     }
 
-    // Function to update shop buttons
     function updateShopButtons() {
         let anyUpgradeOwned = false;
+    
         for (let i = 1; i <= 6; i++) {
             const button = document.querySelector(`#item${i}`);
             const itemFrame = document.querySelector(`#shop-item${i}`);
             const upgradeContent = document.querySelector(`#upgradeContent${i}`);
             const isOwned = upgradeOwnership[i - 1];
             const cost = parseInt(button?.getAttribute('data-cost'), 10);
-
+    
             if (isOwned) {
                 anyUpgradeOwned = true;
                 button.parentNode.replaceChild(createSoldButton(i), button);
                 if (upgradeContent) upgradeContent.style.display = 'flex';
+                showUpgrade(i);
             } else if (retrievedPlayerData.score >= cost) {
                 button.classList.remove('button-disabled');
                 if (itemFrame) itemFrame.style.opacity = '1';
@@ -188,23 +185,23 @@ function initializeGame() {
                 if (itemFrame) itemFrame.style.opacity = '0.5';
             }
         }
-
+    
         if (defaultImage) {
             defaultImage.style.display = anyUpgradeOwned ? 'none' : 'flex';
+        } else {
+            console.error("Default image element not found");
         }
     }
-
-    // Function to create a "sold" button
-    function createSoldButton(item) {
+    
+    function createSoldButton(itemNumber) {
         const soldBox = document.createElement('button');
-        soldBox.id = `sold${item}`;
+        soldBox.id = `sold${itemNumber}`;
         soldBox.innerHTML = 'Owned! <iconify-icon icon="material-symbols:check-circle-rounded" width="20" height="20" style="color: #71d44d"></iconify-icon>';
         soldBox.classList.add('sold-box');
         soldBox.disabled = true;
         return soldBox;
     }
 
-    // Timer functions
     function startTimer() {
         if (timerRunning) return;
         timerRunning = true;
@@ -239,7 +236,6 @@ function initializeGame() {
         }, 3000);
     }
 
-    // Function to toggle shop modal visibility
     function toggleShopModal() {
         if (shopDisplay.style.display === 'flex') closeShopModal();
         else openShopModal();
