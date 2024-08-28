@@ -15,9 +15,9 @@ const contiuneBtn = document.getElementById('prev-cont');
 const rulesBtn = document.getElementById('rules-game');
 const rulesModal = document.getElementById('rules-content');
 
-const scoreBoardBtn = document.getElementById('score-board');
-const closeScoreBoardBtn = document.getElementById('close-score-board');
-const ScoreBoardModal = document.getElementById('score-board-content');
+const scoreBoardBtn = document.getElementById('btn-scoreboard');
+const closeScoreBoardBtn = document.getElementById('close-scoreboard');
+const ScoreBoardModal = document.getElementById('content-scoreboard');
 
 scoreBoardBtn.addEventListener('click', () => {
     ScoreBoardModal.style.display = 'flex';

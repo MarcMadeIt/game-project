@@ -41,6 +41,7 @@ body {
     --primary: #318ce7;
     --secondary: #abb1bd;
     --text: #171717;
+    --text-hover: #444;
     --action: #71d44d;
     --alert: #DF2935;
 
@@ -150,12 +151,99 @@ main {
     cursor: pointer;
 }
 
+.btn-black:hover {
+    box-shadow: var(--text) 0px 0px 2px;
+}
+
+.btn-black:active {
+    background-color: var(--text-hover);
+}
+
+.btn-trans {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 10px 0 0;
+}
+
+.btn-ani {
+    overflow: hidden;
+    position: relative;
+    border-radius: 7px;
+}
+
+.btn-ani span:last-child {
+    opacity: 0;
+    transition: all 1s;
+    color: var(--bg)
+}
+
+.btn-ani span:first-child {
+    background-color: var(--primary);
+    padding: 7px;
+    border-radius: 7px;
+
+}
+
+.btn-ani span {
+    z-index: 2;
+    color: var(--bg)
+}
+
+.btn-ani::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    position: absolute;
+    left: -100%;
+    transition: all 500ms;
+    z-index: 1;
+}
+
+.btn-ani::before:hover {
+    transition: 1.5s;
+}
+
+.btn-ani:hover span {
+    opacity: 100%;
+    transition: 1s;
+}
+
+.btn-ani:hover::before {
+    left: 0;
+}
+
+
+
+.btn-ani::before:hover {
+    animation-name: btn-animation;
+    animation-duration: 1s;
+}
+
+@keyframes btn-animation {
+    from {
+        translate: 0px;
+    }
+
+    to {
+        translate: 100px;
+    }
+}
 
 
 
 
 
-/* Homepage ----------------------------- */
+
+
+
+
+/* Homepage ----------------------------- Homepage */
 
 .intro {
     display: flex;
@@ -297,13 +385,66 @@ main {
     cursor: pointer;
 }
 
+/*ScoreBoard*/
+
+.scoreboard {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.content-scoreboard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg);
+    padding: 50px 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.table-scoreboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+}
+
+.table-scoreboard th,
+.table-scoreboard td {
+    border-bottom: 2px solid var(--text);
+    padding: 10px 15px;
+}
+
+
+.table-scoreboard table {
+    border-collapse: collapse;
+
+}
+
+.table-scoreboard span {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
 
 
 
-/* GAME SECTION ------------------------ */
 
 
-/* Navbar */
+
+
+/* GAME SECTION ------------------------- GAME SECTION */
+
+
+/*Navbar*/
 
 .game-nav {
     display: flex;
