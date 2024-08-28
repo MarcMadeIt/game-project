@@ -184,8 +184,8 @@ function initializeGame() {
 
     shopBtn.addEventListener('click', function () {
         if (shopDisplay.style.display === 'flex') {
-            closeShopModal();
             updateShopButtons();
+            closeShopModal();
         } else {
             openShopModal();
         }
