@@ -47,8 +47,8 @@ function initializeGame() {
         localStorage.setItem('upgradeOwnership', ownershipJSON);
     }
 
-    function updateShopButtons(retrivedPlayerData) {
-        retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
+    function updateShopButtons() {
+        const retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
         const upgradeOwnership = loadUpgradeOwnership();
         const defaultImage = document.querySelector('#racoon');
         let anyUpgradeOwned = false;
@@ -101,9 +101,15 @@ function initializeGame() {
         }
     
         if (defaultImage) {
-            defaultImage.style.display = anyUpgradeOwned ? 'none' : 'flex';
+            if (anyUpgradeOwned) {
+                defaultImage.style.display = 'none';  
+            } else {
+                defaultImage.style.display = 'flex';
+            }
+        } else {
+            console.error("Default image element not found");
         }
-        
+    
         console.log('Finished updateShopButtons function');
     }
     
@@ -154,19 +160,21 @@ function initializeGame() {
             alert("You already own this item.");
             return;
         }
-
+    
         if (retrivedPlayerData.score >= cost) {
             retrivedPlayerData.score -= cost;
             updateScore(0);
             upgradeOwnership[itemNumber - 1] = true;
             saveUpgradeOwnership(upgradeOwnership); 
-            sold(itemNumber);    
-            showUpgrade(itemNumber);    
-            updateShopButtons();
+            sold(itemNumber);
+            showUpgrade(itemNumber);      
+            updateShopButtons(); 
+            console.log(`Bought item ${itemNumber}. Remaining score: ${retrivedPlayerData.score}`);
         } else {
             alert("You don't have enough points to buy this item.");
         }
     }
+    
 
     window.onload = function () {
         updateScore(0);
