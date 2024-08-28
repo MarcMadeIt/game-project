@@ -50,7 +50,7 @@ function initializeGame() {
     function updateShopButtons(retrivedPlayerData) {
         retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
         const upgradeOwnership = loadUpgradeOwnership();
-
+    
         for (let i = 1; i <= 6; i++) {
             const button = document.querySelector(`#item${i}`);
             const itemFrame = document.querySelector(`#shop-item${i}`);
@@ -62,7 +62,7 @@ function initializeGame() {
                     if (!isNaN(cost)) {
                         const isOwned = upgradeOwnership[i - 1];
                         const canAfford = retrivedPlayerData.score >= cost;
-                        
+    
                         console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}, owned = ${isOwned}`);
     
                         if (canAfford && !isOwned) {
@@ -77,10 +77,10 @@ function initializeGame() {
                             if (itemFrame) {
                                 itemFrame.style.opacity = '0.5';
                             }
-                            
+    
                             if (isOwned) {
                                 sold(i);
-                                showUpgrade(i);
+                                showUpgrade(i); 
                             }
                         }
                     } else {
@@ -95,6 +95,7 @@ function initializeGame() {
         }
         console.log('Finished updateShopButtons function');
     }
+    
 
     async function sold(item){
         const soldBox = document.createElement('button');
@@ -111,9 +112,13 @@ function initializeGame() {
         }
     }
 
-    async function showUpgrade (item){
+    async function showUpgrade(item) {
         const upgradeBox = document.querySelector(`#upgrades${item}`);
-        upgradeBox.style.display = 'flex';
+        if (upgradeBox) {
+            upgradeBox.style.display = 'flex';
+        } else {
+            console.error(`Upgrade box with id upgrades${item} not found.`);
+        }
     }
     
     function setupEventListeners() {
@@ -141,8 +146,9 @@ function initializeGame() {
             retrivedPlayerData.score -= cost;
             updateScore(0);
             upgradeOwnership[itemNumber - 1] = true;
-            saveUpgradeOwnership(upgradeOwnership);
-            sold(itemNumber);
+            saveUpgradeOwnership(upgradeOwnership); 
+            sold(itemNumber);    
+            showUpgrade(itemNumber);    
             updateShopButtons();
         } else {
             alert("You don't have enough points to buy this item.");
