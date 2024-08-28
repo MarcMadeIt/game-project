@@ -80,6 +80,7 @@ function initializeGame() {
                             
                             if (isOwned) {
                                 sold(i);
+                                showUpgrade(i);
                             }
                         }
                     } else {
@@ -103,10 +104,16 @@ function initializeGame() {
         button = document.querySelector(`#item${item}`);
         button.parentNode.replaceChild(soldBox, button);
         document.getElementById(`sold${item}`).disabled = true;
+        showUpgrade(item);
         itemFrame = document.querySelector(`#shop-item${item}`);
         if (itemFrame) {
             itemFrame.style.opacity = '1';
         }
+    }
+
+    async function showUpgrade (item){
+        const upgradeBox = document.querySelector(`#upgrades${item}`);
+        upgradeBox.style.display = 'flex';
     }
     
     function setupEventListeners() {
