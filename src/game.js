@@ -131,12 +131,12 @@ function initializeGame() {
     }
 
     function showUpgrade(item) {
-        const upgradeContent = document.querySelector(`#upgradeContent${item}`);
+        const upgradeContent = document.querySelector(`#upgrades${item}`);
         
         if (upgradeContent) {
             upgradeContent.style.display = 'flex';
         } else {
-            console.error(`Upgrade content with id upgradeContent${item} not found.`);
+            console.error(`Upgrade content with id upgrades${item} not found.`);
         }
     }
     
