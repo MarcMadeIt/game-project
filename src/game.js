@@ -145,8 +145,6 @@ function initializeGame() {
             let button = document.getElementById(`item${i}`);
             if (button) {
                 button.addEventListener('click', () => buyItem(i, parseInt(button.getAttribute('data-cost'), 10)));
-            } else {
-                console.error(`Button with id item${i} not found`);
             }
         }
     }
