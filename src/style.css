@@ -54,18 +54,11 @@ body {
     color: var(--text);
     height: 100vh;
     font-family: "Poppins", sans-serif;
-
-    /* background-position: center;
-    background-image: url(../assets/img/ffflux1.png);
+    background-color: #f5f4f4;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232873bf' fill-opacity='0.11' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
-}
-
-.home {
-    /* background-position: center;
-    background-image: url(../assets/img/ffflux1.png);
-    background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
 }
 
 
@@ -98,6 +91,16 @@ main {
 .logo img {
     width: 70px;
     height: 70px;
+}
+
+.home .logo {
+    flex-direction: column-reverse;
+    gap: 25px;
+}
+
+.home .logo img {
+    width: 120px;
+    height: 120px;
 }
 
 .ingame img {
@@ -539,7 +542,6 @@ main {
     height: 100%;
     justify-content: center;
     align-items: center;
-
 }
 
 
@@ -612,6 +614,7 @@ main {
     height: 100%;
     width: auto;
     overflow: hidden;
+    display: flex;
 
 }
 
@@ -620,6 +623,36 @@ main {
     height: 100%;
     border-radius: 50%;
 }
+
+.upgrades-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.upgrades-grp {
+    display: flex;
+    gap: 30px;
+}
+
+.upgrades-item {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.upgrades-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+}
+
+
+
 
 .quiz {
     display: flex;
@@ -703,14 +736,15 @@ main {
 
     .option-item {
         font-size: 13px;
-        width: 110px;
-        height: 100px;
+        width: 300px;
+        height: 50px;
         border-width: 5px;
     }
 
     .options {
-        gap: 10px;
-        padding: 10px;
+        gap: 5px;
+        padding: 0px;
+        flex-direction: column;
     }
 
     .shop {
@@ -739,7 +773,9 @@ main {
 
     }
 
-
+    .intro {
+        height: 100%;
+    }
 
     .shop-item span {
         font-size: 14px;
@@ -756,6 +792,14 @@ main {
 
     .rules-txt {
         font-size: 12px;
+    }
+
+
+    .upgrades-item img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+
     }
 
 }
