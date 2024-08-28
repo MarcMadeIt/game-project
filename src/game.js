@@ -59,40 +59,42 @@ function initializeGame() {
             const upgradeContent = document.querySelector(`#upgradeContent${i}`);
             const costAttribute = button?.getAttribute('data-cost');
             const isOwned = upgradeOwnership[i - 1];
-            
-            if (button) {
-                if (costAttribute !== null) {
-                    const cost = parseInt(costAttribute, 10);
-                    if (!isNaN(cost)) {
-                        const canAfford = retrivedPlayerData.score >= cost;
+            if (!isOwned)
+            {
+                if (button) {
+                    if (costAttribute !== null) {
+                        const cost = parseInt(costAttribute, 10);
+                        if (!isNaN(cost)) {
+                            const canAfford = retrivedPlayerData.score >= cost;
+        
+                            console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}, owned = ${isOwned}`);
+        
+                            if (canAfford && !isOwned) {
+                                console.log(`Button #item${i} is enabled`);
+                                button.classList.remove('button-disabled');
+                                if (itemFrame) {
+                                    itemFrame.style.opacity = '1';
+                                }
+                            } else {
+                                console.log(`Button #item${i} is disabled`);
+                                button.classList.add('button-disabled');
+                                if (itemFrame) {
+                                    itemFrame.style.opacity = '0.5';
+                                }
+        
     
-                        console.log(`Button #item${i}: cost = ${cost}, player score = ${retrivedPlayerData.score}, owned = ${isOwned}`);
-    
-                        if (canAfford && !isOwned) {
-                            console.log(`Button #item${i} is enabled`);
-                            button.classList.remove('button-disabled');
-                            if (itemFrame) {
-                                itemFrame.style.opacity = '1';
                             }
                         } else {
-                            console.log(`Button #item${i} is disabled`);
-                            button.classList.add('button-disabled');
-                            if (itemFrame) {
-                                itemFrame.style.opacity = '0.5';
-                            }
-    
-
+                            console.error(`Invalid cost value for item${i}`);
                         }
                     } else {
-                        console.error(`Invalid cost value for item${i}`);
+                        console.error(`data-cost attribute missing for item${i}`);
                     }
                 } else {
-                    console.error(`data-cost attribute missing for item${i}`);
+                    console.error(`Button with id item${i} not found`);
                 }
-            } else {
-                console.error(`Button with id item${i} not found`);
             }
-            
+              
             if (isOwned) {
                 anyUpgradeOwned = true;
                 sold(i);
