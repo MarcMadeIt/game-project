@@ -50,10 +50,13 @@ function initializeGame() {
     function updateShopButtons(retrivedPlayerData) {
         retrivedPlayerData = JSON.parse(localStorage.getItem('playerData'));
         const upgradeOwnership = loadUpgradeOwnership();
+        const defaultImage = document.querySelector('#racoon');
+        let anyUpgradeOwned = false;
     
         for (let i = 1; i <= 6; i++) {
             const button = document.querySelector(`#item${i}`);
             const itemFrame = document.querySelector(`#shop-item${i}`);
+            const upgradeContent = document.querySelector(`#upgradeContent${i}`);
             const costAttribute = button?.getAttribute('data-cost');
     
             if (button) {
@@ -79,8 +82,11 @@ function initializeGame() {
                             }
     
                             if (isOwned) {
+                                anyUpgradeOwned = true;
                                 sold(i);
-                                showUpgrade(i); 
+                                showUpgrade(i);
+                            } else if (upgradeContent) {
+                                upgradeContent.style.display = 'none';
                             }
                         }
                     } else {
@@ -93,8 +99,14 @@ function initializeGame() {
                 console.error(`Button with id item${i} not found`);
             }
         }
+    
+        if (defaultImage) {
+            defaultImage.style.display = anyUpgradeOwned ? 'none' : 'flex';
+        }
+        
         console.log('Finished updateShopButtons function');
     }
+    
     
 
     async function sold(item){
@@ -112,12 +124,13 @@ function initializeGame() {
         }
     }
 
-    async function showUpgrade(item) {
-        const upgradeBox = document.querySelector(`#upgrades${item}`);
-        if (upgradeBox) {
-            upgradeBox.style.display = 'flex';
+    function showUpgrade(item) {
+        const upgradeContent = document.querySelector(`#upgradeContent${item}`);
+        
+        if (upgradeContent) {
+            upgradeContent.style.display = 'flex';
         } else {
-            console.error(`Upgrade box with id upgrades${item} not found.`);
+            console.error(`Upgrade content with id upgradeContent${item} not found.`);
         }
     }
     
