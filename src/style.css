@@ -730,7 +730,7 @@ main {
     }
 
     .quiz {
-        gap: 20px;
+        gap: 15px;
     }
 
 
@@ -748,23 +748,26 @@ main {
     }
 
     .shop {
-        padding: 15px;
-        top: 20px;
+        padding: 50px;
+        top: 0;
+        height: 100vh;
     }
 
     .shop-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+
     }
 
     .rules-content {
         width: 90%;
+
     }
 
     .shop-item {
         width: 180px;
-        height: 160px;
+        height: 180px;
 
     }
 
