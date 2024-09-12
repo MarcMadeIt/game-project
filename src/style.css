@@ -36,7 +36,7 @@ input {
 
 body {
     overflow-y: hidden;
-
+    height: 100vh;
     --bg: #f5f4f4;
     --primary: #318ce7;
     --secondary: #abb1bd;
@@ -592,7 +592,7 @@ main {
 /* Main */
 
 main {
-    height: 60%;
+    height: 70%;
     padding: 0 10px;
 }
 
@@ -725,7 +725,12 @@ main {
 
 
     .game-nav {
-        gap: 40px;
+        gap: 30px;
+
+    }
+
+    .hero {
+        height: 50%;
 
     }
 
@@ -802,6 +807,12 @@ main {
         width: 90px;
         height: 90px;
         object-fit: cover;
+
+    }
+
+    .main-content {
+
+        margin-top: 30px;
 
     }
 
